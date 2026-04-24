@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48aib"]
 
 [node name="Personaje" type="CharacterBody2D" unique_id=1790913944]
+position = Vector2(549, 307)
 script = ExtResource("1_48aib")
 metadata/_edit_group_ = true
 
