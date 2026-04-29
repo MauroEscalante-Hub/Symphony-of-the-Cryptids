@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cf25agljb5plf"]
 
 [ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_n46bi"]
+[ext_resource type="Script" uid="uid://cldthc0bl7thp" path="res://criptido.gd" id="1_ux1ov"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ux1ov"]
 
 [node name="CRIPTIDO" type="CharacterBody2D" unique_id=1160623242]
+position = Vector2(569, 343)
+script = ExtResource("1_ux1ov")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1991296023]
