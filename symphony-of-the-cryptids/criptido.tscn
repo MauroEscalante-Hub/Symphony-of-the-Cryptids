@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cf25agljb5plf"]
+
+[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_n46bi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ux1ov"]
+
+[node name="CRIPTIDO" type="CharacterBody2D" unique_id=1160623242]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1991296023]
+texture = ExtResource("1_n46bi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531417868]
+scale = Vector2(7.5522275, 7.55183)
+shape = SubResource("CircleShape2D_ux1ov")
