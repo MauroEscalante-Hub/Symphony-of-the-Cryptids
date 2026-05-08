@@ -3,7 +3,10 @@ extends CharacterBody2D
 var Velocidad: int = 50
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
-
+var Perseguir: bool = false
+var secuencia = ["up", "down", "left", "right"]
+var indice = 0
+var encantado: bool = false
 
 func _ready():
 	Direccion_aleatoria()
@@ -11,7 +14,7 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if Direccion_aleatoria:
+	if direccion_actual:
 		velocity = direccion_actual * Velocidad
 		
 	else:
@@ -23,3 +26,9 @@ func Direccion_aleatoria():
 	await get_tree().create_timer(1.7).timeout
 	Direccion_aleatoria()
 	pass
+
+
+
+func _on_area_2d_area_entered(area):
+	Perseguir = true
+	pass # Replace with function body.
