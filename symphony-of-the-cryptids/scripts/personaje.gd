@@ -1,7 +1,7 @@
 class_name Jugador
 extends CharacterBody2D
 
-@export var Velocidad: int = 50
+@export var Velocidad: int = 200
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
@@ -39,7 +39,7 @@ func _on_area_2d_area_entered(area):
 		criptido_actual = collider
 		print("Entraste en rango de un Criptido")
 
-		var secuencia = criptido_actual.obtener_secuencia()
+s		var secuencia = criptido_actual.obtener_secuencia()
 		print("Secuencia:", secuencia)
 
 	pass # Replace with function body.

@@ -36,7 +36,8 @@ func Direccion_aleatoria():
 	pass
 
 func obtenerSecuencia():
-	return secuencia
+	#return secuencia
+	pass
 
 func siguiente_nota(nota):
 	print("Recibí:", nota)
