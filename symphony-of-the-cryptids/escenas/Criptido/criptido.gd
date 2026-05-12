@@ -1,5 +1,9 @@
+class_name  Criptido
 extends CharacterBody2D
 
+
+
+@export var MiJugador : Jugador
 var Velocidad: int = 50
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
@@ -14,12 +18,16 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if direccion_actual:
-		velocity = direccion_actual * Velocidad
-		
-	else:
+	if encantado == true:
 		velocity = Vector2.ZERO
+	
+	elif Perseguir:
+		velocity = (MiJugador.global_position - global_position).normalized() * Velocidad
+	
+	else:
+		velocity = direccion_actual * Velocidad
 	move_and_slide()
+
 
 func Direccion_aleatoria():
 	direccion_actual = direccion.pick_random()
