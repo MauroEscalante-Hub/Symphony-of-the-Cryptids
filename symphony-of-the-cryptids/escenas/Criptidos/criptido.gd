@@ -2,8 +2,8 @@ class_name  Criptido
 extends CharacterBody2D
 
 
-
-@export var MiJugador : Jugador
+var NombreCriptido: String = "PEPE ARGENTI"
+@export var MiJugador : Personaje
 var Velocidad: int = 50
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
@@ -21,12 +21,13 @@ func _physics_process(_delta):
 	if encantado == true:
 		velocity = Vector2.ZERO
 	
-	elif Perseguir:
+	if Perseguir == true:
 		velocity = (MiJugador.global_position - global_position).normalized() * Velocidad
 	
 	else:
 		velocity = direccion_actual * Velocidad
 	move_and_slide()
+
 
 
 func Direccion_aleatoria():
@@ -36,8 +37,7 @@ func Direccion_aleatoria():
 	pass
 
 func obtenerSecuencia():
-	#return secuencia
-	pass
+	return secuencia
 
 func siguiente_nota(nota):
 	print("Recibí:", nota)
@@ -66,9 +66,19 @@ func fallar():
 
 func _on_area_2d_area_entered(area):
 	Perseguir = true
+	var collider = area.get_parent()
+	if collider is Personaje:
+		MiJugador = collider
+	print("Algo entro: ", MiJugador._Nombre())
+	
 	pass # Replace with function body.
 
 
 func _on_area_2d_area_exited(area):
 	Perseguir = false
+	print("Algo salio")
+	
 	pass # Replace with function body.
+
+func ObtenerElNombre():
+	return NombreCriptido

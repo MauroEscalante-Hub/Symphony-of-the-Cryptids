@@ -1,19 +1,26 @@
-class_name Jugador
+class_name Personaje
 extends CharacterBody2D
 
 @export var Velocidad: int = 200
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
+var Nombre: String = "Lucas"
+
 
 func _physics_process(_delta):
 	
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
-	velocity = Direccion * Velocidad
+	DetectarInput()
 	
-	
-	
+	if Direccion:
+		velocity = Direccion * Velocidad
+	else:
+		velocity = Vector2.ZERO
 	move_and_slide()
+
+func _Nombre():
+	return Nombre
 
 func DetectarInput():
 	if Input.is_action_just_pressed("ui_up"):
@@ -37,9 +44,9 @@ func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Criptido:
 		criptido_actual = collider
-		print("Entraste en rango de un Criptido")
+		print("Entraste en rango de un Criptido", criptido_actual.ObtenerElNombre())
 
-s		var secuencia = criptido_actual.obtener_secuencia()
+		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
 
 	pass # Replace with function body.

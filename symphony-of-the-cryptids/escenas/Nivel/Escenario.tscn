@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjpu83h62c6h"]
 
 [ext_resource type="Texture2D" uid="uid://cbudlfkdujw7d" path="res://Proto1.png" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://mxorfhqu4sw7" path="res://escenas/Criptidos/Criptido.tscn" id="2_fuvqo"]
+[ext_resource type="PackedScene" uid="uid://xxls2jxbgpjk" path="res://escenas/Personaje/Personaje.tscn" id="3_tpe3x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0du0"]
 texture = ExtResource("1_glv2v")
@@ -205,3 +207,8 @@ offset_top = 24.0
 offset_right = 1644.0
 offset_bottom = 59.0
 text = "BICHO ACÁ"
+
+[node name="CRIPTIDO" parent="." unique_id=1160623242 instance=ExtResource("2_fuvqo")]
+
+[node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("3_tpe3x")]
+position = Vector2(178.99997, 137)
