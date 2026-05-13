@@ -39,7 +39,7 @@ func _on_area_2d_area_entered(area):
 		criptido_actual = collider
 		print("Entraste en rango de un Criptido")
 
-s		var secuencia = criptido_actual.obtener_secuencia()
+		var secuencia = criptido_actual.obtener_secuencia()
 		print("Secuencia:", secuencia)
 
 	pass # Replace with function body.
