@@ -1,3 +1,108 @@
 [gd_scene format=3 uid="uid://dfdfr4ybwo5cn"]
 
+[ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://scripts/menu_principal.gd" id="1_ynsnw"]
+[ext_resource type="Texture2D" uid="uid://b2212jl0o48fu" path="res://escenas/MenuPrincipal/FondoRobado.jpg" id="2_rue2g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
+bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)
+border_color = Color(0.25608057, 0.33874342, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynsnw"]
+bg_color = Color(0.30723086, 0.28180927, 0.3193702, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rue2g"]
+
 [node name="MenuPrincipal" type="Node2D" unique_id=876170789]
+script = ExtResource("1_ynsnw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=72895278]
+offset_left = -731.0
+offset_top = -433.0
+offset_right = 762.0
+offset_bottom = 399.0
+texture = ExtResource("2_rue2g")
+
+[node name="Control" type="Control" parent="." unique_id=435955731]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.75
+offset_top = 15.5
+offset_right = 119.25
+offset_bottom = 15.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1567625724]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -117.0
+offset_right = 120.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 19
+
+[node name="BotonComenzar" type="Button" parent="Control/VBoxContainer" unique_id=1140083722]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "COMENZAR JUEGO
+"
+
+[node name="BotonInstrucciones" type="Button" parent="Control/VBoxContainer" unique_id=1988385099]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "TUTORIAL
+
+"
+
+[node name="BotonSalir" type="Button" parent="Control/VBoxContainer" unique_id=1117484193]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "SALIR"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=1831845242]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -574.75
+offset_top = -338.5
+offset_right = 577.25
+offset_bottom = -194.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2" unique_id=848794979]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "TITULO FACHERO"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
+
+[connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
+[connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]
+[connection signal="button_down" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_button_down"]
