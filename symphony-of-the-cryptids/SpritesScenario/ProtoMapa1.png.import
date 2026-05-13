@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbudlfkdujw7d"
-path="res://.godot/imported/Proto1.png-59628e99c1116180b4a24412b3ab8d3c.ctex"
+uid="uid://b1kg47rimimoi"
+path="res://.godot/imported/ProtoMapa1.png-af574138c4bf5a36f1f9d3e1940b5bfe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Proto1.png"
-dest_files=["res://.godot/imported/Proto1.png-59628e99c1116180b4a24412b3ab8d3c.ctex"]
+source_file="res://SpritesScenario/ProtoMapa1.png"
+dest_files=["res://.godot/imported/ProtoMapa1.png-af574138c4bf5a36f1f9d3e1940b5bfe.ctex"]
 
 [params]
 
