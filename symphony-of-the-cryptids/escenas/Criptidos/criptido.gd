@@ -47,9 +47,9 @@ func obtenerSecuencia():
 	return secuencia
 
 func siguiente_nota(nota):
-	print("Recibí:", nota)
+	print("Recibí: ", nota)
 	if nota == secuencia[indice]:
-		print("Bien!")
+		print("Bien")
 		indice += 1
 		if indice >= secuencia.size():
 			print("SECUENCIA COMPLETA")
@@ -80,4 +80,14 @@ func _on_area_2d_area_entered(area):
 
 func _on_area_2d_area_exited(area):
 	Perseguir = false
+	pass # Replace with function body.
+
+
+
+
+func _on_areade_danio_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_areade_danio_body_exited(body):
 	pass # Replace with function body.

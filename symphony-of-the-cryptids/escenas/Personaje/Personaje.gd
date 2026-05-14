@@ -5,6 +5,7 @@ extends CharacterBody2D
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
+@export var Mivida: int = 1000
 var Nombre: String = "Lucas"
 
 
@@ -37,6 +38,11 @@ func enviar_input(nota):
 	if criptido_actual != null:
 		criptido_actual.siguiente_nota(nota)
 
+func ReciboDanio(cantidaddeDanio: int):
+	Mivida -= cantidaddeDanio
+	if Mivida <= 0:
+		queue_free()
+	
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
