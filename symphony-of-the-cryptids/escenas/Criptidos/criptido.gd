@@ -13,15 +13,16 @@ var indice = 0
 var encantado: bool = false
 var TiempoEncantado = 0.0
 @export var TiempoMax = 2.5
+var jugador_actual = null
 
 func _ready():
 	Direccion_aleatoria()
-	pass
-
+	print("empieza")
+	Perseguir = false
+	encantado = false
 
 func _physics_process(_delta):
-	if MiJugador == null:
-		return
+	
 	if encantado:
 		TiempoEncantado -= _delta
 		velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
@@ -29,11 +30,13 @@ func _physics_process(_delta):
 		if TiempoEncantado <= 0:
 			encantado = false
 			
-	if Perseguir == true:
+		
+	elif Perseguir and MiJugador != null:
 		velocity = (MiJugador.global_position - global_position).normalized() * Velocidad
 	
 	else:
 		velocity = direccion_actual * Velocidad
+	
 	move_and_slide()
 
 
@@ -52,6 +55,8 @@ func siguiente_nota(nota):
 	if nota == secuencia[indice]:
 		print("Bien")
 		indice += 1
+		TiempoEncantado = TiempoMax
+		
 		if indice >= secuencia.size():
 			print("SECUENCIA COMPLETA")
 			encantar()
@@ -74,13 +79,14 @@ func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
-	print("Algo entro: ", MiJugador._Nombre())
+		print("Algo entro: ", MiJugador.MiNombre())
 	
 	pass # Replace with function body.
 
 
 func _on_area_2d_area_exited(area):
 	Perseguir = false
+	print("Algo salio")
 	pass # Replace with function body.
 
 
@@ -88,15 +94,15 @@ func _on_area_2d_area_exited(area):
 
 func _on_areade_danio_body_entered(body):
 	if body is Personaje:
-		MiJugador = body
-		print("El jugador entro: ", MiJugador.MiNombre())
+		jugador_actual = body
+		print("El jugador entro: ", jugador_actual.MiNombre())
 		if encantado == false:
-			print("Atacando al jugador: ", MiJugador.MiNombre())
-			MiJugador.reciboDanio(Danio_ataque)
+			print("Atacando al jugador: ", jugador_actual.MiNombre())
+			jugador_actual.ReciboDanio(Danio_ataque)
 
 	pass # Replace with function body.
 
 
 func _on_areade_danio_body_exited(body):
-	MiJugador = null
+	jugador_actual = null
 	pass # Replace with function body.

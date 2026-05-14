@@ -40,15 +40,19 @@ func enviar_input(nota):
 
 func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio
+	print("Mi VIDA: ", Mivida)
 	if Mivida <= 0:
 		queue_free()
 	
+
+func MiNombre():
+	return Nombre
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Criptido:
 		criptido_actual = collider
-		print("Entraste en rango de un Criptido", criptido_actual.ObtenerElNombre())
+		print("Entraste en rango de un Criptido", criptido_actual)
 
 		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
