@@ -7,6 +7,8 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ux1ov"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kfdnn"]
+
 [node name="CRIPTIDO" type="CharacterBody2D" unique_id=1160623242]
 position = Vector2(569, 343)
 scale = Vector2(0.48532477, 0.4412187)
@@ -14,7 +16,7 @@ script = ExtResource("1_ekxa8")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531417868]
-scale = Vector2(7.5522275, 7.55183)
+scale = Vector2(6.188547, 6.226611)
 shape = SubResource("RectangleShape2D_wwt2b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1991296023]
@@ -26,5 +28,13 @@ texture = ExtResource("2_nc8t8")
 scale = Vector2(35.533875, 38.219234)
 shape = SubResource("CircleShape2D_ux1ov")
 
+[node name="AreadeDanio" type="Area2D" parent="." unique_id=140348214]
+scale = Vector2(10.802764, 11.243144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreadeDanio" unique_id=24802215]
+shape = SubResource("CircleShape2D_kfdnn")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="AreadeDanio" to="." method="_on_areade_danio_body_entered"]
+[connection signal="body_exited" from="AreadeDanio" to="." method="_on_areade_danio_body_exited"]

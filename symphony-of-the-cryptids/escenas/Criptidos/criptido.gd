@@ -1,31 +1,42 @@
 class_name  Criptido
 extends CharacterBody2D
 
-
-var NombreCriptido: String = "PEPE ARGENTI"
 @export var MiJugador : Personaje
-var Velocidad: int = 50
+@export var Velocidad: int = 50
+@export var Danio_ataque = 100
+var velocidad_encantado:int = 20
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
 var Perseguir: bool = false
-var secuencia = ["up", "down", "left", "right"]
+@export var secuencia = ["up", "down", "left", "right"]
 var indice = 0
 var encantado: bool = false
+var TiempoEncantado = 0.0
+@export var TiempoMax = 2.5
+var jugador_actual = null
 
 func _ready():
 	Direccion_aleatoria()
-	pass
-
+	print("empieza")
+	Perseguir = false
+	encantado = false
 
 func _physics_process(_delta):
-	if encantado == true:
-		velocity = Vector2.ZERO
 	
-	if Perseguir == true:
+	if encantado:
+		TiempoEncantado -= _delta
+		velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
+		
+		if TiempoEncantado <= 0:
+			encantado = false
+			
+		
+	elif Perseguir and MiJugador != null:
 		velocity = (MiJugador.global_position - global_position).normalized() * Velocidad
 	
 	else:
 		velocity = direccion_actual * Velocidad
+	
 	move_and_slide()
 
 
@@ -40,18 +51,16 @@ func obtenerSecuencia():
 	return secuencia
 
 func siguiente_nota(nota):
-	print("Recibí:", nota)
-
+	print("Recibí: ", nota)
 	if nota == secuencia[indice]:
-		print("Bien!")
-
+		print("Bien")
 		indice += 1
-
+		TiempoEncantado = TiempoMax
+		
 		if indice >= secuencia.size():
 			print("SECUENCIA COMPLETA")
 			encantar()
 			indice = 0
-
 	else:
 		print("Mal")
 		fallar()
@@ -62,6 +71,7 @@ func encantar():
 	encantado = true
 
 func fallar():
+	encantado = false
 	print("Se enojo el bicho")
 
 func _on_area_2d_area_entered(area):
@@ -69,7 +79,7 @@ func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
-	print("Algo entro: ", MiJugador._Nombre())
+		print("Algo entro: ", MiJugador.MiNombre())
 	
 	pass # Replace with function body.
 
@@ -77,8 +87,22 @@ func _on_area_2d_area_entered(area):
 func _on_area_2d_area_exited(area):
 	Perseguir = false
 	print("Algo salio")
-	
 	pass # Replace with function body.
 
-func ObtenerElNombre():
-	return NombreCriptido
+
+
+
+func _on_areade_danio_body_entered(body):
+	if body is Personaje:
+		jugador_actual = body
+		print("El jugador entro: ", jugador_actual.MiNombre())
+		if encantado == false:
+			print("Atacando al jugador: ", jugador_actual.MiNombre())
+			jugador_actual.ReciboDanio(Danio_ataque)
+
+	pass # Replace with function body.
+
+
+func _on_areade_danio_body_exited(body):
+	jugador_actual = null
+	pass # Replace with function body.

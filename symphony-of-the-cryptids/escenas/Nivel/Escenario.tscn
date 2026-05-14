@@ -5533,4 +5533,4 @@ layer_1/tile_data = PackedInt32Array(-851968, 6160384, 41, -786432, 6160384, 42,
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=2127249615]
 
 [node name="CRIPTIDO" parent="." unique_id=1160623242 instance=ExtResource("3_tpe3x")]
-position = Vector2(2962, 1715)
+position = Vector2(1273.9995, 1042)

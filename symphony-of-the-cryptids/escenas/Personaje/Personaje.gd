@@ -1,12 +1,14 @@
 class_name Personaje
 extends CharacterBody2D
 
+@export var UI_Encantamiento: PackedScene
 @export var Velocidad: int = 200
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
+@export var Mivida: int = 1000
 var Nombre: String = "Lucas"
-
+var ui_actual = null
 
 func _physics_process(_delta):
 	
@@ -19,8 +21,6 @@ func _physics_process(_delta):
 		velocity = Vector2.ZERO
 	move_and_slide()
 
-func _Nombre():
-	return Nombre
 
 func DetectarInput():
 	if Input.is_action_just_pressed("ui_up"):
@@ -39,15 +39,29 @@ func enviar_input(nota):
 	if criptido_actual != null:
 		criptido_actual.siguiente_nota(nota)
 
+func ReciboDanio(cantidaddeDanio: int):
+	Mivida -= cantidaddeDanio
+	print("Mi VIDA: ", Mivida)
+	if Mivida <= 0:
+		queue_free()
+	
+
+func MiNombre():
+	return Nombre
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Criptido:
 		criptido_actual = collider
-		print("Entraste en rango de un Criptido", criptido_actual.ObtenerElNombre())
+		print("Entraste en rango de un Criptido", criptido_actual)
 
 		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
+		
+	if ui_actual == null:
+		ui_actual = UI_Encantamiento.instantiate()
+		add_child(ui_actual)
+		ui_actual.position = Vector2(-150,70)
 
 	pass # Replace with function body.
 
@@ -56,4 +70,6 @@ func _on_area_2d_area_exited(area):
 	if area.get_parent() == criptido_actual:
 		print("Saliste del rango del Criptido")
 		criptido_actual = null
+		ui_actual.queue_free()
+		
 	pass # Replace with function body.

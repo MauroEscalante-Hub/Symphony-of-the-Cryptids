@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdwpaa2dxtou3"]
+
+[ext_resource type="Script" uid="uid://dwvig78wsmmfi" path="res://scripts/barra.gd" id="1_pb80s"]
+[ext_resource type="Texture2D" uid="uid://bgd1d2su26453" path="res://Flechitas.png" id="2_vhnxa"]
+
+[node name="Barra" type="Node2D" unique_id=1870076857]
+script = ExtResource("1_pb80s")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1575263551]
+self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_vhnxa")
+
+[node name="Label" type="Label" parent="." unique_id=535954805]
+offset_right = 40.0
+offset_bottom = 23.0
