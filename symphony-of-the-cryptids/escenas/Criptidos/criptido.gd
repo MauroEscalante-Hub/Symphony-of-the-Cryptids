@@ -1,16 +1,17 @@
 class_name  Criptido
 extends CharacterBody2D
 
-
-var NombreCriptido: String = "PEPE ARGENTI"
 @export var MiJugador : Personaje
-var Velocidad: int = 50
+@export var Velocidad: int = 50
+var velocidad_encantado:int = 20
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
 var Perseguir: bool = false
-var secuencia = ["up", "down", "left", "right"]
+@export var secuencia = ["up", "down", "left", "right"]
 var indice = 0
 var encantado: bool = false
+var TiempoEncantado = 0.0
+@export var TiempoMax = 2.5
 
 func _ready():
 	Direccion_aleatoria()
@@ -18,9 +19,15 @@ func _ready():
 
 
 func _physics_process(_delta):
-	if encantado == true:
-		velocity = Vector2.ZERO
-	
+	if MiJugador == null:
+		return
+	if encantado:
+		TiempoEncantado -= _delta
+		velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
+		
+		if TiempoEncantado <= 0:
+			encantado = false
+			
 	if Perseguir == true:
 		velocity = (MiJugador.global_position - global_position).normalized() * Velocidad
 	
@@ -41,17 +48,13 @@ func obtenerSecuencia():
 
 func siguiente_nota(nota):
 	print("Recibí:", nota)
-
 	if nota == secuencia[indice]:
 		print("Bien!")
-
 		indice += 1
-
 		if indice >= secuencia.size():
 			print("SECUENCIA COMPLETA")
 			encantar()
 			indice = 0
-
 	else:
 		print("Mal")
 		fallar()
@@ -62,6 +65,7 @@ func encantar():
 	encantado = true
 
 func fallar():
+	encantado = false
 	print("Se enojo el bicho")
 
 func _on_area_2d_area_entered(area):
@@ -76,9 +80,4 @@ func _on_area_2d_area_entered(area):
 
 func _on_area_2d_area_exited(area):
 	Perseguir = false
-	print("Algo salio")
-	
 	pass # Replace with function body.
-
-func ObtenerElNombre():
-	return NombreCriptido

@@ -19,8 +19,6 @@ func _physics_process(_delta):
 		velocity = Vector2.ZERO
 	move_and_slide()
 
-func _Nombre():
-	return Nombre
 
 func DetectarInput():
 	if Input.is_action_just_pressed("ui_up"):
