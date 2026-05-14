@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dfdfr4ybwo5cn"]
+
+[ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://escenas/MenuPrincipal/menu_principal.gd" id="1_ynsnw"]
+[ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/MenuPrincipal/Fondo_menu.png" id="2_qi23i"]
+[ext_resource type="Texture2D" uid="uid://bvhkf2bkitrnb" path="res://escenas/MenuPrincipal/flechas.png" id="3_qi23i"]
+[ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/MenuPrincipal/Título.png" id="4_nrc4w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
+bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)
+border_color = Color(0.25608057, 0.33874342, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynsnw"]
+bg_color = Color(0.30723086, 0.28180927, 0.3193702, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rue2g"]
+
+[node name="MenuPrincipal" type="Node2D" unique_id=876170789]
+script = ExtResource("1_ynsnw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=72895278]
+offset_left = -585.0
+offset_top = -425.0
+offset_right = 585.0
+offset_bottom = 333.0
+texture = ExtResource("2_qi23i")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="." unique_id=435955731]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.75
+offset_top = 15.5
+offset_right = 119.25
+offset_bottom = 15.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1567625724]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -116.75
+offset_top = -60.5
+offset_right = 122.75
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 19
+
+[node name="BotonComenzar" type="Button" parent="Control/VBoxContainer" unique_id=1140083722]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "COMENZAR JUEGO
+"
+
+[node name="BotonInstrucciones" type="Button" parent="Control/VBoxContainer" unique_id=1988385099]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "TUTORIAL
+
+"
+
+[node name="BotonSalir" type="Button" parent="Control/VBoxContainer" unique_id=1117484193]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
+text = "SALIR"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=1831845242]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -574.75
+offset_top = -338.5
+offset_right = 577.25
+offset_bottom = -194.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer2" unique_id=848794979]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350704632]
+visible = false
+position = Vector2(279, 70)
+scale = Vector2(0.6583851, 0.7851711)
+texture = ExtResource("3_qi23i")
+
+[node name="Título" type="Sprite2D" parent="." unique_id=362228924]
+position = Vector2(140.00002, -14.000006)
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("4_nrc4w")
+
+[connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
+[connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]
+[connection signal="button_down" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_button_down"]

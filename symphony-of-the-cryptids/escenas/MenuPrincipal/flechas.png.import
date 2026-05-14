@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbudlfkdujw7d"
-path="res://.godot/imported/Proto1.png-59628e99c1116180b4a24412b3ab8d3c.ctex"
+uid="uid://bvhkf2bkitrnb"
+path="res://.godot/imported/flechas.png-6f69546587dc925bea215ecbed9d3c98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Proto1.png"
-dest_files=["res://.godot/imported/Proto1.png-59628e99c1116180b4a24412b3ab8d3c.ctex"]
+source_file="res://escenas/MenuPrincipal/flechas.png"
+dest_files=["res://.godot/imported/flechas.png-6f69546587dc925bea215ecbed9d3c98.ctex"]
 
 [params]
 
