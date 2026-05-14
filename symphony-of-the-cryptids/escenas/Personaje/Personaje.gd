@@ -1,13 +1,14 @@
 class_name Personaje
 extends CharacterBody2D
 
+@export var UI_Encantamiento: PackedScene
 @export var Velocidad: int = 200
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
 @export var Mivida: int = 1000
 var Nombre: String = "Lucas"
-
+var ui_actual = null
 
 func _physics_process(_delta):
 	
@@ -56,6 +57,11 @@ func _on_area_2d_area_entered(area):
 
 		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
+		
+	if ui_actual == null:
+		ui_actual = UI_Encantamiento.instantiate()
+		add_child(ui_actual)
+		ui_actual.position = Vector2(-150,70)
 
 	pass # Replace with function body.
 
@@ -64,4 +70,6 @@ func _on_area_2d_area_exited(area):
 	if area.get_parent() == criptido_actual:
 		print("Saliste del rango del Criptido")
 		criptido_actual = null
+		ui_actual.queue_free()
+		
 	pass # Replace with function body.
