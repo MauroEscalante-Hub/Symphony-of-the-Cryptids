@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @export var MiJugador : Personaje
 @export var Velocidad: int = 50
+@export var Danio_ataque = 100
 var velocidad_encantado:int = 20
 var direccion_actual
 var direccion = [Vector2.ZERO, Vector2.LEFT,Vector2.RIGHT,Vector2.UP,Vector2.ZERO, Vector2.DOWN]
@@ -86,8 +87,16 @@ func _on_area_2d_area_exited(area):
 
 
 func _on_areade_danio_body_entered(body):
+	if body is Personaje:
+		MiJugador = body
+		print("El jugador entro: ", MiJugador.MiNombre())
+		if encantado == false:
+			print("Atacando al jugador: ", MiJugador.MiNombre())
+			MiJugador.reciboDanio(Danio_ataque)
+
 	pass # Replace with function body.
 
 
 func _on_areade_danio_body_exited(body):
+	MiJugador = null
 	pass # Replace with function body.
