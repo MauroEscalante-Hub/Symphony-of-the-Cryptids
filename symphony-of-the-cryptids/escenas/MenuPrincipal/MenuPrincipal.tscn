@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dfdfr4ybwo5cn"]
 
 [ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://scripts/menu_principal.gd" id="1_ynsnw"]
-[ext_resource type="Texture2D" uid="uid://b2212jl0o48fu" path="res://escenas/MenuPrincipal/FondoRobado.jpg" id="2_rue2g"]
+[ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/MenuPrincipal/Fondo_menu.png" id="2_qi23i"]
 [ext_resource type="Texture2D" uid="uid://bvhkf2bkitrnb" path="res://escenas/MenuPrincipal/flechas.png" id="3_qi23i"]
+[ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/MenuPrincipal/Título.png" id="4_nrc4w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
 bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)
@@ -17,11 +18,12 @@ bg_color = Color(0.30723086, 0.28180927, 0.3193702, 1)
 script = ExtResource("1_ynsnw")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=72895278]
-offset_left = -731.0
-offset_top = -433.0
-offset_right = 762.0
-offset_bottom = 399.0
-texture = ExtResource("2_rue2g")
+offset_left = -585.0
+offset_top = -425.0
+offset_right = 585.0
+offset_bottom = 333.0
+texture = ExtResource("2_qi23i")
+expand_mode = 1
 
 [node name="Control" type="Control" parent="." unique_id=435955731]
 layout_mode = 3
@@ -38,10 +40,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -119.5
-offset_top = -117.0
-offset_right = 120.0
-offset_bottom = 86.0
+offset_left = -116.75
+offset_top = -60.5
+offset_right = 122.75
+offset_bottom = 142.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -100,15 +102,19 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
-text = "TITULO FACHERO"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=350704632]
 visible = false
-position = Vector2(257, -52)
+position = Vector2(279, 70)
 scale = Vector2(0.6583851, 0.7851711)
 texture = ExtResource("3_qi23i")
+
+[node name="Título" type="Sprite2D" parent="." unique_id=362228924]
+position = Vector2(140.00002, -14.000006)
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("4_nrc4w")
 
 [connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]

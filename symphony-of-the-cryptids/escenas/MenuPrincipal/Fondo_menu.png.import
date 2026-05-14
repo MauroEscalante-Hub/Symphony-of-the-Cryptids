@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2212jl0o48fu"
-path="res://.godot/imported/FondoRobado.jpg-9defbeaeda0eaae592a17dbe6f15e87e.ctex"
+uid="uid://ba67dov8vl6rx"
+path="res://.godot/imported/Fondo_menu.png-e878fc8811c793b082bde756df3016d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/MenuPrincipal/FondoRobado.jpg"
-dest_files=["res://.godot/imported/FondoRobado.jpg-9defbeaeda0eaae592a17dbe6f15e87e.ctex"]
+source_file="res://escenas/MenuPrincipal/Fondo_menu.png"
+dest_files=["res://.godot/imported/Fondo_menu.png-e878fc8811c793b082bde756df3016d5.ctex"]
 
 [params]
 
