@@ -11,7 +11,6 @@ var TiempoEncantado = 0.0
 @export var secuencia = ["up", "down", "left", "right"]
 var indice = 0
 var velocidad_encantado:int = 20
-var direccion_actual
 var Perseguir: bool = false
 var encantado: bool = false
 
@@ -26,7 +25,7 @@ func _physics_process(_delta):
 	if encantado:
 		Estado_encantado(_delta)
 	
-	elif Perseguir and PuntoaSeguir != null:
+	elif PuntoaSeguir != null:
 		Punto_Objetivo()
 	
 	else:
@@ -36,17 +35,14 @@ func _physics_process(_delta):
 
 
 func Estado_encantado(_delta):
-	print("Criptido encantado")
-	encantado = true
-	
 	TiempoEncantado -= _delta
 	velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
 	
 	if TiempoEncantado <= 0:
-			encantado = false
+		encantado = false
 
 func Estado_idle():
-	velocity = direccion_actual * Velocidad
+	velocity = Vector2.ZERO
 
 func Punto_Objetivo():
 	var direccion = (PuntoaSeguir.global_position - global_position).normalized()
@@ -54,45 +50,49 @@ func Punto_Objetivo():
 	velocity = direccion * Velocidad
 	pass
 
-#func obtenerSecuencia():
-	#return secuencia
-
-#func siguiente_nota(nota):
-	#print("Recibí: ", nota)
-	#if nota == secuencia[indice]:
-		#print("Bien")
-		#indice += 1
-		#TiempoEncantado = TiempoMax
-		#
-		#if indice >= secuencia.size():
-			#print("SECUENCIA COMPLETA")
-			#Estado_encantar()
-			#indice = 0
-	#else:
-		#print("Mal")
-		#fallar()
-		#indice = 0
-
-
+func obtenerSecuencia():
+	return secuencia
 
 func fallar():
 	encantado = false
 	print("Se enojo el bicho")
 
+func siguiente_nota(nota):
+	print("Recibí: ", nota)
+	if nota == secuencia[indice]:
+		print("Bien")
+		indice += 1
+		
+		if indice >= secuencia.size():
+			print("SECUENCIA COMPLETA")
+			print("Criptido encantado")
+			
+			encantado = true
+			indice = 0
+			TiempoEncantado = TiempoMax
+		
+	else:
+		print("Mal")
+		fallar()
+		indice = 0
+
+
+
 func _on_area_2d_area_entered(area):
-	Perseguir = true
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
 		print("Algo entro: ", MiJugador.MiNombre())
 	
-	pass # Replace with function body.
 
 
 func _on_area_2d_area_exited(area):
-	Perseguir = false
-	print("Algo salio")
-	pass # Replace with function body.
+	var collider = area.get_parent()
+
+	if collider == MiJugador:
+		print("Algo salio")
+		MiJugador = null
+	
 
 
 
