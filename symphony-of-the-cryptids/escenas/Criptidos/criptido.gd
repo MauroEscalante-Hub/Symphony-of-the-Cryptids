@@ -49,13 +49,13 @@ func Estado_encantado(_delta):
 func Estado_idle():
 	velocity = Vector2.ZERO
 
-func Estado_enjaulado():
+func Enjaulado(_posicion):
 	enjaulado = true
 	encantado = false
-	
-	if enjaulado == true:
-		velocity = (UnaJaula.global_position - global_position).normalized()
-		velocity = Vector2.ZERO
+
+	global_position = _posicion
+
+	velocity = Vector2.ZERO
 	
 
 func Punto_Objetivo():
