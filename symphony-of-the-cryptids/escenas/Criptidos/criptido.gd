@@ -1,7 +1,8 @@
 class_name  Criptido
 extends CharacterBody2D
 
-@export var PuntoaSeguir : Marker2D
+@onready var DanioTiempo = $DanioTimer
+@export var PuntoaSeguir: Marker2D
 @export var MiJugador: Personaje
 var jugador_actual = null
 @export var Velocidad: int = 50
@@ -13,6 +14,7 @@ var indice = 0
 var velocidad_encantado:int = 20
 var Perseguir: bool = false
 var encantado: bool = false
+
 
 
 func _ready():
@@ -36,7 +38,9 @@ func _physics_process(_delta):
 
 func Estado_encantado(_delta):
 	TiempoEncantado -= _delta
-	velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
+	
+	if MiJugador != null:
+		velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
 	
 	if TiempoEncantado <= 0:
 		encantado = false
@@ -56,6 +60,10 @@ func obtenerSecuencia():
 func fallar():
 	encantado = false
 	print("Se enojo el bicho")
+	TiempoEncantado = 0
+	
+	if jugador_actual != null:
+		jugador_actual.ReciboDanio(Danio_ataque)
 
 func siguiente_nota(nota):
 	print("Recibí: ", nota)
@@ -88,7 +96,7 @@ func _on_area_2d_area_entered(area):
 
 func _on_area_2d_area_exited(area):
 	var collider = area.get_parent()
-
+	
 	if collider == MiJugador:
 		print("Algo salio")
 		MiJugador = null
@@ -100,14 +108,17 @@ func _on_area_2d_area_exited(area):
 func _on_areade_danio_body_entered(body):
 	if body is Personaje:
 		jugador_actual = body
-		print("El jugador entro: ", jugador_actual.MiNombre())
-		if encantado == false:
-			print("Atacando al jugador: ", jugador_actual.MiNombre())
-			jugador_actual.ReciboDanio(Danio_ataque)
-
-	pass # Replace with function body.
+		DanioTiempo.start(0.5)
 
 
 func _on_areade_danio_body_exited(body):
-	jugador_actual = null
-	pass # Replace with function body.
+	if body == jugador_actual:
+		jugador_actual = null
+		DanioTiempo.stop()
+	
+
+
+func _on_danio_timer_timeout():
+	if jugador_actual != null and encantado == false:
+		jugador_actual.ReciboDanio(Danio_ataque)
+	
