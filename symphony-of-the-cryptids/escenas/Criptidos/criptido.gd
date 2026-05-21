@@ -2,6 +2,7 @@ class_name  Criptido
 extends CharacterBody2D
 
 @onready var DanioTiempo = $DanioTimer
+@export var UnaJaula: Area2D
 @export var PuntoaSeguir: Marker2D
 @export var MiJugador: Personaje
 var jugador_actual = null
@@ -14,7 +15,7 @@ var indice = 0
 var velocidad_encantado:int = 20
 var Perseguir: bool = false
 var encantado: bool = false
-
+var enjaulado: bool = false
 
 
 func _ready():
@@ -47,6 +48,15 @@ func Estado_encantado(_delta):
 
 func Estado_idle():
 	velocity = Vector2.ZERO
+
+func Enjaulado(_posicion):
+	enjaulado = true
+	encantado = false
+
+	global_position = _posicion
+
+	velocity = Vector2.ZERO
+	
 
 func Punto_Objetivo():
 	var direccion = (PuntoaSeguir.global_position - global_position).normalized()
@@ -84,15 +94,12 @@ func siguiente_nota(nota):
 		fallar()
 		indice = 0
 
-
-
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
 		print("Algo entro: ", MiJugador.MiNombre())
 	
-
 
 func _on_area_2d_area_exited(area):
 	var collider = area.get_parent()
@@ -102,21 +109,16 @@ func _on_area_2d_area_exited(area):
 		MiJugador = null
 	
 
-
-
-
 func _on_areade_danio_body_entered(body):
 	if body is Personaje:
 		jugador_actual = body
 		DanioTiempo.start(0.5)
-
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
 		jugador_actual = null
 		DanioTiempo.stop()
 	
-
 
 func _on_danio_timer_timeout():
 	if jugador_actual != null and encantado == false:

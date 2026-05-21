@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0i63ioxnsxt5"]
+
+[ext_resource type="Script" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eryk7"]
+
+[node name="JaulaDeCriptido" type="Area2D" unique_id=172644181]
+script = ExtResource("1_ecrkp")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=862379385]
+scale = Vector2(5.5, 5.5)
+shape = SubResource("RectangleShape2D_eryk7")
+
+[node name="CentrodeLaJaula" type="Marker2D" parent="." unique_id=1921132605]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
