@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0i63ioxnsxt5"]
 
-[ext_resource type="Script" uid="uid://bpqtcqwf8uw4p" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
+[ext_resource type="Script" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eryk7"]
 
