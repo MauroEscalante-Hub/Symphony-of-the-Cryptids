@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://SpritesScenario/ProtoMapa1.png" id="1_63wjd"]
 [ext_resource type="PackedScene" uid="uid://xxls2jxbgpjk" path="res://escenas/Personaje/Personaje.tscn" id="2_fuvqo"]
 [ext_resource type="PackedScene" uid="uid://mxorfhqu4sw7" path="res://escenas/Criptidos/Criptido.tscn" id="3_tpe3x"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="4_tpe3x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
 texture = ExtResource("1_63wjd")
@@ -5536,8 +5537,13 @@ scale = Vector2(0.7591379, 0.68914413)
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" unique_id=2127249615]
 
-[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "MiJugador") instance=ExtResource("3_tpe3x")]
+[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("3_tpe3x")]
 position = Vector2(1273.9995, 1042)
 scale = Vector2(0.7591379, 0.68914413)
 PuntoaSeguir = NodePath("../Marker2D")
+Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
+
+[node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("4_tpe3x")]
+position = Vector2(835, 386)
+scale = Vector2(2.265, 2.265)

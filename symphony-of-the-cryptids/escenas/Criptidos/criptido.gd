@@ -2,8 +2,8 @@ class_name  Criptido
 extends CharacterBody2D
 
 @onready var DanioTiempo = $DanioTimer
-@export var UnaJaula: Area2D
 @export var PuntoaSeguir: Marker2D
+@export var Unajaula: Jaula
 @export var MiJugador: Personaje
 var jugador_actual = null
 @export var Velocidad: int = 50
@@ -12,7 +12,7 @@ var jugador_actual = null
 var TiempoEncantado = 0.0
 @export var secuencia = ["up", "down", "left", "right"]
 var indice = 0
-var velocidad_encantado:int = 20
+var velocidad_encantado:int = 40
 var Perseguir: bool = false
 var encantado: bool = false
 var enjaulado: bool = false
@@ -20,16 +20,21 @@ var enjaulado: bool = false
 
 func _ready():
 	print("empieza")
-	Perseguir = false
-	encantado = false
+	
 
 func _physics_process(_delta):
+	
+	if enjaulado == true:
+		Estado_enjaulado()
+		move_and_slide()
+		return
 	
 	if encantado:
 		Estado_encantado(_delta)
 	
 	elif PuntoaSeguir != null:
 		Punto_Objetivo()
+	
 	
 	else:
 		Estado_idle()
@@ -49,20 +54,16 @@ func Estado_encantado(_delta):
 func Estado_idle():
 	velocity = Vector2.ZERO
 
-func Enjaulado(_posicion):
+func Estado_enjaulado():
 	enjaulado = true
-	encantado = false
-
-	global_position = _posicion
-
-	velocity = Vector2.ZERO
+	velocity = (Unajaula.global_position - global_position).normalized() * velocidad_encantado
 	
 
 func Punto_Objetivo():
 	var direccion = (PuntoaSeguir.global_position - global_position).normalized()
 	
 	velocity = direccion * Velocidad
-	pass
+	
 
 func obtenerSecuencia():
 	return secuencia
