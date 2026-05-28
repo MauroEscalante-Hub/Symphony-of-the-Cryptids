@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dfdfr4ybwo5cn"]
 
-[ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://escenas/MenuPrincipal/menu_principal.gd" id="1_ynsnw"]
-[ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/MenuPrincipal/Fondo_menu.png" id="2_qi23i"]
-[ext_resource type="Texture2D" uid="uid://bvhkf2bkitrnb" path="res://escenas/MenuPrincipal/flechas.png" id="3_qi23i"]
-[ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/MenuPrincipal/Título.png" id="4_nrc4w"]
+[ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://escenas/menu_principal/menu_principal.gd" id="1_ynsnw"]
+[ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/menu_principal/Fondo_menu.png" id="2_qi23i"]
+[ext_resource type="Texture2D" uid="uid://bvhkf2bkitrnb" path="res://escenas/menu_principal/flechas.png" id="3_qi23i"]
+[ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/menu_principal/Título.png" id="4_nrc4w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
 bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)

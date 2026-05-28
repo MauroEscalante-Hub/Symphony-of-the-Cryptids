@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8uohtcc8vxxg"]
 
-[ext_resource type="Script" uid="uid://d0nsur72tnpyc" path="res://escenas/MenuPrincipal/Transicion/introduccion.gd" id="1_05sj6"]
+[ext_resource type="Script" uid="uid://d0nsur72tnpyc" path="res://escenas/menu_principal/transicion/introduccion.gd" id="1_05sj6"]
 
 [sub_resource type="Animation" id="Animation_hrchg"]
 length = 0.001

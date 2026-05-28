@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba67dov8vl6rx"
-path="res://.godot/imported/Fondo_menu.png-e878fc8811c793b082bde756df3016d5.ctex"
+uid="uid://cbudlfkdujw7d"
+path="res://.godot/imported/Proto1.png-16449b2e0afbefe6e3ddbec7cb0dc43a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/MenuPrincipal/Fondo_menu.png"
-dest_files=["res://.godot/imported/Fondo_menu.png-e878fc8811c793b082bde756df3016d5.ctex"]
+source_file="res://srites_ecenario/Proto1.png"
+dest_files=["res://.godot/imported/Proto1.png-16449b2e0afbefe6e3ddbec7cb0dc43a.ctex"]
 
 [params]
 
