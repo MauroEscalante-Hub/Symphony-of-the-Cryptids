@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bjpu83h62c6h"]
+[gd_scene format=3 uid="uid://coif166vwlg6s"]
 
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://SpritesScenario/ProtoMapa1.png" id="1_63wjd"]
 [ext_resource type="PackedScene" uid="uid://xxls2jxbgpjk" path="res://escenas/Personaje/Personaje.tscn" id="2_fuvqo"]
