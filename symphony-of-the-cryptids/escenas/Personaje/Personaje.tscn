@@ -8,8 +8,22 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wwt2b"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseoc"]
+bg_color = Color(0.8052077, 0.5177908, 0.40964422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bk5i"]
+bg_color = Color(0.8216191, 0, 0.027642645, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Personaje" type="CharacterBody2D" unique_id=1790913944]
-position = Vector2(478, 262)
+position = Vector2(478.99997, 265)
 scale = Vector2(0.63175714, 0.5422116)
 script = ExtResource("1_rrs66")
 UI_Encantamiento = ExtResource("2_kseoc")
@@ -28,6 +42,21 @@ shape = SubResource("RectangleShape2D_48aib")
 scale = Vector2(19.019438, 21.305544)
 shape = SubResource("CircleShape2D_wwt2b")
 debug_color = Color(0.6358332, 0.52458125, 0.14823806, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1848062047]
+zoom = Vector2(0.685, 0.685)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1930137821]
+
+[node name="BarraDeSalud" type="ProgressBar" parent="CanvasLayer" unique_id=695815084]
+offset_left = 140.0
+offset_top = 35.0
+offset_right = 373.0
+offset_bottom = 67.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kseoc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5bk5i")
+max_value = 200.0
+value = 100.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
