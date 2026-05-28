@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://mxorfhqu4sw7"]
+[gd_scene format=3 uid="uid://bjd8xs5mgju80"]
 
 [ext_resource type="Script" uid="uid://cldthc0bl7thp" path="res://escenas/criptidos/criptido.gd" id="1_ekxa8"]
 [ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="2_nc8t8"]
