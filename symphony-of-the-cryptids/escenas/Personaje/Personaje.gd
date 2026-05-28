@@ -6,11 +6,19 @@ extends CharacterBody2D
 var Direccion
 var InputFlechas = []
 var criptido_actual = null
-@export var Mivida: int = 1000
+@export var Mivida: int = 200
+const MiVidaMaxíma: int = 200
 var Nombre: String = "Lucas"
 var ui_actual = null
+@onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
+
+func _onready():
+	Mivida = MiVidaMaxíma
+	Barra_de_Salud.value = Mivida
+
 
 func _physics_process(_delta):
+	Barra_de_Salud.value = Mivida
 	
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	DetectarInput()

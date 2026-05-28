@@ -14,6 +14,43 @@ bg_color = Color(0.30723086, 0.28180927, 0.3193702, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rue2g"]
 
+[sub_resource type="Animation" id="Animation_nrc4w"]
+resource_name = "Fadeout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ay6ar"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u8rbe"]
+_data = {
+&"Fadeout": SubResource("Animation_nrc4w"),
+&"RESET": SubResource("Animation_ay6ar")
+}
+
 [node name="MenuPrincipal" type="Node2D" unique_id=876170789]
 script = ExtResource("1_ynsnw")
 
@@ -115,6 +152,19 @@ texture = ExtResource("3_qi23i")
 position = Vector2(140.00002, -14.000006)
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("4_nrc4w")
+
+[node name="Transicion" type="CanvasLayer" parent="." unique_id=2008146239]
+
+[node name="ColorRect" type="ColorRect" parent="Transicion" unique_id=1665620348]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transicion" unique_id=1191713469]
+libraries/ = SubResource("AnimationLibrary_u8rbe")
 
 [connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]

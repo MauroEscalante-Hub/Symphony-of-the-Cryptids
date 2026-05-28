@@ -1,11 +1,21 @@
 extends Node2D
 @onready var sprite_2d = $Sprite2D
+@onready var Color_Rect = $Transicion/ColorRect
+@onready var Animation_Player = $Transicion/AnimationPlayer
 
 func _ready():
+	Color_Rect.visible = false
 	pass
 
+#func Transicion():
+#	Color_Rect.visible = true
+#	Animation_Player.play("Fadeout")
+
 func _on_boton_comenzar_button_down() -> void:
-	get_tree().change_scene_to_file("res://escenas/Nivel/Escenario.tscn")
+	Color_Rect.visible = true
+	Animation_Player.play("Fadeout")
+	await Animation_Player.animation_finished
+	get_tree().change_scene_to_file("res://escenas/MenuPrincipal/Transicion/Introduccion.tscn")
 	pass # Replace with function body.
 
 func _on_boton_instrucciones_button_down() -> void:
