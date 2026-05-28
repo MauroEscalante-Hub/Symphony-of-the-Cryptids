@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bpar036p0nnqa"]
+
+[ext_resource type="Texture2D" uid="uid://ckb7mm7jq4knr" path="res://escenas/JuegoRitmo/71 sin título_20260526225840.png" id="1_7f4lj"]
+[ext_resource type="Script" uid="uid://cgxxskucmusgg" path="res://sprite_2d.gd" id="2_kf64f"]
+
+[node name="Node2D" type="Node2D" unique_id=8474774]
+
+[node name="Flecha Abajo" type="Sprite2D" parent="." unique_id=620053805]
+position = Vector2(809.99994, 378.75)
+scale = Vector2(0.1259256, 0.109722145)
+texture = ExtResource("1_7f4lj")
+hframes = 4
+vframes = 2
+script = ExtResource("2_kf64f")
+Tocar = "F.Abajo"
+
+[node name="Flecha Arriba" type="Sprite2D" parent="." unique_id=1315194177]
+position = Vector2(857.00006, 377)
+scale = Vector2(0.1259256, 0.109722145)
+texture = ExtResource("1_7f4lj")
+hframes = 4
+vframes = 2
+frame = 1
+script = ExtResource("2_kf64f")
+Tocar = "F.Arriba"
+
+[node name="Flecha Izquierda" type="Sprite2D" parent="." unique_id=187043131]
+position = Vector2(901, 374)
+scale = Vector2(0.09999945, 0.10208328)
+texture = ExtResource("1_7f4lj")
+hframes = 4
+vframes = 2
+frame = 3
+script = ExtResource("2_kf64f")
+Tocar = "F.Izquierda"
+
+[node name="Flecha Derecha" type="Sprite2D" parent="." unique_id=937555678]
+position = Vector2(948, 373)
+scale = Vector2(0.09999945, 0.10208328)
+texture = ExtResource("1_7f4lj")
+hframes = 4
+vframes = 2
+frame = 2
+script = ExtResource("2_kf64f")
+Tocar = "F.Derecha"
