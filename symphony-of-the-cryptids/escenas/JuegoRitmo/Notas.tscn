@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpar036p0nnqa"]
 
 [ext_resource type="Texture2D" uid="uid://ckb7mm7jq4knr" path="res://escenas/JuegoRitmo/71 sin título_20260526225840.png" id="1_7f4lj"]
-[ext_resource type="Script" uid="uid://cgxxskucmusgg" path="res://sprite_2d.gd" id="2_kf64f"]
+[ext_resource type="Script" uid="uid://cgxxskucmusgg" path="res://scripts/sprite_2d.gd" id="2_kf64f"]
 
 [node name="Node2D" type="Node2D" unique_id=8474774]
 
