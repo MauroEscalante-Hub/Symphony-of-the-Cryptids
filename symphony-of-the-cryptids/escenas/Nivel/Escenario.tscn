@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_vjcyy"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="2_jq272"]
 [ext_resource type="PackedScene" uid="uid://1ybvyklgxnwv" path="res://escenas/personaje/personaje.tscn" id="3_pelng"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="3_px6jo"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="3_px6jo"]
 [ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/criptido.tscn" id="4_jq272"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
