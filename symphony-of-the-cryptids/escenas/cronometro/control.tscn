@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dw8jy2heta4aq"]
+
+[ext_resource type="Script" uid="uid://dopfobdjvq02v" path="res://scripts/cronometro.gd" id="1_nea7s"]
+
+[node name="Control" type="Control" unique_id=1172207762]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_nea7s")
+
+[node name="tiempo_del_juego" type="Timer" parent="." unique_id=392178095]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1086428915]
+
+[node name="tiempo" type="Label" parent="CanvasLayer" unique_id=1444082333]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="tiempo_del_juego" to="." method="_on_tiempo_del_juego_timeout"]
