@@ -2,9 +2,9 @@ class_name  Criptido
 extends CharacterBody2D
 
 @onready var DanioTiempo = $DanioTimer
-@export var PuntoaSeguir: Marker2D
-@export var Unajaula: Jaula
-@export var MiJugador: Personaje
+@export var PuntoaSeguir = Marker2D
+@export var Unajaula = Jaula
+@export var MiJugador = Personaje
 var jugador_actual = null
 @export var Velocidad: int = 50
 @export var Danio_ataque = 100
