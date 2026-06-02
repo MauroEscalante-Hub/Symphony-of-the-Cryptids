@@ -7,26 +7,22 @@
 script = ExtResource("1_pb80s")
 metadata/_edit_group_ = true
 
-[node name="flechaArriba" type="TextureRect" parent="." unique_id=1575263551]
-self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=261462106]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="flechaArriba" type="TextureRect" parent="HBoxContainer" unique_id=1575263551]
+layout_mode = 2
 texture = ExtResource("2_r2e27")
 
-[node name="flehcaAbajo" type="TextureRect" parent="." unique_id=908951341]
-self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="flehcaAbajo" type="TextureRect" parent="HBoxContainer" unique_id=908951341]
+layout_mode = 2
 texture = ExtResource("2_r2e27")
 
-[node name="flechaIzquierda" type="TextureRect" parent="." unique_id=830520366]
-self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="flechaIzquierda" type="TextureRect" parent="HBoxContainer" unique_id=830520366]
+layout_mode = 2
 texture = ExtResource("2_r2e27")
 
-[node name="flechaDerecha" type="TextureRect" parent="." unique_id=20572429]
-self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="flechaDerecha" type="TextureRect" parent="HBoxContainer" unique_id=20572429]
+layout_mode = 2
 texture = ExtResource("2_r2e27")
