@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://beynj8hgkqmy0" path="res://escenas/barra/barra.gd" id="1_r2e27"]
 [ext_resource type="Texture2D" uid="uid://bgd1d2su26453" path="res://Flechitas.png" id="2_vhnxa"]
-[ext_resource type="Texture2D" uid="uid://0hs32my7k5sg" path="res://flechitaDePureba.png" id="3_sfbtu"]
+[ext_resource type="Texture2D" uid="uid://cdu6difmngiax" path="res://flechitaDePureba2.0.png" id="3_sfbtu"]
 
 [node name="barraControl" type="Control" unique_id=1887410771]
 layout_mode = 3
@@ -18,11 +18,9 @@ offset_bottom = 110.0
 texture = ExtResource("2_vhnxa")
 
 [node name="flechaInput" type="TextureRect" parent="." unique_id=1988342167]
-layout_mode = 0
-offset_left = 126.0
-offset_top = -42.0
-offset_right = 289.0
-offset_bottom = 146.0
-scale = Vector2(1.0882574, 1.1904854)
+layout_mode = 1
+offset_right = 128.00002
+offset_bottom = 128.0
+scale = Vector2(0.6522187, 0.68537396)
 texture = ExtResource("3_sfbtu")
 expand_mode = 1

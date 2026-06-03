@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0hs32my7k5sg"
-path="res://.godot/imported/flechitaDePureba.png-e40b73910caaa4439281ced35d9e2a5c.ctex"
+uid="uid://cdu6difmngiax"
+path="res://.godot/imported/flechitaDePureba2.0.png-69d6dacbbbae5ede69511aa73581f20c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flechitaDePureba.png"
-dest_files=["res://.godot/imported/flechitaDePureba.png-e40b73910caaa4439281ced35d9e2a5c.ctex"]
+source_file="res://flechitaDePureba2.0.png"
+dest_files=["res://.godot/imported/flechitaDePureba2.0.png-69d6dacbbbae5ede69511aa73581f20c.ctex"]
 
 [params]
 
