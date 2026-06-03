@@ -37,4 +37,3 @@ func animarFlecha():
 	
 	twenn.parallel().tween_property(flecha_D_interaccion,"modulate:a",0.0,1)
 	
-	
