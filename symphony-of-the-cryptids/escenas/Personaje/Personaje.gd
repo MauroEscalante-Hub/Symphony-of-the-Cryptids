@@ -47,10 +47,13 @@ func DetectarInput():
 		
 
 func enviar_input(nota):
-	if ui_actual != null:
-		ui_actual.mostrar_nota(nota)
 	if criptido_actual != null:
-		criptido_actual.siguiente_nota(nota)
+		
+		var notaDflecha = criptido_actual.siguiente_nota(nota) 
+	
+		if ui_actual != null:
+			ui_actual.mostrar_nota(nota, notaDflecha)
+	
 
 func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio

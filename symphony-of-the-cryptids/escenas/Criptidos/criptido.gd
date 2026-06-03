@@ -106,11 +106,12 @@ func siguiente_nota(nota):
 			encantado = true
 			indice = 0
 			TiempoEncantado = TiempoMax
-		
+		return true
 	else:
 		print("Mal")
 		fallar()
 		indice = 0
+		return false
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()

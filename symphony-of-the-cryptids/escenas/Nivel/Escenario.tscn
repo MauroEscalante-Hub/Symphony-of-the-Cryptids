@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://brb0anln7pyly"]
+[gd_scene format=3 uid="uid://crtrh8hpnws2q"]
 
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_pelng"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="2_px6jo"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="3_kqkil"]
-[ext_resource type="PackedScene" uid="uid://1ybvyklgxnwv" path="res://escenas/personaje/Personaje.tscn" id="4_j7mmo"]
-[ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/Criptido.tscn" id="5_1obfr"]
+[ext_resource type="PackedScene" uid="uid://1ybvyklgxnwv" path="res://escenas/personaje/personaje.tscn" id="4_j7mmo"]
+[ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/criptido.tscn" id="5_1obfr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
 texture = ExtResource("1_pelng")
