@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbnp70om24o06"]
+[gd_scene format=3 uid="uid://crtrh8hpnws2q"]
 
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_pelng"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="2_px6jo"]

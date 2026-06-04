@@ -62,6 +62,9 @@ func Estado_enjaulado():
 	enjaulado = true
 	velocity = (Unajaula.global_position - global_position).normalized() * velocidad_encantado
 	
+	
+	if global_position.distance_to(Unajaula.Centro.global_position) < 10:
+		queue_free()
 
 func Punto_Objetivo():
 	var direccion = (punto_actual.global_position - global_position).normalized()
@@ -106,11 +109,12 @@ func siguiente_nota(nota):
 			encantado = true
 			indice = 0
 			TiempoEncantado = TiempoMax
-		
+		return true
 	else:
 		print("Mal")
 		fallar()
 		indice = 0
+		return false
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()

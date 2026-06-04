@@ -1,17 +1,27 @@
 [gd_scene format=3 uid="uid://cdwpaa2dxtou3"]
 
-[ext_resource type="Script" uid="uid://dwvig78wsmmfi" path="res://scripts/barra.gd" id="1_pb80s"]
+[ext_resource type="Script" uid="uid://beynj8hgkqmy0" path="res://escenas/barra/barra.gd" id="1_r2e27"]
 [ext_resource type="Texture2D" uid="uid://bgd1d2su26453" path="res://Flechitas.png" id="2_vhnxa"]
+[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="3_sfbtu"]
 
-[node name="Barra" type="Node2D" unique_id=1870076857]
-script = ExtResource("1_pb80s")
+[node name="barraControl" type="Control" unique_id=1887410771]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+script = ExtResource("1_r2e27")
+metadata/_edit_group_ = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1575263551]
-self_modulate = Color(0.10609398, 0.012036505, 0.09364378, 1)
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="barraDeFlechas" type="TextureRect" parent="." unique_id=2125810226]
+visible = false
+layout_mode = 0
+offset_right = 399.0
+offset_bottom = 110.0
 texture = ExtResource("2_vhnxa")
 
-[node name="Label" type="Label" parent="." unique_id=535954805]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="flechaInput" type="TextureRect" parent="." unique_id=1988342167]
+layout_mode = 1
+offset_right = 128.00002
+offset_bottom = 128.0
+scale = Vector2(0.6522187, 0.68537396)
+texture = ExtResource("3_sfbtu")
+expand_mode = 1

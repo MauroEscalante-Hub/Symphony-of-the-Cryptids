@@ -36,16 +36,24 @@ func DetectarInput():
 	
 	if Input.is_action_just_pressed("ui_down"):
 		enviar_input("down")
+		
 	
 	if Input.is_action_just_pressed("ui_left"):
 		enviar_input("left")
+		
 	
 	if Input.is_action_just_pressed("ui_right"):
 		enviar_input("right")
+		
 
 func enviar_input(nota):
 	if criptido_actual != null:
-		criptido_actual.siguiente_nota(nota)
+		
+		var notaDflecha = criptido_actual.siguiente_nota(nota) 
+	
+		if ui_actual != null:
+			ui_actual.mostrar_nota(nota, notaDflecha)
+	
 
 func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio
