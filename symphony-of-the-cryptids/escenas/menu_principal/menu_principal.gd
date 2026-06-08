@@ -15,7 +15,7 @@ func _on_boton_comenzar_button_down() -> void:
 	Color_Rect.visible = true
 	Animation_Player.play("Fadeout")
 	await Animation_Player.animation_finished
-	get_tree().change_scene_to_file("res://escenas/MenuPrincipal/Transicion/Introduccion.tscn")
+	get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/introduccion.tscn")
 	pass # Replace with function body.
 
 func _on_boton_instrucciones_button_down() -> void:

@@ -10,6 +10,7 @@ var criptido_actual = null
 const MiVidaMaxíma: int = 200
 var Nombre: String = "Lucas"
 var ui_actual = null
+var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
 
 func _onready():
@@ -23,12 +24,17 @@ func _physics_process(_delta):
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	DetectarInput()
 	
+	if Mivida <= 0:
+		GameOver()
+	
 	if Direccion:
 		velocity = Direccion * Velocidad
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()
 
+func GameOver():
+	get_tree().change_scene_to_file("res://escenas/gameover_y_pantalla_final/game_over.tscn")
 
 func DetectarInput():
 	if Input.is_action_just_pressed("ui_up"):
