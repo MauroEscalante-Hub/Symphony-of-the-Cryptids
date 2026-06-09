@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Symphony of the CryptidsMapa"
-run/main_scene="uid://bpar036p0nnqa"
+run/main_scene="uid://dfdfr4ybwo5cn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

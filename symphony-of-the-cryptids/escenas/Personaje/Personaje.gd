@@ -24,8 +24,9 @@ func _physics_process(_delta):
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	DetectarInput()
 	
-	if Mivida <= 0:
-		GameOver()
+	#if Mivida <= 0:
+	#GameOver()
+	#Esto ya no sirve
 	
 	if Direccion:
 		velocity = Direccion * Velocidad
@@ -65,7 +66,7 @@ func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio
 	print("Mi VIDA: ", Mivida)
 	if Mivida <= 0:
-		queue_free()
+		GameOver()
 	
 
 func MiNombre():

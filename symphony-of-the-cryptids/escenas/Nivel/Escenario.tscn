@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_vjcyy"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="2_jq272"]
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_px6jo"]
-[ext_resource type="PackedScene" uid="uid://1ybvyklgxnwv" path="res://escenas/personaje/Personaje.tscn" id="3_pelng"]
+[ext_resource type="PackedScene" uid="uid://ds1pcnhv7ihm3" path="res://escenas/personaje/Personaje.tscn" id="3_pelng"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="3_px6jo"]
 [ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/Criptido.tscn" id="4_jq272"]
+[ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="7_kqkil"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
 texture = ExtResource("1_vjcyy")
@@ -8611,9 +8612,17 @@ color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("3_pelng")]
 position = Vector2(678, 336)
+Velocidad = null
+Mivida = null
 
-[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
-position = Vector2(1056, 442)
-PuntoaSeguir = NodePath("../Marker2D")
+[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
+position = Vector2(1056, 442.00003)
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
+secuencia = ["up", "up", "up", "left"]
+
+[node name="Control" parent="." unique_id=1172207762 instance=ExtResource("7_kqkil")]
+offset_left = -346.0
+offset_top = -246.0
+offset_right = -265.0
+offset_bottom = -185.0
