@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://0i63ioxnsxt5"]
 
 [ext_resource type="Script" uid="uid://bpqtcqwf8uw4p" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
-[ext_resource type="Texture2D" uid="uid://dsmv5kvqrnvw2" path="res://TRAMPA.png" id="2_7rgys"]
+[ext_resource type="Texture2D" uid="uid://dkt7wt8q0h0uj" path="res://escenas/Jaula/Jaula_Abierta.png" id="2_6ir18"]
+[ext_resource type="Texture2D" uid="uid://dd33fmkahptyl" path="res://escenas/Jaula/ENCERRADO.png" id="3_aq0d2"]
 
 [sub_resource type="Animation" id="Animation_7rgys"]
 resource_name = "NivelCompletado"
@@ -63,9 +64,15 @@ shape = SubResource("RectangleShape2D_eryk7")
 
 [node name="CentrodeLaJaula" type="Marker2D" parent="." unique_id=1921132605]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=685428489]
-position = Vector2(39, -67)
-texture = ExtResource("2_7rgys")
-metadata/_edit_group_ = true
+[node name="JaulaAbierta" type="Sprite2D" parent="." unique_id=626242320]
+position = Vector2(54.000004, -88.00001)
+scale = Vector2(0.19638857, 0.17354514)
+texture = ExtResource("2_6ir18")
+
+[node name="JaulaCerrada" type="Sprite2D" parent="." unique_id=1093107068]
+visible = false
+position = Vector2(37.000008, -60.257793)
+scale = Vector2(0.9523809, 0.85006654)
+texture = ExtResource("3_aq0d2")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
