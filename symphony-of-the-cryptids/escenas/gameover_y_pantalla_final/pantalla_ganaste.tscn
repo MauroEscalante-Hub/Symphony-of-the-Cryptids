@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://oa7e0dn7d0s8"]
+
+[ext_resource type="Script" uid="uid://chovhb0ovx50c" path="res://escenas/gameover_y_pantalla_final/pantalla_ganaste.gd" id="1_g4nh1"]
+
+[node name="pantalla_ganaste" type="CanvasLayer" unique_id=422334998]
+script = ExtResource("1_g4nh1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=602321165]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1842956203]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Siguiente_Nivel" type="Button" parent="VBoxContainer" unique_id=1437304382]
+layout_mode = 2
+text = "Siguiente nivel (Proximamente ;3 )"
+
+[node name="Volver_Al_Menu" type="Button" parent="VBoxContainer" unique_id=549319594]
+layout_mode = 2
+text = "Volver al menu"
+
+[node name="Salir_Del_Juego" type="Button" parent="VBoxContainer" unique_id=1144426760]
+layout_mode = 2
+text = "Salir dle juego"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1153677530]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.0
+offset_top = 62.0
+offset_right = 149.0
+offset_bottom = 144.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=1561213346]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "BUEN TRABAJO"
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=2061227987]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Dinero generado:"
+horizontal_alignment = 1
+
+[node name="Puntuacion" type="Label" parent="VBoxContainer2" unique_id=332161544]
+layout_mode = 2
+horizontal_alignment = 1
+
+[connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]
+[connection signal="button_down" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_button_down"]

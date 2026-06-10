@@ -3,10 +3,59 @@
 [ext_resource type="Script" uid="uid://bpqtcqwf8uw4p" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
 [ext_resource type="Texture2D" uid="uid://dsmv5kvqrnvw2" path="res://TRAMPA.png" id="2_7rgys"]
 
+[sub_resource type="Animation" id="Animation_7rgys"]
+resource_name = "NivelCompletado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.012617188, 0.012617188, 0.012617188, 0), Color(0.011764706, 0.011764706, 0.011764706, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6ir18"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.012617188, 0.012617188, 0.012617188, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aq0d2"]
+_data = {
+&"NivelCompletado": SubResource("Animation_7rgys"),
+&"RESET": SubResource("Animation_6ir18")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eryk7"]
 
 [node name="JaulaDeCriptido" type="Area2D" unique_id=172644181]
 script = ExtResource("1_ecrkp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=831537774]
+libraries/ = SubResource("AnimationLibrary_aq0d2")
+
+[node name="ColorRect" type="ColorRect" parent="AnimationPlayer" unique_id=789904723]
+modulate = Color(0.012617188, 0.012617188, 0.012617188, 0)
+self_modulate = Color(0.51462185, 0.51462185, 0.51462185, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=862379385]
 scale = Vector2(5.5, 5.5)

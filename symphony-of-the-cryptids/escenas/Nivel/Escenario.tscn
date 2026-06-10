@@ -8611,15 +8611,15 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("3_pelng")]
-position = Vector2(678, 336)
+position = Vector2(455, 292)
 Velocidad = null
 Mivida = null
 
 [node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
-position = Vector2(1056, 442.00003)
+position = Vector2(600, 455.00003)
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
-secuencia = ["up", "up", "up", "left"]
+secuencia = ["up", "up", "up", "up"]
 
 [node name="Control" parent="." unique_id=1172207762 instance=ExtResource("7_kqkil")]
 offset_left = -346.0
