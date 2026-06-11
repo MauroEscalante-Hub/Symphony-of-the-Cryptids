@@ -10,8 +10,12 @@ offset_bottom = 40.0
 script = ExtResource("1_nea7s")
 
 [node name="tiempo_del_juego" type="Timer" parent="." unique_id=392178095]
+wait_time = 240.0
+one_shot = true
+autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1086428915]
+visible = false
 
 [node name="tiempo" type="Label" parent="CanvasLayer" unique_id=1444082333]
 offset_right = 40.0
