@@ -1,6 +1,8 @@
 class_name Personaje
 extends CharacterBody2D
 
+
+var Nota: Nota_Flauta
 @export var UI_Encantamiento: PackedScene
 @export var Velocidad: int = 200
 var Direccion
@@ -13,6 +15,10 @@ var ui_actual = null
 var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
 @onready var Animacion = $SpriteJugador
+@onready var Audio_Do = $Audio_Do
+@onready var Audio_Mi = $Audio_Mi
+@onready var Audio_Si = $Audio_Si
+@onready var Audio_Sol = $Audio_Sol
 
 func _onready():
 	Mivida = MiVidaMaxíma
@@ -46,19 +52,23 @@ func GameOver():
 
 func DetectarInput():
 	if Input.is_action_just_pressed("ui_up"):
+		Audio_Do.play()
 		enviar_input("up")
 	
 	if Input.is_action_just_pressed("ui_down"):
+		Audio_Mi.play()
 		enviar_input("down")
 		
 	
 	if Input.is_action_just_pressed("ui_left"):
+		Audio_Si.play()
 		enviar_input("left")
 		
 	
 	if Input.is_action_just_pressed("ui_right"):
+		Audio_Sol.play()
 		enviar_input("right")
-		
+
 
 func enviar_input(nota):
 	if criptido_actual != null:

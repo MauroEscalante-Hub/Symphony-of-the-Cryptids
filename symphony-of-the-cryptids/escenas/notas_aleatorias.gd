@@ -1,3 +1,4 @@
+class_name Nota_Flauta
 extends Node2D
 
 var Do = load ("res://Sonidos de notas/Do.mp3")
@@ -26,7 +27,10 @@ func Reproducir_notas():
 	if Input.is_action_just_pressed("Derecha"):
 		$AudioStreamPlayer2D.stream = Sol
 		$AudioStreamPlayer2D.play()
-
+	
+func Obtener_Nota_Do():
+	$AudioStreamPlayer2d.stream = Do
+	$AudioStreamPlayer2d.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

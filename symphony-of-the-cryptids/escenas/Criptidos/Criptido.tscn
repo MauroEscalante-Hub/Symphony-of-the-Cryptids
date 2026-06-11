@@ -48,6 +48,7 @@ shape = SubResource("RectangleShape2D_wwt2b")
 position = Vector2(75.398895, -102.592316)
 scale = Vector2(0.5105541, 0.43626642)
 sprite_frames = SubResource("SpriteFrames_jvfw2")
+frame_progress = 0.688338
 
 [node name="Area2D" type="Area2D" parent="." unique_id=790171551]
 scale = Vector2(3, 3)
