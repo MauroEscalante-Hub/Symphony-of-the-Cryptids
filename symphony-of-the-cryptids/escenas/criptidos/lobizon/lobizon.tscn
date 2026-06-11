@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://de835v6tldx7r"]
 
 [ext_resource type="Script" uid="uid://crp7y2ee008w3" path="res://escenas/criptidos/lobizon/lobizon.gd" id="1_tc5gp"]
+[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="2_i3dbj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65ayd"]
 
@@ -16,14 +17,17 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_65ayd")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625975400]
+texture = ExtResource("2_i3dbj")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=403510906]
+scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=37061862]
 scale = Vector2(4.959, 5)
 shape = SubResource("CircleShape2D_neqd0")
 
 [node name="areade_danio" type="Area2D" parent="." unique_id=712391479]
+scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areade_danio" unique_id=228504424]
 scale = Vector2(4.129956, 3.9123955)

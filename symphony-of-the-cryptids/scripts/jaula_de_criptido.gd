@@ -8,6 +8,7 @@ extends Area2D
 @export var Criptido_actual: Criptido
 @export var Criptidos_Enjaulados: int = 0
 @export var Cantidad_De_Criptidos: int = 3
+var LabelGuita: PGanaste
 var Dinero_Generado: int = 0
 var Dinero_Suficiente: int = 499
 var Cuota_cumplida: bool = false
@@ -39,6 +40,7 @@ func _on_body_entered(body):
 		body.Estado_enjaulado()
 		Criptidos_Enjaulados =+ 1
 		Dinero_Generado =+ 250
+		LabelGuita.puntuacion_label(Dinero_Generado)
 		Plata_Generada()
 		
 		#print(Dinero_Generado)
