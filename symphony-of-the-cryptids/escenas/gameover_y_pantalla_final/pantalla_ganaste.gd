@@ -1,12 +1,13 @@
+class_name PGanaste
 extends CanvasLayer
 
 @onready var GuitaIU = $VBoxContainer2/Puntuacion
 var Puntuacion: Jaula
-var MiPuntuacion: int = 0
+var MiPuntuacion
 
 
 func _ready():
-	GuitaIU = Puntuacion.Dinero_Generado
+	pass
 
 func _on_volver_al_menu_button_down() -> void:
 	get_tree().change_scene_to_file("res://escenas/menu_principal/menu_principal.tscn")
@@ -15,3 +16,8 @@ func _on_volver_al_menu_button_down() -> void:
 func _on_salir_del_juego_button_down() -> void:
 	get_tree().quit()
 	pass # Replace with function body.
+
+func puntuacion_label(UnValor):
+	MiPuntuacion = UnValor
+	GuitaIU.text = str(MiPuntuacion)
+	pass

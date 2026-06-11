@@ -39,6 +39,7 @@ script = ExtResource("1_ekxa8")
 Velocidad = 150
 Danio_ataque = 25
 TiempoMax = 3.0
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531417868]
 scale = Vector2(6.188547, 6.226611)

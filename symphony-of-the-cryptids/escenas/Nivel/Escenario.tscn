@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_1obfr"]
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="3_qvt54"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_mlppi"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_mlppi"]
 [ext_resource type="PackedScene" uid="uid://ds1pcnhv7ihm3" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
 [ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/Criptido.tscn" id="7_qx8ys"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
@@ -9473,14 +9473,14 @@ position = Vector2(317, 391)
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
 position = Vector2(2354, 871)
 
-[node name="Marker2D2" type="Marker2D" parent="." unique_id=1284382719]
-position = Vector2(1750, 882)
+[node name="Marker2D2" type="Marker2D" parent="Marker2D" unique_id=1284382719]
+position = Vector2(-604, 11)
 
-[node name="Marker2D3" type="Marker2D" parent="." unique_id=1572213960]
-position = Vector2(1742, 1257)
+[node name="Marker2D3" type="Marker2D" parent="Marker2D" unique_id=1572213960]
+position = Vector2(-612, 386)
 
-[node name="Marker2D4" type="Marker2D" parent="." unique_id=902001722]
-position = Vector2(2352, 1271)
+[node name="Marker2D4" type="Marker2D" parent="Marker2D" unique_id=902001722]
+position = Vector2(-2, 400)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=472060904]
 
@@ -9501,7 +9501,7 @@ position = Vector2(712, 849)
 
 [node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("7_qx8ys")]
 position = Vector2(1996, 972)
-PuntoaSeguir = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+PuntoaSeguir = [NodePath("../Marker2D"), NodePath("../Marker2D/Marker2D2"), NodePath("../Marker2D/Marker2D3"), NodePath("../Marker2D/Marker2D4")]
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
 secuencia = ["up", "left", "right", "right"]
