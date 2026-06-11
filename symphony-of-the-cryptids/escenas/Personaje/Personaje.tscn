@@ -1,9 +1,32 @@
 [gd_scene format=3 uid="uid://ds1pcnhv7ihm3"]
 
 [ext_resource type="Script" uid="uid://bfydi2h7utcei" path="res://escenas/personaje/personaje.gd" id="1_rrs66"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="2_al3pb"]
 [ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="2_kseoc"]
+[ext_resource type="Texture2D" uid="uid://c06y68ta0788q" path="res://escenas/personaje/sprites/P1.png" id="3_njjr8"]
+[ext_resource type="Texture2D" uid="uid://cg1x1tyitl75g" path="res://escenas/personaje/sprites/P2.png" id="4_wf0h7"]
 [ext_resource type="PackedScene" uid="uid://cti5rysshfgog" path="res://escenas/cronometro/reloj.tscn" id="4_wpla8"]
+[ext_resource type="Texture2D" uid="uid://ddheo17mqg8yo" path="res://escenas/personaje/sprites/P3.png" id="5_a12ng"]
+[ext_resource type="Texture2D" uid="uid://d3ssg5iuye66v" path="res://escenas/personaje/sprites/P4.png" id="6_i2yhl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf0vx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_njjr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wf0h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a12ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i2yhl")
+}],
+"loop": true,
+"name": &"Movimiento",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48aib"]
 
@@ -28,10 +51,14 @@ position = Vector2(472, 299)
 scale = Vector2(0.63175714, 0.5422116)
 script = ExtResource("1_rrs66")
 UI_Encantamiento = ExtResource("2_kseoc")
-metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1598917696]
-texture = ExtResource("2_al3pb")
+[node name="SpriteJugador" type="AnimatedSprite2D" parent="." unique_id=339909752]
+position = Vector2(17.41175, -142.01097)
+scale = Vector2(0.20664303, 0.2567124)
+sprite_frames = SubResource("SpriteFrames_qf0vx")
+animation = &"Movimiento"
+frame = 2
+frame_progress = 0.61698836
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489152137]
 scale = Vector2(6.3102736, 6.396642)
