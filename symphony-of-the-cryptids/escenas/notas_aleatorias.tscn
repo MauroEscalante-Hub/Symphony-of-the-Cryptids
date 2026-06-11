@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://u5x7m2u4j3"]
+
+[ext_resource type="Script" uid="uid://chvqqbtwg5plc" path="res://escenas/notas_aleatorias.gd" id="1_lg37x"]
+
+[node name="NotasAleatorias" type="Node2D" unique_id=1523869571]
+script = ExtResource("1_lg37x")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=937401827]
