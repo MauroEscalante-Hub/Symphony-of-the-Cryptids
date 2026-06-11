@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://de835v6tldx7r"]
+
+[ext_resource type="Script" uid="uid://crp7y2ee008w3" path="res://escenas/criptidos/lobizon/lobizon.gd" id="1_tc5gp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65ayd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_neqd0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i4pja"]
+
+[node name="lobizon" type="CharacterBody2D" unique_id=1473864662]
+script = ExtResource("1_tc5gp")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=871392178]
+shape = SubResource("RectangleShape2D_65ayd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625975400]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=403510906]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=37061862]
+scale = Vector2(4.959, 5)
+shape = SubResource("CircleShape2D_neqd0")
+
+[node name="areade_danio" type="Area2D" parent="." unique_id=712391479]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areade_danio" unique_id=228504424]
+scale = Vector2(4.129956, 3.9123955)
+shape = SubResource("CircleShape2D_i4pja")
+
+[node name="Timer" type="Timer" parent="." unique_id=773719847]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="areade_danio" to="." method="_on_areade_danio_body_entered"]
+[connection signal="body_exited" from="areade_danio" to="." method="_on_areade_danio_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
