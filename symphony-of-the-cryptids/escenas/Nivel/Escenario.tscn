@@ -9472,7 +9472,6 @@ position = Vector2(317, 391)
 position = Vector2(713, 457)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=472060904]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=2070168456]
 root_node = NodePath("../..")
@@ -9487,12 +9486,24 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("3_pelng")]
-position = Vector2(455, 292)
+position = Vector2(641.99994, 291)
 Velocidad = null
 Mivida = null
 
-[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
-position = Vector2(600, 455.00003)
+[node name="CRIPTIDO2" parent="." unique_id=1160623242 instance=ExtResource("4_jq272")]
+position = Vector2(2964.9998, 1773)
+scale = Vector2(0.806, 0.737)
+
+[node name="CRIPTIDO" parent="." unique_id=1680898058 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
+position = Vector2(3713.0002, 276.00003)
+scale = Vector2(0.772, 0.737)
+Unajaula = NodePath("../JaulaDeCriptido")
+MiJugador = NodePath("../Personaje")
+secuencia = ["up", "up", "up", "up"]
+
+[node name="CRIPTIDO3" parent="." unique_id=276485761 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
+position = Vector2(2007.0002, 1025)
+scale = Vector2(0.772, 0.737)
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
 secuencia = ["up", "up", "up", "up"]

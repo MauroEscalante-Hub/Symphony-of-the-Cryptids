@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cti5rysshfgog"]
+
+[ext_resource type="Script" uid="uid://d4cpwytyirbnl" path="res://escenas/cronometro/animation_player.gd" id="1_jahnp"]
+[ext_resource type="Texture2D" uid="uid://dupau6svgottw" path="res://escenas/cronometro/Reloj.png" id="2_ui7sk"]
+[ext_resource type="Texture2D" uid="uid://d3tujtux848ht" path="res://escenas/cronometro/Aguja.png" id="3_jlmph"]
+
+[sub_resource type="Animation" id="Animation_3cxdr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reloj/Aguja:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_2tuo6"]
+resource_name = "Relojito"
+length = 240.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Reloj/Aguja:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 240),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-6.2831855, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6atwm"]
+_data = {
+&"RESET": SubResource("Animation_3cxdr"),
+&"Relojito": SubResource("Animation_2tuo6")
+}
+
+[node name="Reloj" type="CanvasLayer" unique_id=1039321415]
+
+[node name="Animacion_Reloj" type="AnimationPlayer" parent="." unique_id=229232188]
+libraries/ = SubResource("AnimationLibrary_6atwm")
+script = ExtResource("1_jahnp")
+
+[node name="Reloj" type="Sprite2D" parent="." unique_id=177794808]
+position = Vector2(73, 73)
+texture = ExtResource("2_ui7sk")
+metadata/_edit_group_ = true
+
+[node name="Aguja" type="Sprite2D" parent="Reloj" unique_id=1591417889]
+position = Vector2(-1, -3)
+rotation = -6.2831855
+texture = ExtResource("3_jlmph")

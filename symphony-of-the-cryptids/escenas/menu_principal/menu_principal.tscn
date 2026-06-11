@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://escenas/menu_principal/menu_principal.gd" id="1_ynsnw"]
 [ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/menu_principal/Fondo_menu.png" id="2_qi23i"]
-[ext_resource type="Texture2D" uid="uid://bvhkf2bkitrnb" path="res://escenas/menu_principal/flechas.png" id="3_qi23i"]
 [ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/menu_principal/Título.png" id="4_nrc4w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
@@ -106,7 +105,7 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_e150g")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ynsnw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rue2g")
-text = "TUTORIAL
+text = "CARGAR PARTIDA 
 
 "
 
@@ -140,13 +139,20 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
+[node name="Label" type="Label" parent="Control" unique_id=1807741460]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0910001
+anchor_right = 1.0910001
+offset_left = -195.99902
+offset_top = 22.5
+offset_right = -80.99902
+offset_bottom = 45.5
+theme_override_colors/font_color = Color(0.39016634, 0.3901664, 0.39016637, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "proximamente"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350704632]
-visible = false
-position = Vector2(279, 70)
-scale = Vector2(0.6583851, 0.7851711)
-texture = ExtResource("3_qi23i")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
 
 [node name="Título" type="Sprite2D" parent="." unique_id=362228924]
 position = Vector2(140.00002, -14.000006)
