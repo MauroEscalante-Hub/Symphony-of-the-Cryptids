@@ -9469,7 +9469,16 @@ script = ExtResource("2_jq272")
 position = Vector2(317, 391)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
-position = Vector2(713, 457)
+position = Vector2(2354, 871)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=1284382719]
+position = Vector2(1750, 882)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=1572213960]
+position = Vector2(1742, 1257)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=902001722]
+position = Vector2(2352, 1271)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=472060904]
 visible = false
@@ -9487,18 +9496,35 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("3_pelng")]
-position = Vector2(573.99994, 297)
+position = Vector2(712, 849)
 Velocidad = null
 Mivida = null
 
-[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
-position = Vector2(3021, 1519)
+[node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
+position = Vector2(2174, 900)
+PuntoaSeguir = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
-secuencia = ["up", "up", "up", "up"]
+secuencia = ["up", "left", "right", "right"]
 
 [node name="Control" parent="." unique_id=1172207762 instance=ExtResource("7_kqkil")]
 offset_left = -346.0
 offset_top = -246.0
 offset_right = -265.0
 offset_bottom = -185.0
+
+[node name="CRIPTIDO2" parent="." unique_id=461037757 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
+position = Vector2(708.00006, 1436.0001)
+PuntoaSeguir = [NodePath("../Pomp2_1"), NodePath("../Pomp2_1/Pomp2_2"), NodePath("../Pomp2_1/Pomp2_3")]
+Unajaula = NodePath("../JaulaDeCriptido")
+MiJugador = NodePath("../Personaje")
+secuencia = ["down", "up", "up", "down"]
+
+[node name="Pomp2_1" type="Marker2D" parent="." unique_id=436667674]
+position = Vector2(667, 1844)
+
+[node name="Pomp2_3" type="Marker2D" parent="Pomp2_1" unique_id=672876196]
+position = Vector2(359, -247)
+
+[node name="Pomp2_2" type="Marker2D" parent="Pomp2_1" unique_id=360503309]
+position = Vector2(-294, -289)

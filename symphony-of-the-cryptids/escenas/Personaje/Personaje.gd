@@ -12,6 +12,7 @@ var Nombre: String = "Lucas"
 var ui_actual = null
 var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
+@onready var Animacion = $SpriteJugador
 
 func _onready():
 	Mivida = MiVidaMaxíma
@@ -22,6 +23,10 @@ func _physics_process(_delta):
 	Barra_de_Salud.value = Mivida
 	
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
+	if Input.is_action_just_pressed("Derecha"):
+		Animacion.flip_h = true
+	if Input.is_action_just_pressed("Izquierda"):
+		Animacion.flip_h = false
 	DetectarInput()
 	
 	#if Mivida <= 0:
@@ -30,8 +35,10 @@ func _physics_process(_delta):
 	
 	if Direccion:
 		velocity = Direccion * Velocidad
+		Animacion.play()
 	else:
 		velocity = Vector2.ZERO
+		Animacion.stop()
 	move_and_slide()
 
 func GameOver():

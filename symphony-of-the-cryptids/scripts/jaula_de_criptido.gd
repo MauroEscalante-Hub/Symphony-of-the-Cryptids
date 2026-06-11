@@ -12,6 +12,8 @@ var Dinero_Generado: int = 0
 var Dinero_Suficiente: int = 499
 var Cuota_cumplida: bool = false
 
+#Signal Plata:
+
 #const Fade = preload("res://escenas/nivel/escenario.gd")
 #var script_jaula = Fade.new()
 #Aca intente usar una funcion de otra escena pero no estoy
