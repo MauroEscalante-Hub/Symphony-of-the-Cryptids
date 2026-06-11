@@ -38,6 +38,7 @@ func _on_body_entered(body):
 		Criptidos_Enjaulados =+ 1
 		Dinero_Generado =+ 250
 		Plata_Generada()
+		
 		#print(Dinero_Generado)
 		if Criptidos_Enjaulados == Cantidad_De_Criptidos and Cuota_cumplida == true:
 			#script_jaula.Fadeout

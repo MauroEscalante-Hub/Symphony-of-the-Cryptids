@@ -9492,7 +9492,7 @@ Velocidad = null
 Mivida = null
 
 [node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("4_jq272")]
-position = Vector2(970.00006, 380)
+position = Vector2(3021, 1519)
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
 secuencia = ["up", "up", "up", "up"]
