@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://n2764rnq4hav"
+path="res://.godot/imported/Do.mp3-6ec769d20383c564746faa8a560068ba.mp3str"
+
+[deps]
+
+source_file="res://Sonidos de notas/Do.mp3"
+dest_files=["res://.godot/imported/Do.mp3-6ec769d20383c564746faa8a560068ba.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
