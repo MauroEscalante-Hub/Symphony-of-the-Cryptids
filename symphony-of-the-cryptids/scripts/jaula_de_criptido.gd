@@ -7,9 +7,9 @@ extends Area2D
 @onready var Jaula_cerrada = $JaulaCerrada
 @export var Criptido_actual: Criptido
 @export var Criptidos_Enjaulados: int = 0
-@export var Cantidad_De_Criptidos: int = 1
+@export var Cantidad_De_Criptidos: int = 3
 var Dinero_Generado: int = 0
-var Dinero_Suficiente: int = 600
+var Dinero_Suficiente: int = 499
 var Cuota_cumplida: bool = false
 
 #const Fade = preload("res://escenas/nivel/escenario.gd")
