@@ -10,7 +10,7 @@ offset_bottom = 40.0
 script = ExtResource("1_nea7s")
 
 [node name="tiempo_del_juego" type="Timer" parent="." unique_id=392178095]
-wait_time = 240.0
+wait_time = 180.0
 one_shot = true
 autostart = true
 
