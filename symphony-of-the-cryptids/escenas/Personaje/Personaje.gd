@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 var Nota: Nota_Flauta
 @export var UI_Encantamiento: PackedScene
-@export var Velocidad: int = 200
+@export var Velocidad: int = 250
 var Direccion
 var InputFlechas = []
 var criptido_actual = null

@@ -63,6 +63,7 @@ horizontal_alignment = 1
 
 [node name="Puntuacion" type="Label" parent="VBoxContainer2" unique_id=332161544]
 layout_mode = 2
+text = "(exploto la variable)"
 horizontal_alignment = 1
 
 [connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]

@@ -7,10 +7,9 @@ extends Area2D
 @onready var Jaula_cerrada = $JaulaCerrada
 @export var Criptido_actual: Criptido
 @export var Criptidos_Enjaulados: int = 0
-@export var Cantidad_De_Criptidos: int = 3
-var LabelGuita: PGanaste
+@export var Cantidad_De_Criptidos: int = 1
 var Dinero_Generado: int = 0
-var Dinero_Suficiente: int = 499
+var Dinero_Suficiente: int = 449
 var Cuota_cumplida: bool = false
 
 #Signal Plata:
@@ -33,18 +32,22 @@ func Plata_Generada():
 	if Dinero_Generado > Dinero_Suficiente:
 		Cuota_cumplida = true
 
+func Esperar_Criptido():
+	await get_tree().create_timer(0,5)
+	Criptido_actual = null
+
 func _on_body_entered(body):
 	if body is Criptido:
 		Criptido_actual = body
 		print("El criptido ingreso a la jaula")
 		body.Estado_enjaulado()
 		Criptidos_Enjaulados =+ 1
-		Dinero_Generado =+ 250
-		LabelGuita.puntuacion_label(Dinero_Generado)
+		Esperar_Criptido()
+		Dinero_Generado =+ 150
 		Plata_Generada()
 		
 		#print(Dinero_Generado)
-		if Criptidos_Enjaulados == Cantidad_De_Criptidos and Cuota_cumplida == true:
+		if Criptidos_Enjaulados >= Cantidad_De_Criptidos: #and Cuota_cumplida == true: esto no funciono
 			#script_jaula.Fadeout
 			get_tree().change_scene_to_file("res://escenas/gameover_y_pantalla_final/pantalla_ganaste.tscn")
 			
