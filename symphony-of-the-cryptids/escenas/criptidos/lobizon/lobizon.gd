@@ -147,11 +147,7 @@ func _on_areade_danio_body_exited(body):
 		DanioTiempo.stop()
 	
 
-func _on_danio_timer_timeout():
+func _on_timer_timeout():
 	if jugador_actual != null and encantado == false:
 		jugador_actual.ReciboDanio(Danio_ataque)
 	
-
-
-func _on_timer_timeout():
-	pass # Replace with function body.
