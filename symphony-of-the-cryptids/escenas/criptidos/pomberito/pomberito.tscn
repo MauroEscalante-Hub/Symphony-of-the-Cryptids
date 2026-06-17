@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://xx310i4yqu2k"]
+
+[ext_resource type="Script" uid="uid://bxds6e0eryjvd" path="res://escenas/criptidos/pomberito/pomberito.gd" id="1_84ooo"]
+[ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/sprites_pompero/1.png" id="2_eadcm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgwgs"]
+
+[node name="Pomberito" type="CharacterBody2D" unique_id=1441714446]
+script = ExtResource("1_84ooo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230453351]
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_eadcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938637605]
+scale = Vector2(2.91991, 2.7899616)
+shape = SubResource("RectangleShape2D_mgwgs")

@@ -1,26 +1,8 @@
-class_name  Criptido
-extends CharacterBody2D
+extends Criptido
+class_name  Lobizon
 
-@onready var DanioTiempo = $DanioTimer
-@onready var Animachion = $Sprite2D
-@export var PuntoaSeguir: Array[Marker2D]
-var punto_actual: Marker2D
-@export var Unajaula: Jaula
-@export var MiJugador: Personaje
-var jugador_actual = null
-@export var Velocidad: int = 50
-@export var Danio_ataque = 100
-@export var TiempoMax = 2.5
-var TiempoEncantado = 0.0
-@export var secuencia = ["up", "down", "left", "right"]
-var indice = 0
-var velocidad_encantado:int = 110
-var Perseguir: bool = false
-var encantado: bool = false
-var enjaulado: bool = false
-
-
-
+@onready var Animacion = $Sprite2D
+@onready var tiempo = $Timer
 func _ready():
 	print("empieza")
 	
@@ -37,16 +19,16 @@ func _physics_process(_delta):
 	
 	if encantado:
 		Estado_encantado(_delta)
-		Animachion.play()
+		#Animacion.play()
 	
 	elif punto_actual != null:
-		Animachion.play()
+		#Animacion.play()
 		Punto_Objetivo()
 	
 	
 	else:
 		Estado_idle()
-		Animachion.stop()
+		#Animacion.stop()
 	
 	move_and_slide()
 
@@ -125,7 +107,6 @@ func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
-		print("Algo entro: ", MiJugador.MiNombre())
 	
 
 func _on_area_2d_area_exited(area):
@@ -139,12 +120,12 @@ func _on_area_2d_area_exited(area):
 func _on_areade_danio_body_entered(body):
 	if body is Personaje:
 		jugador_actual = body
-		DanioTiempo.start(0.5)
+		tiempo.start(0.5)
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
 		jugador_actual = null
-		DanioTiempo.stop()
+		tiempo.stop()
 	
 
 func _on_timer_timeout():

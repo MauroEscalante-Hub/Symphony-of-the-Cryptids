@@ -1,5 +1,5 @@
-class_name  Criptido
 extends CharacterBody2D
+class_name Criptido
 
 @onready var DanioTiempo = $DanioTimer
 @onready var Animachion = $Sprite2D
@@ -37,16 +37,16 @@ func _physics_process(_delta):
 	
 	if encantado:
 		Estado_encantado(_delta)
-		Animachion.play()
+		#Animachion.play()
 	
 	elif punto_actual != null:
-		Animachion.play()
+		#Animachion.play()
 		Punto_Objetivo()
 	
 	
 	else:
 		Estado_idle()
-		Animachion.stop()
+		#Animachion.stop()
 	
 	move_and_slide()
 
@@ -125,7 +125,6 @@ func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Personaje:
 		MiJugador = collider
-		print("Algo entro: ", MiJugador.MiNombre())
 	
 
 func _on_area_2d_area_exited(area):

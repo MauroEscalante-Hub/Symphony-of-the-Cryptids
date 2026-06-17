@@ -1,5 +1,5 @@
-class_name Personaje
 extends CharacterBody2D
+class_name Personaje
 
 
 var Nota: Nota_Flauta
@@ -10,7 +10,6 @@ var InputFlechas = []
 var criptido_actual = null
 @export var Mivida: int = 200
 const MiVidaMaxíma: int = 200
-var Nombre: String = "Lucas"
 var ui_actual = null
 var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
@@ -85,9 +84,6 @@ func ReciboDanio(cantidaddeDanio: int):
 	if Mivida <= 0:
 		GameOver()
 	
-
-func MiNombre():
-	return Nombre
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
