@@ -9470,6 +9470,8 @@ script = ExtResource("4_r2gqe")
 
 [node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("5_mlppi")]
 position = Vector2(317, 391)
+Criptidos_Enjaulados = 0
+Cantidad_De_Criptidos = 1
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
 position = Vector2(2354, 871)
@@ -9499,9 +9501,6 @@ color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("6_bw1yj")]
 position = Vector2(712, 849)
-UI_Encantamiento = null
-Velocidad = 200
-Mivida = 200
 
 [node name="Control" parent="." unique_id=1172207762 instance=ExtResource("8_2yff0")]
 offset_left = -346.0
@@ -9526,8 +9525,9 @@ MiJugador = NodePath("../Personaje")
 Velocidad = 150
 Danio_ataque = 1
 
-[node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("Unajaula", "MiJugador") instance=ExtResource("9_qvt54")]
+[node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("9_qvt54")]
 position = Vector2(2040, 1033)
+PuntoaSeguir = [NodePath("../Marker2D"), NodePath("../Marker2D/Marker2D2"), NodePath("../Marker2D/Marker2D3"), NodePath("../Marker2D/Marker2D4")]
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
 Velocidad = 800

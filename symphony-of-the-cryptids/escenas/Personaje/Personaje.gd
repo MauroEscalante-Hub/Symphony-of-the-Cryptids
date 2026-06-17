@@ -94,10 +94,10 @@ func _on_area_2d_area_entered(area):
 		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
 		
-		if ui_actual == null:
-			ui_actual = UI_Encantamiento.instantiate()
-			add_child(ui_actual)
-			ui_actual.position = Vector2(-150,70)
+		#if ui_actual == null:
+			#ui_actual = UI_Encantamiento.instantiate()
+			#add_child(ui_actual)
+			#ui_actual.position = Vector2(-150,70)
 
 	pass # Replace with function body.
 

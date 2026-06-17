@@ -5,13 +5,33 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgwgs"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_eadcm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgwgs"]
+
 [node name="Pomberito" type="CharacterBody2D" unique_id=1441714446]
 script = ExtResource("1_84ooo")
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=230453351]
+position = Vector2(213, -14)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_eadcm")
+offset = Vector2(-2575, 37.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938637605]
 scale = Vector2(2.91991, 2.7899616)
 shape = SubResource("RectangleShape2D_mgwgs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=10724987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2009292282]
+scale = Vector2(13.847934, 13.440008)
+shape = SubResource("CircleShape2D_eadcm")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1855469212]
+scale = Vector2(0.95746374, 0.9513661)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=593072825]
+scale = Vector2(8.794989, 9.400423)
+shape = SubResource("CircleShape2D_mgwgs")

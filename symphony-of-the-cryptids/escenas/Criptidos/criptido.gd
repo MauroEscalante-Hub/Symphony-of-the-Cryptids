@@ -138,12 +138,12 @@ func _on_area_2d_area_exited(area):
 func _on_areade_danio_body_entered(body):
 	if body is Personaje:
 		jugador_actual = body
-		DanioTiempo.start(0.5)
+		$DanioTimer.start(0.5)
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
 		jugador_actual = null
-		DanioTiempo.stop()
+		$DanioTimer.stop()
 	
 
 func _on_danio_timer_timeout():
