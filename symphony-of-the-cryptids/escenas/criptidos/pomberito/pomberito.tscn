@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://xx310i4yqu2k"]
+
+[ext_resource type="Script" uid="uid://bxds6e0eryjvd" path="res://escenas/criptidos/pomberito/pomberito.gd" id="1_84ooo"]
+[ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/sprites_pompero/1.png" id="2_eadcm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgwgs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eadcm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgwgs"]
+
+[node name="Pomberito" type="CharacterBody2D" unique_id=1441714446]
+script = ExtResource("1_84ooo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230453351]
+position = Vector2(213, -14)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_eadcm")
+offset = Vector2(-2575, 37.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938637605]
+scale = Vector2(2.91991, 2.7899616)
+shape = SubResource("RectangleShape2D_mgwgs")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=10724987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2009292282]
+scale = Vector2(13.847934, 13.440008)
+shape = SubResource("CircleShape2D_eadcm")
+
+[node name="areade_danio" type="Area2D" parent="." unique_id=1855469212]
+scale = Vector2(0.95746374, 0.9513661)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areade_danio" unique_id=593072825]
+scale = Vector2(8.794989, 9.400423)
+shape = SubResource("CircleShape2D_mgwgs")
+
+[node name="Timer" type="Timer" parent="." unique_id=549047513]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="areade_danio" to="." method="_on_areade_danio_body_entered"]
+[connection signal="body_exited" from="areade_danio" to="." method="_on_areade_danio_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

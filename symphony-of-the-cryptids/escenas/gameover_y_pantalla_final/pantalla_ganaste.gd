@@ -3,7 +3,7 @@ extends CanvasLayer
 
 @onready var GuitaIU = $VBoxContainer2/Puntuacion
 var Puntuacion: Jaula
-var MiPuntuacion
+var MiPuntuacion = 0
 
 
 func _ready():
