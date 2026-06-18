@@ -9530,4 +9530,5 @@ Danio_ataque = 1
 position = Vector2(2040, 1033)
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
-Velocidad = 800
+Velocidad = 200
+Danio_ataque = 25

@@ -29,9 +29,17 @@ shape = SubResource("RectangleShape2D_mgwgs")
 scale = Vector2(13.847934, 13.440008)
 shape = SubResource("CircleShape2D_eadcm")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1855469212]
+[node name="areade_danio" type="Area2D" parent="." unique_id=1855469212]
 scale = Vector2(0.95746374, 0.9513661)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=593072825]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areade_danio" unique_id=593072825]
 scale = Vector2(8.794989, 9.400423)
 shape = SubResource("CircleShape2D_mgwgs")
+
+[node name="Timer" type="Timer" parent="." unique_id=549047513]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="body_entered" from="areade_danio" to="." method="_on_areade_danio_body_entered"]
+[connection signal="body_exited" from="areade_danio" to="." method="_on_areade_danio_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
