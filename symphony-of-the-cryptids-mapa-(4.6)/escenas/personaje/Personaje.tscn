@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://ds1pcnhv7ihm3"]
+
+[ext_resource type="Script" uid="uid://6gp6h41n2s5n" path="res://escenas/personaje/Personaje.gd" id="1_rrs66"]
+[ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="2_kseoc"]
+[ext_resource type="Texture2D" uid="uid://c06y68ta0788q" path="res://escenas/personaje/sprites/P1.png" id="3_njjr8"]
+[ext_resource type="Texture2D" uid="uid://cg1x1tyitl75g" path="res://escenas/personaje/sprites/P2.png" id="4_wf0h7"]
+[ext_resource type="PackedScene" uid="uid://cti5rysshfgog" path="res://escenas/cronometro/reloj.tscn" id="4_wpla8"]
+[ext_resource type="Texture2D" uid="uid://ddheo17mqg8yo" path="res://escenas/personaje/sprites/P3.png" id="5_a12ng"]
+[ext_resource type="Texture2D" uid="uid://d3ssg5iuye66v" path="res://escenas/personaje/sprites/P4.png" id="6_i2yhl"]
+[ext_resource type="AudioStream" uid="uid://bqgtjax2ibqve" path="res://Sonidos de notas/Do.mp3" id="8_wf0h7"]
+[ext_resource type="AudioStream" uid="uid://ca0pg0h5amrd5" path="res://Sonidos de notas/Mi.mp3" id="9_qf0vx"]
+[ext_resource type="AudioStream" uid="uid://bmvfpuo2bekoy" path="res://Sonidos de notas/Si.mp3" id="10_5hjvd"]
+[ext_resource type="AudioStream" uid="uid://dql48o4sck2mp" path="res://Sonidos de notas/Sol.mp3" id="11_3s1mw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qf0vx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_njjr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wf0h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a12ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i2yhl")
+}],
+"loop": true,
+"name": &"Movimiento",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48aib"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wwt2b"]
+radius = 18.329884
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseoc"]
+bg_color = Color(0.8052077, 0.5177908, 0.40964422, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5bk5i"]
+bg_color = Color(0.8216191, 0, 0.027642645, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Personaje" type="CharacterBody2D" unique_id=1790913944]
+position = Vector2(472, 299)
+scale = Vector2(0.63175714, 0.5422116)
+script = ExtResource("1_rrs66")
+UI_Encantamiento = ExtResource("2_kseoc")
+metadata/_edit_group_ = true
+
+[node name="SpriteJugador" type="AnimatedSprite2D" parent="." unique_id=339909752]
+position = Vector2(17.41175, -142.01097)
+scale = Vector2(0.20664303, 0.2567124)
+sprite_frames = SubResource("SpriteFrames_qf0vx")
+animation = &"Movimiento"
+frame = 2
+frame_progress = 0.61698836
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489152137]
+scale = Vector2(6.3102736, 6.396642)
+shape = SubResource("RectangleShape2D_48aib")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=392176480]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1616666716]
+scale = Vector2(19.019438, 21.305544)
+shape = SubResource("CircleShape2D_wwt2b")
+debug_color = Color(0.6358332, 0.52458125, 0.14823806, 0.41960785)
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1848062047]
+zoom = Vector2(0.8, 0.8)
+
+[node name="Reloj" parent="." unique_id=1039321415 instance=ExtResource("4_wpla8")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1930137821]
+
+[node name="BarraDeSalud" type="ProgressBar" parent="CanvasLayer" unique_id=695815084]
+offset_left = 156.0
+offset_top = 34.0
+offset_right = 389.0
+offset_bottom = 66.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kseoc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5bk5i")
+max_value = 200.0
+value = 100.0
+
+[node name="Audio_Do" type="AudioStreamPlayer2D" parent="." unique_id=794843779]
+stream = ExtResource("8_wf0h7")
+volume_db = -5.0
+pitch_scale = 0.9
+
+[node name="Audio_Mi" type="AudioStreamPlayer2D" parent="." unique_id=929303177]
+stream = ExtResource("9_qf0vx")
+volume_db = -7.0
+
+[node name="Audio_Si" type="AudioStreamPlayer2D" parent="." unique_id=689059093]
+stream = ExtResource("10_5hjvd")
+volume_db = -9.0
+
+[node name="Audio_Sol" type="AudioStreamPlayer2D" parent="." unique_id=1324353865]
+stream = ExtResource("11_3s1mw")
+volume_db = -17.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

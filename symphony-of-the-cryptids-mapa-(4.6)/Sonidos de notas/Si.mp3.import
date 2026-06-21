@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmvfpuo2bekoy"
+path="res://.godot/imported/Si.mp3-d5bfc38cc6145dfc748720ad42b60a02.mp3str"
+
+[deps]
+
+source_file="res://Sonidos de notas/Si.mp3"
+dest_files=["res://.godot/imported/Si.mp3-d5bfc38cc6145dfc748720ad42b60a02.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

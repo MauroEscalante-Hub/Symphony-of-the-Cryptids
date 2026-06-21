@@ -66,5 +66,6 @@ layout_mode = 2
 text = "(exploto la variable)"
 horizontal_alignment = 1
 
+[connection signal="button_down" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_button_down"]
 [connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]
 [connection signal="button_down" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_button_down"]

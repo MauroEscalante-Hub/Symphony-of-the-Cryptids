@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ca0pg0h5amrd5"
+path="res://.godot/imported/Mi.mp3-b179776fe8163176d43943cd1e276aed.mp3str"
+
+[deps]
+
+source_file="res://Sonidos de notas/Mi.mp3"
+dest_files=["res://.godot/imported/Mi.mp3-b179776fe8163176d43943cd1e276aed.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

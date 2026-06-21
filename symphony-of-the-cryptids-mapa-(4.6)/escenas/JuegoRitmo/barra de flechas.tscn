@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d12fbf8ow7o8p"]
+
+[ext_resource type="Texture2D" uid="uid://cvn08uttojhf5" path="res://escenas/JuegoRitmo/69 sin título_20260526200358.png" id="1_mvwfs"]
+[ext_resource type="Texture2D" uid="uid://p825cy4ti3wd" path="res://escenas/JuegoRitmo/70 sin título_20260526215100.png" id="2_0d2st"]
+[ext_resource type="Script" uid="uid://drkg1wx1di468" path="res://escenas/hit.gd" id="3_a3yoa"]
+[ext_resource type="PackedScene" uid="uid://bpar036p0nnqa" path="res://escenas/JuegoRitmo/Notas.tscn" id="4_0d2st"]
+
+[node name="Node2D" type="Node2D" unique_id=1366764804]
+
+[node name="Barra" type="Sprite2D" parent="." unique_id=1344198783]
+modulate = Color(0.9747159, 0.96984464, 0.995647, 1)
+position = Vector2(554, 368.99997)
+scale = Vector2(0.3398148, 0.39340276)
+texture = ExtResource("1_mvwfs")
+
+[node name="Hit" type="Sprite2D" parent="." unique_id=144479633]
+modulate = Color(0.8039216, 0.78431374, 0.6117647, 1)
+position = Vector2(436, 348)
+scale = Vector2(0.102314785, 0.1076389)
+texture = ExtResource("2_0d2st")
+script = ExtResource("3_a3yoa")
+Tocar = "F.Arriba"
+
+[node name="Node2D" parent="." unique_id=8474774 instance=ExtResource("4_0d2st")]
+modulate = Color(0, 0.7727801, 0.6796827, 1)
+position = Vector2(-128, -31)

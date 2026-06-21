@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dql48o4sck2mp"
+path="res://.godot/imported/Sol.mp3-ba570a6cb5eaab7ac2395297d699a28f.mp3str"
+
+[deps]
+
+source_file="res://Sonidos de notas/Sol.mp3"
+dest_files=["res://.godot/imported/Sol.mp3-ba570a6cb5eaab7ac2395297d699a28f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
