@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="3_qvt54"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_mlppi"]
-[ext_resource type="PackedScene" uid="uid://ds1pcnhv7ihm3" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
+[ext_resource type="PackedScene" uid="uid://c0bl2xkvpqchp" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
 [ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/Criptido.tscn" id="7_qx8ys"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
 
@@ -9471,7 +9471,7 @@ script = ExtResource("4_r2gqe")
 position = Vector2(317, 391)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
-position = Vector2(2586, 2645)
+position = Vector2(2548, 2662)
 
 [node name="Marker2D2" type="Marker2D" parent="." unique_id=1284382719]
 position = Vector2(3554, 2689)
