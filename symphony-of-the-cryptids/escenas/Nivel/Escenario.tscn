@@ -9500,7 +9500,7 @@ color = Color(0, 0, 0, 1)
 position = Vector2(758, 452.00006)
 
 [node name="CRIPTIDO" parent="." unique_id=1160623242 node_paths=PackedStringArray("PuntoaSeguir", "Unajaula", "MiJugador") instance=ExtResource("7_qx8ys")]
-position = Vector2(3118.0002, 2382)
+position = Vector2(3239.0002, 2261)
 PuntoaSeguir = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 Unajaula = NodePath("../JaulaDeCriptido")
 MiJugador = NodePath("../Personaje")
