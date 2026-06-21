@@ -17,5 +17,5 @@ func _on_salir_del_juego_button_down() -> void:
 
 
 func _on_siguiente_nivel_button_down() -> void:
-	get_tree().change_scene_to_file("res://escenas/nivel/Escenario.tscn")
+	get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/IntermedioMapa1.tscn")
 	pass # Replace with function body.
