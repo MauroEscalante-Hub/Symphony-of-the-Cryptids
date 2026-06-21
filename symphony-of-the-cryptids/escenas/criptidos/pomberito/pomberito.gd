@@ -1,5 +1,5 @@
 extends Criptido
-class_name  Lobizon
+class_name Pomberito
 
 @onready var TiempoDeDanio = $Timer
 

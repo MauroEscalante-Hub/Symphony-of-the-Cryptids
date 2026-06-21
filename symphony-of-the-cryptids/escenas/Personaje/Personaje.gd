@@ -1,5 +1,5 @@
-class_name Personaje
 extends CharacterBody2D
+class_name Personaje
 
 
 var Nota: Nota_Flauta
@@ -10,7 +10,6 @@ var InputFlechas = []
 var criptido_actual = null
 @export var Mivida: int = 200
 const MiVidaMaxíma: int = 200
-var Nombre: String = "Lucas"
 var ui_actual = null
 var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
@@ -86,9 +85,6 @@ func ReciboDanio(cantidaddeDanio: int):
 		GameOver()
 	
 
-func MiNombre():
-	return Nombre
-
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Criptido:
@@ -98,10 +94,10 @@ func _on_area_2d_area_entered(area):
 		var secuencia = criptido_actual.obtenerSecuencia()
 		print("Secuencia:", secuencia)
 		
-		if ui_actual == null:
-			ui_actual = UI_Encantamiento.instantiate()
-			add_child(ui_actual)
-			ui_actual.position = Vector2(-150,70)
+		#if ui_actual == null:
+			#ui_actual = UI_Encantamiento.instantiate()
+			#add_child(ui_actual)
+			#ui_actual.position = Vector2(-150,70)
 
 	pass # Replace with function body.
 
