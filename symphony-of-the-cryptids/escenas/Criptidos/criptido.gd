@@ -126,6 +126,9 @@ func siguiente_nota(nota):
 		#return false
 	pass
 
+func Ataque():
+	pass
+
 #func _on_area_2d_area_entered(area):
 	#var collider = area.get_parent()
 	#if collider is Personaje:
