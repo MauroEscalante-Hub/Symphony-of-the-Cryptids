@@ -20,34 +20,34 @@ var enjaulado: bool = false
 
 
 
-func _ready():
-	print("empieza")
-	
-	if PuntoaSeguir.size() > 0:
-		punto_actual = PuntoaSeguir.pick_random()
-	
+#func _ready():
+	#print("empieza")
+	#
+	#if PuntoaSeguir.size() > 0:
+		#punto_actual = PuntoaSeguir.pick_random()
+	#
 
-func _physics_process(_delta):
-	
-	if enjaulado == true:
-		Estado_enjaulado()
-		move_and_slide()
-		return
-	
-	if encantado:
-		Estado_encantado(_delta)
-		#Animacion.play()
-	
-	elif punto_actual != null:
-		#Animacion.play()
-		Punto_Objetivo()
-	
-	
-	else:
-		Estado_idle()
-		#Animacion.stop()
-	
-	move_and_slide()
+#func _physics_process(_delta):
+	#
+	#if enjaulado == true:
+		#Estado_enjaulado()
+		#move_and_slide()
+		#return
+	#
+	#if encantado:
+		#Estado_encantado(_delta)
+		##Animacion.play()
+	#
+	#elif punto_actual != null:
+		##Animacion.play()
+		#Punto_Objetivo()
+	#
+	#
+	#else:
+		#Estado_idle()
+		##Animacion.stop()
+	#
+	#move_and_slide()
 
 
 func Estado_encantado(_delta):
