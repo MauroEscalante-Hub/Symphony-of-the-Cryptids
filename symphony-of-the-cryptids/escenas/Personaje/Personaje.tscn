@@ -56,8 +56,6 @@ position = Vector2(472, 299)
 scale = Vector2(0.63175714, 0.5422116)
 script = ExtResource("1_e58e8")
 UI_Encantamiento = ExtResource("2_kseoc")
-Velocidad = null
-Mivida = null
 metadata/_edit_group_ = true
 
 [node name="SpriteJugador" type="AnimatedSprite2D" parent="." unique_id=339909752]

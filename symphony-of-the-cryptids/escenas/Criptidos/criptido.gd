@@ -36,89 +36,95 @@ var enjaulado: bool = false
 	#
 	#if encantado:
 		#Estado_encantado(_delta)
-		##Animacion.play()
+		#Animacion.play()
 	#
 	#elif punto_actual != null:
-		##Animacion.play()
+		#Animacion.play()
 		#Punto_Objetivo()
 	#
 	#
 	#else:
 		#Estado_idle()
-		##Animacion.stop()
+		#Animacion.stop()
 	#
 	#move_and_slide()
 
 
 func Estado_encantado(_delta):
-	TiempoEncantado -= _delta
-	
-	if MiJugador != null:
-		velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
-	
-	if TiempoEncantado <= 0:
-		encantado = false
+	#TiempoEncantado -= _delta
+	#
+	#if MiJugador != null:
+		#velocity = (MiJugador.global_position - global_position).normalized() * velocidad_encantado
+	#
+	#if TiempoEncantado <= 0:
+		#encantado = false
+		pass
 
 func Estado_idle():
-	velocity = Vector2.ZERO
+	#velocity = Vector2.ZERO
+	pass
 
 func Estado_enjaulado():
-	enjaulado = true
-	velocity = (Unajaula.global_position - global_position).normalized() * velocidad_encantado
-	
-	
-	if global_position.distance_to(Unajaula.Centro.global_position) < 10:
-		queue_free()
+	#enjaulado = true
+	#velocity = (Unajaula.global_position - global_position).normalized() * velocidad_encantado
+	#
+	#
+	#if global_position.distance_to(Unajaula.Centro.global_position) < 10:
+		#queue_free()
+	pass
 
 func Punto_Objetivo():
-	var direccion = (punto_actual.global_position - global_position).normalized()
-	
-	velocity = direccion * Velocidad
-	
-	if global_position.distance_to(punto_actual.global_position) < 10:
-		siguiente_punto()
-	
+	#var direccion = (punto_actual.global_position - global_position).normalized()
+	#
+	#velocity = direccion * Velocidad
+	#
+	#if global_position.distance_to(punto_actual.global_position) < 10:
+		#siguiente_punto()
+	pass
 
 func siguiente_punto():
-	
-	var nuevo_punto = punto_actual
-	
-	while nuevo_punto == punto_actual and PuntoaSeguir.size() > 1:
-		nuevo_punto = PuntoaSeguir.pick_random()
-	
-	punto_actual = nuevo_punto
-	print("Nuevo destino: ", punto_actual.name)
+	#
+	#var nuevo_punto = punto_actual
+	#
+	#while nuevo_punto == punto_actual and PuntoaSeguir.size() > 1:
+		#nuevo_punto = PuntoaSeguir.pick_random()
+	#
+	#punto_actual = nuevo_punto
+	#print("Nuevo destino: ", punto_actual.name)
+	pass
 
 func obtenerSecuencia():
 	return secuencia
 
 func fallar():
-	encantado = false
-	print("Se enojo el bicho")
-	TiempoEncantado = 0
-	
-	if jugador_actual != null:
-		jugador_actual.ReciboDanio(Danio_ataque)
+	#encantado = false
+	#print("Se enojo el bicho")
+	#TiempoEncantado = 0
+	#
+	#if jugador_actual != null:
+		#jugador_actual.ReciboDanio(Danio_ataque)
+	pass
 
 func siguiente_nota(nota):
-	print("Recibí: ", nota)
-	if nota == secuencia[indice]:
-		print("Bien")
-		indice += 1
-		
-		if indice >= secuencia.size():
-			print("SECUENCIA COMPLETA")
-			print("Criptido encantado")
-			
-			encantado = true
-			indice = 0
-			TiempoEncantado = TiempoMax
-		return true
-	else:
-		print("Mal")
-		fallar()
-		indice = 0
-		return false
+	#print("Recibí: ", nota)
+	#if nota == secuencia[indice]:
+		#print("Bien")
+		#indice += 1
+		#
+		#if indice >= secuencia.size():
+			#print("SECUENCIA COMPLETA")
+			#print("Criptido encantado")
+			#
+			#encantado = true
+			#indice = 0
+			#TiempoEncantado = TiempoMax
+		#return true
+	#else:
+		#print("Mal")
+		#fallar()
+		#indice = 0
+		#return false
+	pass
 
 #func _on_area_2d_area_entered(area):
 	#var collider = area.get_parent()

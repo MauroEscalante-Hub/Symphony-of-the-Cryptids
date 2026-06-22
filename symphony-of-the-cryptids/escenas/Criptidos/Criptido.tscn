@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bjd8xs5mgju80"]
+[gd_scene format=3 uid="uid://bxm4yg3ijpsr"]
 
 [ext_resource type="Script" uid="uid://cldthc0bl7thp" path="res://escenas/criptidos/criptido.gd" id="1_ekxa8"]
 [ext_resource type="Texture2D" uid="uid://bacg2fdd2gxkf" path="res://escenas/criptidos/sprites_pompero/4.png" id="2_18qhi"]
