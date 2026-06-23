@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cldthc0bl7thp" path="res://escenas/criptidos/criptido.gd" id="1_ekxa8"]
 [ext_resource type="Texture2D" uid="uid://bacg2fdd2gxkf" path="res://escenas/criptidos/sprites_pompero/4.png" id="2_18qhi"]
+[ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="2_h4uxi"]
 [ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/sprites_pompero/1.png" id="3_lx1gf"]
 [ext_resource type="Texture2D" uid="uid://da6alxskit6qm" path="res://escenas/criptidos/sprites_pompero/3.png" id="4_yfqln"]
 [ext_resource type="Texture2D" uid="uid://dpaihkowfyw40" path="res://escenas/criptidos/sprites_pompero/2.png" id="5_5u6kj"]
@@ -32,9 +33,7 @@ animations = [{
 position = Vector2(569, 343)
 scale = Vector2(0.26525608, 0.25343025)
 script = ExtResource("1_ekxa8")
-Velocidad = 150
-Danio_ataque = 25
-TiempoMax = 3.0
+nota_encantada = ExtResource("2_h4uxi")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531417868]

@@ -18,6 +18,7 @@ var EstasVivo: bool = true
 @onready var Audio_Mi = $Audio_Mi
 @onready var Audio_Si = $Audio_Si
 @onready var Audio_Sol = $Audio_Sol
+signal  entre 
 
 func _onready():
 	Mivida = MiVidaMaxíma
@@ -34,9 +35,6 @@ func _physics_process(_delta):
 		Animacion.flip_h = false
 	DetectarInput()
 	
-	#if Mivida <= 0:
-	#GameOver()
-	#Esto ya no sirve
 	
 	if Direccion:
 		velocity = Direccion * Velocidad
@@ -72,11 +70,10 @@ func DetectarInput():
 func enviar_input(nota):
 	if criptido_actual != null:
 		
-		var notaDflecha = criptido_actual.siguiente_nota(nota) 
-	
+		var correcta = criptido_actual.siguiente_nota(nota) 
 		if ui_actual != null:
-			ui_actual.mostrar_nota(nota, notaDflecha)
-	
+			ui_actual.mostrar_nota(nota, correcta)
+		criptido_actual.mostrar_nota(nota, correcta)
 
 func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio
@@ -90,10 +87,8 @@ func _on_area_2d_area_entered(area):
 	if collider is Criptido:
 		criptido_actual = collider
 		print("Entraste en rango de un Criptido", criptido_actual)
-
-		var secuencia = criptido_actual.obtenerSecuencia()
-		print("Secuencia:", secuencia)
 		
+		criptido_actual.obtenerSecuencia()
 		#if ui_actual == null:
 			#ui_actual = UI_Encantamiento.instantiate()
 			#add_child(ui_actual)
