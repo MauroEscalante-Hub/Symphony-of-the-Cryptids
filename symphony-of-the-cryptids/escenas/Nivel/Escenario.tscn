@@ -9523,3 +9523,10 @@ la_jaula = NodePath("../JaulaDeCriptido")
 velocidad = 100
 danio_de_ataque = 25
 nota_encantada = ExtResource("9_1obfr")
+
+[node name="Pomberito2" parent="." unique_id=1987907439 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_j7mmo")]
+position = Vector2(3359, 2497)
+jugador = NodePath("../Personaje")
+punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+la_jaula = NodePath("../JaulaDeCriptido")
+nota_encantada = ExtResource("9_1obfr")

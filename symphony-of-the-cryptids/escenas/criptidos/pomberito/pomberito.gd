@@ -42,8 +42,6 @@ func recibir_danio(cantidad: int):
 	return miVida
 	
 
-func aturdido():
-	pass
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()

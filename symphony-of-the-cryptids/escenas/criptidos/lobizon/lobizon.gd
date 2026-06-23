@@ -3,16 +3,16 @@ class_name  Lobizon
 
 
 @onready var TiempoDeDanio = $Timer
-var embistiendo = false
-var direccion_embestida = Vector2.ZERO
-var velocidad_embestida = 150
-var duracion_embestida = 0.5
+var me_empache = false
+var cantidad_maxima_de_pomberitos = 0
+var velocidad_original: int
 
 var _pomberito_actual = null
 var comida: bool = false
 
 func _ready():
 	print("empieza")
+	velocidad_original = velocidad
 	
 	if punto_inicial.size() > 0:
 		punto_actual = punto_inicial.pick_random()
@@ -24,6 +24,12 @@ func _physics_process(delta):
 		move_and_slide()
 		return
 	
+	if me_empache == true:
+		print("estoy empachado")
+		estado_empachado()
+		move_and_slide()
+		return
+	
 	if encantado:
 		print("ESTOY ENCANTADO")
 		Estado_encantado(delta)
@@ -32,6 +38,9 @@ func _physics_process(delta):
 	
 	if _pomberito_actual != null:
 		perseguirEnemigo()
+		move_and_slide()
+		return
+	
 	
 	else:
 		Punto_Objetivo()
@@ -53,6 +62,30 @@ func Aullar():
 	if jugador_actual != null:
 		jugador_actual.recibir_aullido()
 	
+
+func estado_empachado():
+	cantidad_maxima_de_pomberitos += 1
+	print("Comidos:", cantidad_maxima_de_pomberitos)
+	
+	if cantidad_maxima_de_pomberitos >= 2:
+		print("ME EMPACHÉ")
+		empachado()
+
+func empachado():
+	if me_empache:
+		return
+	
+	me_empache = true
+	velocidad = velocidad_original / 2
+	print("velocidad ahora: ",velocidad)
+	_pomberito_actual = null
+	
+	await get_tree().create_timer(5.0).timeout
+	
+	velocidad = velocidad_original
+	print("velocidad despues: ", velocidad)
+	cantidad_maxima_de_pomberitos = 0
+	me_empache = false
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
@@ -92,7 +125,9 @@ func _on_areade_danio_body_exited(body):
 
 func _on_timer_timeout():
 	if _pomberito_actual != null:
-		print("[Lobizon] El pombetiro que voy a comer ", _pomberito_actual)
-		_pomberito_actual.recibir_danio(danio_de_ataque)
+		var vida_del_enano = _pomberito_actual.recibir_danio(danio_de_ataque)
+		if vida_del_enano <= 0:
+			estado_empachado()
+			_pomberito_actual = null
 	elif jugador_actual != null and encantado == false:
 		jugador_actual.ReciboDanio(danio_de_ataque)
