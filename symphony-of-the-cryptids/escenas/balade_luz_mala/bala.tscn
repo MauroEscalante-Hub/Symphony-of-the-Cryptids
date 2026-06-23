@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cy7kum00rwwdd"]
+
+[ext_resource type="Script" uid="uid://ymp2vxbbachs" path="res://escenas/balade_luz_mala/bala.gd" id="1_3u23b"]
+[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_xiq0l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3u23b"]
+
+[node name="bala" type="Area2D" unique_id=1216911117]
+script = ExtResource("1_3u23b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=657356802]
+modulate = Color(1, 1, 0.21960784, 1)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("1_xiq0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069761487]
+shape = SubResource("CircleShape2D_3u23b")
