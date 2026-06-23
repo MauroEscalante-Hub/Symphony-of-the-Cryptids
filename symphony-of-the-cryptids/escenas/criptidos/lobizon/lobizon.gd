@@ -24,18 +24,17 @@ func _physics_process(delta):
 		move_and_slide()
 		return
 	
-	if me_empache == true:
-		print("estoy empachado")
-		estado_empachado()
-		move_and_slide()
-		return
-	
 	if encantado:
 		print("ESTOY ENCANTADO")
 		Estado_encantado(delta)
 		move_and_slide()
 		return
 	
+	if me_empache == true:
+		print("estoy empachado")
+		estado_empachado()
+		move_and_slide()
+		return
 	if _pomberito_actual != null:
 		perseguirEnemigo()
 		move_and_slide()
@@ -67,7 +66,7 @@ func estado_empachado():
 	cantidad_maxima_de_pomberitos += 1
 	print("Comidos:", cantidad_maxima_de_pomberitos)
 	
-	if cantidad_maxima_de_pomberitos >= 2:
+	if cantidad_maxima_de_pomberitos >= 1:
 		print("ME EMPACHÉ")
 		empachado()
 

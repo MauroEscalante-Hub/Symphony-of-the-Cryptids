@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_48aib")
 [node name="Area2D" type="Area2D" parent="." unique_id=392176480]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1616666716]
-scale = Vector2(19.019438, 21.305544)
+scale = Vector2(12, 13.443)
 shape = SubResource("CircleShape2D_wwt2b")
 debug_color = Color(0.6358332, 0.52458125, 0.14823806, 0.41960785)
 metadata/_edit_group_ = true
