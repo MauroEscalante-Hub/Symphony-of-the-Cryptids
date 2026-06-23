@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://bjd8xs5mgju80"]
+[gd_scene format=3 uid="uid://bxm4yg3ijpsr"]
 
 [ext_resource type="Script" uid="uid://cldthc0bl7thp" path="res://escenas/criptidos/criptido.gd" id="1_ekxa8"]
 [ext_resource type="Texture2D" uid="uid://bacg2fdd2gxkf" path="res://escenas/criptidos/sprites_pompero/4.png" id="2_18qhi"]
+[ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="2_h4uxi"]
 [ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/sprites_pompero/1.png" id="3_lx1gf"]
 [ext_resource type="Texture2D" uid="uid://da6alxskit6qm" path="res://escenas/criptidos/sprites_pompero/3.png" id="4_yfqln"]
 [ext_resource type="Texture2D" uid="uid://dpaihkowfyw40" path="res://escenas/criptidos/sprites_pompero/2.png" id="5_5u6kj"]
@@ -28,18 +29,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ux1ov"]
-radius = 12.384556
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_kfdnn"]
-
 [node name="CRIPTIDO" type="CharacterBody2D" unique_id=1160623242]
 position = Vector2(569, 343)
 scale = Vector2(0.26525608, 0.25343025)
 script = ExtResource("1_ekxa8")
-Velocidad = 150
-Danio_ataque = 25
-TiempoMax = 3.0
+nota_encantada = ExtResource("2_h4uxi")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=531417868]
@@ -51,24 +45,3 @@ position = Vector2(75.398895, -102.592316)
 scale = Vector2(0.5105541, 0.43626642)
 sprite_frames = SubResource("SpriteFrames_jvfw2")
 frame_progress = 0.7888279
-
-[node name="Area2D" type="Area2D" parent="." unique_id=790171551]
-scale = Vector2(3, 3)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=278348221]
-scale = Vector2(35.533875, 38.219234)
-shape = SubResource("CircleShape2D_ux1ov")
-
-[node name="AreadeDanio" type="Area2D" parent="." unique_id=140348214]
-scale = Vector2(50.97, 50.97)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreadeDanio" unique_id=24802215]
-shape = SubResource("CircleShape2D_kfdnn")
-
-[node name="DanioTimer" type="Timer" parent="." unique_id=272148185]
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
-[connection signal="body_entered" from="AreadeDanio" to="." method="_on_areade_danio_body_entered"]
-[connection signal="body_exited" from="AreadeDanio" to="." method="_on_areade_danio_body_exited"]
-[connection signal="timeout" from="DanioTimer" to="." method="_on_danio_timer_timeout"]

@@ -2,22 +2,25 @@ extends CharacterBody2D
 class_name Personaje
 
 
-var Nota: Nota_Flauta
+
 @export var UI_Encantamiento: PackedScene
 @export var Velocidad: int = 250
-var Direccion
-var InputFlechas = []
-var criptido_actual = null
 @export var Mivida: int = 200
-const MiVidaMaxíma: int = 200
-var ui_actual = null
-var EstasVivo: bool = true
 @onready var Barra_de_Salud = $CanvasLayer/BarraDeSalud
 @onready var Animacion = $SpriteJugador
 @onready var Audio_Do = $Audio_Do
 @onready var Audio_Mi = $Audio_Mi
 @onready var Audio_Si = $Audio_Si
 @onready var Audio_Sol = $Audio_Sol
+var Nota: Nota_Flauta
+var Direccion
+var InputFlechas = []
+var criptido_actual = null
+const MiVidaMaxíma: int = 200
+var ui_actual = null
+var EstasVivo: bool = true
+var puede_moverse: bool = true
+signal  entre 
 
 func _onready():
 	Mivida = MiVidaMaxíma
@@ -27,6 +30,12 @@ func _onready():
 func _physics_process(_delta):
 	Barra_de_Salud.value = Mivida
 	
+	if not puede_moverse:
+		velocity = Vector2.ZERO
+		Animacion.stop()
+		move_and_slide()
+		return
+	
 	var Direccion = Input.get_vector("Izquierda", "Derecha", "Arriba", "Abajo")
 	if Input.is_action_just_pressed("Derecha"):
 		Animacion.flip_h = true
@@ -34,9 +43,6 @@ func _physics_process(_delta):
 		Animacion.flip_h = false
 	DetectarInput()
 	
-	#if Mivida <= 0:
-	#GameOver()
-	#Esto ya no sirve
 	
 	if Direccion:
 		velocity = Direccion * Velocidad
@@ -72,11 +78,10 @@ func DetectarInput():
 func enviar_input(nota):
 	if criptido_actual != null:
 		
-		var notaDflecha = criptido_actual.siguiente_nota(nota) 
-	
+		var correcta = criptido_actual.siguiente_nota(nota) 
 		if ui_actual != null:
-			ui_actual.mostrar_nota(nota, notaDflecha)
-	
+			ui_actual.mostrar_nota(nota, correcta)
+		criptido_actual.mostrar_nota(nota, correcta)
 
 func ReciboDanio(cantidaddeDanio: int):
 	Mivida -= cantidaddeDanio
@@ -85,21 +90,26 @@ func ReciboDanio(cantidaddeDanio: int):
 		GameOver()
 	
 
+func recibir_aullido():
+	puede_moverse = false
+	print("Estoy asustado por el aullido")
+	await get_tree().create_timer(1.0).timeout
+	puede_moverse = true
+	
+
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
 	if collider is Criptido:
 		criptido_actual = collider
 		print("Entraste en rango de un Criptido", criptido_actual)
-
-		var secuencia = criptido_actual.obtenerSecuencia()
-		print("Secuencia:", secuencia)
 		
+		criptido_actual.obtenerSecuencia()
 		#if ui_actual == null:
 			#ui_actual = UI_Encantamiento.instantiate()
 			#add_child(ui_actual)
 			#ui_actual.position = Vector2(-150,70)
+	
 
-	pass # Replace with function body.
 
 
 func _on_area_2d_area_exited(area):
@@ -110,4 +120,4 @@ func _on_area_2d_area_exited(area):
 			ui_actual.queue_free()
 			ui_actual = null
 		
-	pass # Replace with function body.
+	

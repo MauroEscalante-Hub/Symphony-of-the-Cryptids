@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b5i2ngmbepn82"]
+
+[ext_resource type="Script" uid="uid://b5pmmurpyun62" path="res://escenas/criptidos/luz_mala/luz_mala.gd" id="1_1gl1v"]
+[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_gdo36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gl1v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o02at"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cbf5i"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=264062293]
+script = ExtResource("1_1gl1v")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=435241146]
+modulate = Color(0.8480453, 0.82811993, 0.74742204, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_gdo36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1853714090]
+scale = Vector2(1.875, 1.875)
+shape = SubResource("RectangleShape2D_1gl1v")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=969158092]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=135286807]
+scale = Vector2(7.5, 7.5)
+shape = SubResource("CircleShape2D_o02at")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=945838527]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1855347450]
+scale = Vector2(5.5, 5.5)
+shape = SubResource("CircleShape2D_cbf5i")

@@ -23,14 +23,14 @@ texture = ExtResource("2_i3dbj")
 scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=37061862]
-scale = Vector2(4.959, 5)
+scale = Vector2(5.38, 5.424)
 shape = SubResource("CircleShape2D_neqd0")
 
 [node name="areade_danio" type="Area2D" parent="." unique_id=712391479]
 scale = Vector2(5, 5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areade_danio" unique_id=228504424]
-scale = Vector2(4.129956, 3.9123955)
+scale = Vector2(5, 4.737)
 shape = SubResource("CircleShape2D_i4pja")
 
 [node name="Timer" type="Timer" parent="." unique_id=773719847]
