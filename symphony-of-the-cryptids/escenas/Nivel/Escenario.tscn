@@ -6,10 +6,9 @@
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_mlppi"]
 [ext_resource type="PackedScene" uid="uid://c0pfi2mbgas6j" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
+[ext_resource type="PackedScene" uid="uid://b5i2ngmbepn82" path="res://escenas/criptidos/luz_mala/luz_mala.tscn" id="8_1obfr"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
-[ext_resource type="PackedScene" uid="uid://xx310i4yqu2k" path="res://escenas/criptidos/pomberito/pomberito.tscn" id="8_j7mmo"]
 [ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="9_1obfr"]
-[ext_resource type="PackedScene" uid="uid://de835v6tldx7r" path="res://escenas/criptidos/lobizon/lobizon.tscn" id="10_qvt54"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
 texture = ExtResource("1_j7mmo")
@@ -9499,7 +9498,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("6_bw1yj")]
-position = Vector2(3072, 2073)
+position = Vector2(1420, 2289)
 
 [node name="Control" parent="." unique_id=1172207762 instance=ExtResource("8_2yff0")]
 offset_left = -346.0
@@ -9507,25 +9506,8 @@ offset_top = -246.0
 offset_right = -265.0
 offset_bottom = -185.0
 
-[node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_j7mmo")]
-position = Vector2(3087, 2365)
-jugador = NodePath("../Personaje")
-punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
-la_jaula = NodePath("../JaulaDeCriptido")
-danio_de_ataque = 10
-nota_encantada = ExtResource("9_1obfr")
-
-[node name="lobizon" parent="." unique_id=1473864662 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("10_qvt54")]
-position = Vector2(2536, 2365)
-jugador = NodePath("../Personaje")
-punto_inicial = [NodePath("../Marker2D3"), NodePath("../Marker2D4"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
-la_jaula = NodePath("../JaulaDeCriptido")
-velocidad = 100
-danio_de_ataque = 25
-nota_encantada = ExtResource("9_1obfr")
-
-[node name="Pomberito2" parent="." unique_id=1987907439 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_j7mmo")]
-position = Vector2(3359, 2497)
+[node name="luz_mala" parent="." unique_id=264062293 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
+position = Vector2(3053, 2362)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
