@@ -26,8 +26,8 @@ var ui_actual = null
 func Estado_Idle():
 	pass
 
-func Estado_encantado(_delta):
-	TiempoEncantado -= _delta  
+func Estado_encantado(delta):
+	TiempoEncantado -= delta  
 	
 	if jugador != null:
 		velocity = (jugador.global_position - global_position).normalized() * velocidad_encantado

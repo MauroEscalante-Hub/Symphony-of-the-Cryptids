@@ -18,26 +18,23 @@ func _ready():
 		punto_actual = punto_inicial.pick_random()
 	
 
-func _physics_process(_delta):
-	if enjaulado == true:
+func _physics_process(delta):
+	if enjaulado:
 		Estado_enjaulado()
 		move_and_slide()
 		return
 	
 	if encantado:
-		Estado_encantado(_delta)
-		#Animacion.play()
-	
+		print("ESTOY ENCANTADO")
+		Estado_encantado(delta)
+		move_and_slide()
+		return
 	
 	if _pomberito_actual != null:
-		#Animacion.play()
 		perseguirEnemigo()
-	
-	
 	
 	else:
 		Punto_Objetivo()
-		#Animacion.stop()
 	
 	move_and_slide()
 
@@ -48,13 +45,13 @@ func perseguirEnemigo():
 		velocity = nuevadireccion * velocidad
 	
 
-func embestir():
-	print("Emvistiendo")
+func Aullar():
+	if jugador_actual == null:
+		return
 	
-	var dir = (jugador_actual.position - global_position).normalized()
-	if embistiendo == true:
-		velocity = dir * velocidad_embestida
-	
+	print("AUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
+	if jugador_actual != null:
+		jugador_actual.recibir_aullido()
 	
 
 func _on_area_2d_area_entered(area):
@@ -77,8 +74,7 @@ func _on_areade_danio_body_entered(body):
 	if body == jugador:
 		jugador_actual = body
 		TiempoDeDanio.start()
-		embistiendo = true
-		embestir()
+		Aullar()
 		
 	elif body is Pomberito:
 		_pomberito_actual = body
