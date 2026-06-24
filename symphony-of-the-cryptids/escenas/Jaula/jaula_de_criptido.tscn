@@ -44,8 +44,6 @@ _data = {
 
 [node name="JaulaDeCriptido" type="Area2D" unique_id=172644181]
 script = ExtResource("1_ecrkp")
-Criptidos_Enjaulados = null
-Cantidad_De_Criptidos = null
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=831537774]
 libraries/ = SubResource("AnimationLibrary_aq0d2")

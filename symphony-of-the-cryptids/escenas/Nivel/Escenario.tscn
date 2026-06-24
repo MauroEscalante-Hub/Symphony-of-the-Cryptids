@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cjb5fgyp4o76t"]
+[gd_scene format=3 uid="uid://dtodks6ndekno"]
 
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_j7mmo"]
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_1obfr"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_mlppi"]
 [ext_resource type="PackedScene" uid="uid://c0pfi2mbgas6j" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
-[ext_resource type="PackedScene" uid="uid://b5i2ngmbepn82" path="res://escenas/criptidos/luz_mala/luz_mala.tscn" id="8_1obfr"]
+[ext_resource type="PackedScene" uid="uid://xx310i4yqu2k" path="res://escenas/criptidos/pomberito/pomberito.tscn" id="8_1obfr"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
 [ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="9_1obfr"]
 
@@ -9470,18 +9470,24 @@ script = ExtResource("4_r2gqe")
 
 [node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("5_mlppi")]
 position = Vector2(317, 391)
+Criptidos_Enjaulados = 0
+Cantidad_De_Criptidos = 3
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
-position = Vector2(2548, 2662)
+position = Vector2(193.9764, 1376.6104)
+scale = Vector2(0.7976381, 0.86104316)
 
 [node name="Marker2D2" type="Marker2D" parent="." unique_id=1284382719]
-position = Vector2(3554, 2689)
+position = Vector2(954.97644, 1389.6104)
+scale = Vector2(0.7976381, 0.86104316)
 
 [node name="Marker2D3" type="Marker2D" parent="." unique_id=1572213960]
-position = Vector2(3559, 2090)
+position = Vector2(959.97644, 790.6104)
+scale = Vector2(0.7976381, 0.86104316)
 
 [node name="Marker2D4" type="Marker2D" parent="." unique_id=902001722]
-position = Vector2(2552, 2046)
+position = Vector2(197.9764, 760.6104)
+scale = Vector2(0.7976381, 0.86104316)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=472060904]
 
@@ -9498,7 +9504,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("6_bw1yj")]
-position = Vector2(1420, 2289)
+position = Vector2(565, 446)
 
 [node name="Control" parent="." unique_id=1172207762 instance=ExtResource("8_2yff0")]
 offset_left = -346.0
@@ -9506,11 +9512,23 @@ offset_top = -246.0
 offset_right = -265.0
 offset_bottom = -185.0
 
-[node name="luz_mala" parent="." unique_id=264062293 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
-position = Vector2(3053, 2362)
+[node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
+position = Vector2(584, 1112)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
-velocidad = 80
-danio_de_ataque = 10
+nota_encantada = ExtResource("9_1obfr")
+
+[node name="Pomberito2" parent="." unique_id=1946722917 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
+position = Vector2(584, 1112)
+jugador = NodePath("../Personaje")
+punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+la_jaula = NodePath("../JaulaDeCriptido")
+nota_encantada = ExtResource("9_1obfr")
+
+[node name="Pomberito3" parent="." unique_id=141070746 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
+position = Vector2(584, 1112)
+jugador = NodePath("../Personaje")
+punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+la_jaula = NodePath("../JaulaDeCriptido")
 nota_encantada = ExtResource("9_1obfr")

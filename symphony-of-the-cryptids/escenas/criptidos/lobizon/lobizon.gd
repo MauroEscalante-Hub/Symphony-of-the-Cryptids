@@ -6,7 +6,7 @@ class_name  Lobizon
 var me_empache = false
 var cantidad_maxima_de_pomberitos = 0
 var velocidad_original: int
-
+var valorEspecial: int = 300
 var _pomberito_actual = null
 var comida: bool = false
 
@@ -85,6 +85,9 @@ func empachado():
 	print("velocidad despues: ", velocidad)
 	cantidad_maxima_de_pomberitos = 0
 	me_empache = false
+
+func obtener_valor():
+	return valorEspecial
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()

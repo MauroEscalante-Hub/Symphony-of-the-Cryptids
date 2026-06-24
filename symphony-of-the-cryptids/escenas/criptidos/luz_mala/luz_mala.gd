@@ -5,6 +5,7 @@ class_name LuzMala
 @onready var tiempodedanio = $Timer
 var esperar_punto: bool = false
 var tweens: Tween
+var valorEspecial: int = 450
 
 func _ready():
 	print("empieza")
@@ -77,6 +78,9 @@ func iniciar_flotacion():
 	tweens.set_loops()
 	tweens.tween_property(self, "position:y", position.y - 10, 1.5)
 	tweens.tween_property(self, "position:y", position.y + 10, 1.5)
+
+func obtener_valor():
+	return valorEspecial
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()

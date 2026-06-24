@@ -3,7 +3,7 @@ class_name Pomberito
 
 @onready var TiempoDeDanio = $Timer
 var miVida: int = 100
-
+var valorEspecial: int = 100
 func _ready():
 	print("empieza")
 	
@@ -42,6 +42,9 @@ func recibir_danio(cantidad: int):
 	return miVida
 	
 
+
+func obtener_valor():
+	return valorEspecial
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
