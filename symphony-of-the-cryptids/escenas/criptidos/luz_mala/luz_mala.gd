@@ -4,6 +4,7 @@ class_name LuzMala
 @export var unabala: PackedScene
 @onready var tiempodedanio = $Timer
 var esperar_punto: bool = false
+var tweens: Tween
 
 func _ready():
 	print("empieza")
@@ -34,6 +35,7 @@ func Punto_Objetivo():
 		velocity = Vector2.ZERO
 		return
 	
+	iniciar_flotacion()
 	var direccion = (punto_actual.global_position - global_position).normalized()
 	
 	velocity = direccion * velocidad
@@ -44,7 +46,7 @@ func Punto_Objetivo():
 		esperar_punto = true
 		velocity = Vector2.ZERO
 		
-		await get_tree().create_timer(5.0).timeout  
+		await get_tree().create_timer(5.5).timeout  
 		
 		var nuevo_punto = punto_actual
 		
@@ -54,7 +56,7 @@ func Punto_Objetivo():
 		punto_actual = nuevo_punto
 		print("Nuevo destino: ", punto_actual.name)
 	
-	esperar_punto = false
+		esperar_punto = false
 
 func disparar():
 	if jugador == null:
@@ -67,6 +69,14 @@ func disparar():
 	
 	get_tree().current_scene.add_child(nueva_bala)
 
+func iniciar_flotacion():
+	if tweens:
+		tweens.kill()
+	
+	tweens = create_tween()
+	tweens.set_loops()
+	tweens.tween_property(self, "position:y", position.y - 10, 1.5)
+	tweens.tween_property(self, "position:y", position.y + 10, 1.5)
 
 func _on_area_2d_area_entered(area):
 	var collider = area.get_parent()
@@ -98,4 +108,6 @@ func _on_areade_danio_body_exited(body):
 
 
 func _on_timer_timeout():
-	disparar()
+	if jugador_actual != null:
+		disparar()
+	

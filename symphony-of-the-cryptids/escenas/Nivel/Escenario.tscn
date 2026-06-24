@@ -9511,5 +9511,6 @@ position = Vector2(3053, 2362)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
+velocidad = 80
 danio_de_ataque = 10
 nota_encantada = ExtResource("9_1obfr")
