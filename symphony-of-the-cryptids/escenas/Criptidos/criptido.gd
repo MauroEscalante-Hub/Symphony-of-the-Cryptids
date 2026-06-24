@@ -34,9 +34,12 @@ func Estado_encantado(delta):
 	
 	if TiempoEncantado <= 0:
 		encantado = false
-		pass
+	
 
+
+func obtener_valor():
 	pass
+
 
 func Estado_enjaulado():
 	enjaulado = true 
