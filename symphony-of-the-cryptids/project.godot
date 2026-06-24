@@ -15,6 +15,10 @@ run/main_scene="uid://dfdfr4ybwo5cn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DineroDejaula="*uid://dsb33p84uknhx"
+
 [input]
 
 Arriba={
