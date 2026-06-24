@@ -3,7 +3,7 @@ class_name LuzMala
 
 @export var unabala: PackedScene
 @onready var tiempodedanio = $Timer
-
+var esperar_punto: bool = false
 
 func _ready():
 	print("empieza")
@@ -29,6 +29,32 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func Punto_Objetivo():
+	if esperar_punto:
+		velocity = Vector2.ZERO
+		return
+	
+	var direccion = (punto_actual.global_position - global_position).normalized()
+	
+	velocity = direccion * velocidad
+	
+	if global_position.distance_to(punto_actual.global_position) < 10:
+		print("puntocerca")
+		
+		esperar_punto = true
+		velocity = Vector2.ZERO
+		
+		await get_tree().create_timer(5.0).timeout  
+		
+		var nuevo_punto = punto_actual
+		
+		while nuevo_punto == punto_actual and punto_inicial.size() > 1:
+			nuevo_punto = punto_inicial.pick_random()
+		
+		punto_actual = nuevo_punto
+		print("Nuevo destino: ", punto_actual.name)
+	
+	esperar_punto = false
 
 func disparar():
 	if jugador == null:
