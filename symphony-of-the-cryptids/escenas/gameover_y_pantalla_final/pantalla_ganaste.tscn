@@ -29,7 +29,7 @@ size_flags_horizontal = 4
 
 [node name="Siguiente_Nivel" type="Button" parent="VBoxContainer" unique_id=1437304382]
 layout_mode = 2
-text = "Siguiente nivel (Proximamente <3 )"
+text = "Siguiente nivel"
 
 [node name="Volver_Al_Menu" type="Button" parent="VBoxContainer" unique_id=549319594]
 layout_mode = 2
@@ -37,7 +37,7 @@ text = "Volver al menu"
 
 [node name="Salir_Del_Juego" type="Button" parent="VBoxContainer" unique_id=1144426760]
 layout_mode = 2
-text = "Salir dle juego"
+text = "Salir del juego"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1153677530]
 anchors_preset = 5
@@ -63,7 +63,7 @@ horizontal_alignment = 1
 
 [node name="Puntuacion" type="Label" parent="VBoxContainer2" unique_id=332161544]
 layout_mode = 2
-text = "(exploto la variable)"
+text = "0"
 horizontal_alignment = 1
 
 [connection signal="button_down" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_button_down"]

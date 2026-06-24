@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="4_amqhr"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_hxfwh"]
 [ext_resource type="Script" uid="uid://tlmkxnt8ppek" path="res://escenas/nivel/escenario_tutorial.gd" id="5_iw528"]
-[ext_resource type="PackedScene" uid="uid://ds1pcnhv7ihm3" path="res://escenas/personaje/Personaje.tscn" id="7_amqhr"]
+[ext_resource type="PackedScene" uid="uid://c0bl2xkvpqchp" path="res://escenas/personaje/Personaje.tscn" id="7_amqhr"]
+[ext_resource type="AudioStream" uid="uid://h1tcdg702kiw" path="res://efectos_sonido_musica/Ambiente.mp3" id="8_5oa6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5oa6d"]
 texture = ExtResource("1_quncv")
@@ -9109,4 +9110,10 @@ color = Color(0, 0, 0, 1)
 position = Vector2(578, 742)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("7_amqhr")]
-position = Vector2(954, 732)
+position = Vector2(798.99994, 718)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=8024645]
+stream = ExtResource("8_5oa6d")
+volume_db = -3.0
+autoplay = true
+parameters/looping = false

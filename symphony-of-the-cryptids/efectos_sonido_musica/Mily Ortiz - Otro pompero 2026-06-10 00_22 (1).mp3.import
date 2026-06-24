@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dd314bvirktei"
+path="res://.godot/imported/Mily Ortiz - Otro pompero 2026-06-10 00_22 (1).mp3-03c3b1ff654d83a5167625b96bc178d8.mp3str"
+
+[deps]
+
+source_file="res://efectos_sonido_musica/Mily Ortiz - Otro pompero 2026-06-10 00_22 (1).mp3"
+dest_files=["res://.godot/imported/Mily Ortiz - Otro pompero 2026-06-10 00_22 (1).mp3-03c3b1ff654d83a5167625b96bc178d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

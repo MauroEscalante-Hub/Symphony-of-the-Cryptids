@@ -8,3 +8,7 @@ func _ready() -> void:
 	await Animation_Player.animation_finished
 	get_tree().change_scene_to_file("res://escenas/nivel/Escenario.tscn")
 	pass # Replace with function body.
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("SaltarMapa"):
+		get_tree().change_scene_to_file("res://escenas/nivel/Escenario.tscn")

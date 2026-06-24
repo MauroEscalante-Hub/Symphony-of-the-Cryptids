@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://ck6pwgmbfd8d1"]
+
+[ext_resource type="Script" uid="uid://bngec3m8wuhs" path="res://escenas/gameover_y_pantalla_final/pantalla_ganaste_final.gd" id="1_rtqe3"]
+
+[node name="PantallaGanasteFinal" type="CanvasLayer" unique_id=1229094306]
+script = ExtResource("1_rtqe3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=128846027]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=149971638]
+offset_left = 490.0
+offset_top = 319.0
+offset_right = 667.0
+offset_bottom = 385.0
+size_flags_horizontal = 4
+
+[node name="Volver_Al_Menu" type="Button" parent="VBoxContainer" unique_id=1107854687]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Volver al menu"
+
+[node name="Salir_Del_Juego" type="Button" parent="VBoxContainer" unique_id=668494917]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Salir"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1073204885]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.0
+offset_top = 62.0
+offset_right = 149.0
+offset_bottom = 144.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=999407833]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "  Buen Trabajo"
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=1227804953]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "El cliente ha quedado 
+satisfecho, vuelve la 
+próxima semana."
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer2" unique_id=1862630721]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Gracias por jugar
+Symphony of the Cryptids"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]
+[connection signal="button_down" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_button_down"]

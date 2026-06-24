@@ -104,7 +104,6 @@ func _on_area_2d_area_exited(area):
 		print(jugador_actual)
 		
 
-
 func _on_areade_danio_body_entered(body):
 	if body == jugador:
 		jugador_actual = body
