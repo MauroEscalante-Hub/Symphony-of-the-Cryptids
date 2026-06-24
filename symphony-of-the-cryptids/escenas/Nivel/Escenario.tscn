@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://duidcxn7gj66m"]
+[gd_scene format=3 uid="uid://cjb5fgyp4o76t"]
 
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="1_j7mmo"]
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_1obfr"]
@@ -9511,4 +9511,5 @@ position = Vector2(3053, 2362)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
+danio_de_ataque = 10
 nota_encantada = ExtResource("9_1obfr")

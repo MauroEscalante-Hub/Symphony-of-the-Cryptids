@@ -72,5 +72,4 @@ func _on_areade_danio_body_exited(body):
 
 
 func _on_timer_timeout():
-	if jugador_actual != null and encantado == false:
-		jugador_actual.ReciboDanio(danio_de_ataque)
+	disparar()
