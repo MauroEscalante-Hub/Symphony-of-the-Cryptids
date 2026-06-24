@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bp5cs5lyu3mph" path="res://srites_ecenario/charco.png" id="4_5luiu"]
 [ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_3s13t"]
 [ext_resource type="PackedScene" uid="uid://c0bl2xkvpqchp" path="res://escenas/personaje/Personaje.tscn" id="6_mo6nc"]
+[ext_resource type="AudioStream" uid="uid://h1tcdg702kiw" path="res://efectos_sonido_musica/Ambiente.mp3" id="7_3s13t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5luiu"]
 texture = ExtResource("1_d12w6")
@@ -9085,3 +9086,9 @@ position = Vector2(1634, 1063)
 
 [node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("5_3s13t")]
 position = Vector2(1154, 1102)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=701556401]
+stream = ExtResource("7_3s13t")
+volume_db = -3.0
+autoplay = true
+parameters/looping = false

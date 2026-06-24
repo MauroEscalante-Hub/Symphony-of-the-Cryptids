@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d0ipx7e7avuor"]
+
+[ext_resource type="Script" uid="uid://bvyiopkegpku2" path="res://escenas/gameover_y_pantalla_final/pantalla_ganaste_tuto.gd" id="1_ury7q"]
+
+[node name="PantallaGanasteTuto" type="CanvasLayer" unique_id=914181291]
+script = ExtResource("1_ury7q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=670085624]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2139740904]
+offset_left = 514.0
+offset_top = 239.0
+offset_right = 638.0
+offset_bottom = 340.0
+size_flags_horizontal = 4
+
+[node name="Siguiente_Nivel" type="Button" parent="VBoxContainer" unique_id=85012511]
+layout_mode = 2
+text = "Siguiente nivel"
+
+[node name="Volver_Al_Menu" type="Button" parent="VBoxContainer" unique_id=1192435116]
+layout_mode = 2
+text = "Volver al menu"
+
+[node name="Salir_Del_Juego" type="Button" parent="VBoxContainer" unique_id=1386902880]
+layout_mode = 2
+text = "Salir del juego"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=458822423]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -142.0
+offset_top = 62.0
+offset_right = 149.0
+offset_bottom = 144.0
+grow_horizontal = 2
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=2087716353]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "BUEN TRABAJO"
+
+[node name="Label2" type="Label" parent="VBoxContainer2" unique_id=1571356051]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "Dinero generado:"
+horizontal_alignment = 1
+
+[node name="Puntuacion" type="Label" parent="VBoxContainer2" unique_id=1121638282]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_button_down"]
+[connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]
+[connection signal="button_down" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_button_down"]

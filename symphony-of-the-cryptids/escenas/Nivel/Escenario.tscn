@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c0bl2xkvpqchp" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
 [ext_resource type="PackedScene" uid="uid://bjd8xs5mgju80" path="res://escenas/criptidos/Criptido.tscn" id="7_qx8ys"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
+[ext_resource type="AudioStream" uid="uid://h1tcdg702kiw" path="res://efectos_sonido_musica/Ambiente.mp3" id="9_1obfr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nxaq"]
 texture = ExtResource("1_j7mmo")
@@ -9511,3 +9512,9 @@ offset_left = -346.0
 offset_top = -246.0
 offset_right = -265.0
 offset_bottom = -185.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1880345438]
+stream = ExtResource("9_1obfr")
+volume_db = -3.0
+autoplay = true
+parameters/looping = false

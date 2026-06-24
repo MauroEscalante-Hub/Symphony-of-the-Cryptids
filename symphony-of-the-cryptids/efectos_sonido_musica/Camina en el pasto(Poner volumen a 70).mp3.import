@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqt44h3qyli7x"
+path="res://.godot/imported/Camina en el pasto(Poner volumen a 70).mp3-146e6b04a45c052de7f1bf0963602337.mp3str"
+
+[deps]
+
+source_file="res://efectos_sonido_musica/Camina en el pasto(Poner volumen a 70).mp3"
+dest_files=["res://.godot/imported/Camina en el pasto(Poner volumen a 70).mp3-146e6b04a45c052de7f1bf0963602337.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
