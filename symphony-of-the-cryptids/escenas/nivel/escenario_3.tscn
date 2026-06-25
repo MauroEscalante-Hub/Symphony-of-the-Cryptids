@@ -9092,7 +9092,7 @@ la_jaula = NodePath("../JaulaDeCriptido")
 nota_encantada = ExtResource("6_8sbtx")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=275690827]
-position = Vector2(2648, 1077)
+position = Vector2(2657, 1059)
 scale = Vector2(1.5, 1.5)
 
 [node name="Personaje" parent="." unique_id=1790913944 instance=ExtResource("6_mo6nc")]
@@ -9100,6 +9100,7 @@ position = Vector2(1634, 1063)
 
 [node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("5_3s13t")]
 position = Vector2(1154, 1102)
+Cantidad_De_Criptidos = null
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=701556401]
 stream = ExtResource("7_3s13t")

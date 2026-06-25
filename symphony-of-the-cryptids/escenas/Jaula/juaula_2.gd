@@ -1,4 +1,5 @@
-extends Area2D
+extends Jaula
+class_name OtraJaula
 
 
 # Called when the node enters the scene tree for the first time.
