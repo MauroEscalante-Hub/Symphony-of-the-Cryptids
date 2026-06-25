@@ -2,20 +2,20 @@ extends CanvasLayer
 
 @onready var GuitaIU = $VBoxContainer2/Puntuacion
 @onready var label_puntuacion = $VBoxContainer2/Puntuacion
-var nivel : int = 0
-var bichos : int = 0
-var dinero : int = 0
-var cuota : bool 
-var bichos_capturados : int
+#var nivel : int = 0
+#var bichos : int = 0
+#var dinero : int = 0
+#var cuota : bool 
+#var bichos_capturados : int
 
 func _ready():
 	pass
 	
 func _process(delta):
-	cuota = DineroDejaula.cuota
-	bichos = DineroDejaula.cantidad_bichos
-	dinero = DineroDejaula.dinero_total
-	bichos_capturados = DineroDejaula.criptido_encerrados
+	#cuota = DineroDejaula.cuota
+	#bichos = DineroDejaula.cantidad_bichos
+	#dinero = DineroDejaula.dinero_total
+	#bichos_capturados = DineroDejaula.criptido_encerrados
 	label_puntuacion.text = "Dinero: " + str(DineroDejaula.dinero_total)
 	
 	
