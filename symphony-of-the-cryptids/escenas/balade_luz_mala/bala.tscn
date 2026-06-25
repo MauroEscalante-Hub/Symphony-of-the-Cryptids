@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy7kum00rwwdd"]
 
 [ext_resource type="Script" uid="uid://ymp2vxbbachs" path="res://escenas/balade_luz_mala/bala.gd" id="1_3u23b"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_xiq0l"]
+[ext_resource type="Texture2D" uid="uid://8pwm04g8pf0w" path="res://escenas/criptidos/luz_mala/luz_mala_sprites/LuzMala 1.png" id="2_3u23b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3u23b"]
 
@@ -10,11 +10,14 @@ scale = Vector2(2, 2)
 script = ExtResource("1_3u23b")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=657356802]
-modulate = Color(1, 1, 0.21960784, 1)
-scale = Vector2(0.11, 0.11)
-texture = ExtResource("1_xiq0l")
+modulate = Color(1.8119333, 2.0818837, 1.4101572, 1)
+self_modulate = Color(0.6089998, 0.60099244, 0.60710645, 1)
+position = Vector2(1.5000076, -0.49999237)
+scale = Vector2(0.02364608, 0.025324747)
+texture = ExtResource("2_3u23b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2069761487]
+visible = false
 shape = SubResource("CircleShape2D_3u23b")
 
 [node name="Timer" type="Timer" parent="." unique_id=596028033]

@@ -1,6 +1,7 @@
 extends Criptido
 class_name Pomberito
 
+@onready var Anima = $AnimatedSprite2D
 @onready var TiempoDeDanio = $Timer
 var miVida: int = 100
 var valorEspecial: int = 100
@@ -11,6 +12,9 @@ func _ready():
 		punto_actual = punto_inicial.pick_random()
 	
 func _physics_process(_delta):
+	
+	Anima.play("caminar")
+	
 	if enjaulado == true:
 		Estado_enjaulado()
 		move_and_slide()

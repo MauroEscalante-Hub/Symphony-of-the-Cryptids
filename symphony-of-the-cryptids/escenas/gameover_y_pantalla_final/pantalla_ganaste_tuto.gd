@@ -1,4 +1,11 @@
 extends CanvasLayer
+@onready var label_puntuacion = $VBoxContainer2/Puntuacion
+
+func _ready():
+	pass
+
+func _process(delta):
+	label_puntuacion.text = "Dinero: " + str(DineroDejaula.dinero_total)
 
 func _on_siguiente_nivel_button_down() -> void:
 	get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/IntermedioMapa1.tscn")

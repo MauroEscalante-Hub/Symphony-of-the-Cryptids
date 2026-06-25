@@ -93,7 +93,7 @@ func ReciboDanio(cantidaddeDanio: int):
 func recibir_aullido():
 	puede_moverse = false
 	print("Estoy asustado por el aullido")
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(2.0).timeout
 	puede_moverse = true
 	
 

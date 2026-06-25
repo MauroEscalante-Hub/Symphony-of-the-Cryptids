@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dupau6svgottw" path="res://escenas/cronometro/Reloj.png" id="2_epugp"]
 [ext_resource type="Texture2D" uid="uid://d3tujtux848ht" path="res://escenas/cronometro/Aguja.png" id="3_3s13s"]
 [ext_resource type="Texture2D" uid="uid://deettl2ryvmi" path="res://escenas/menu_principal/transicion/flechas.png" id="4_n6ed5"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="5_ov30o"]
+[ext_resource type="Texture2D" uid="uid://dth6a4jk8m1ty" path="res://escenas/barra/LaFlecha.png" id="5_epugp"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eu6pg"]
 
@@ -392,15 +392,15 @@ visible_ratio = 0.0
 [node name="Bien" type="Sprite2D" parent="CanvasLayer/Label4" unique_id=1328779350]
 modulate = Color(0.090006284, 0.65534747, 7.70092e-07, 1)
 material = SubResource("CanvasItemMaterial_eu6pg")
-position = Vector2(-24, 113)
-scale = Vector2(0.671875, 0.6953125)
-texture = ExtResource("5_ov30o")
+position = Vector2(-9, 96.99999)
+scale = Vector2(0.31212798, 0.24514173)
+texture = ExtResource("5_epugp")
 
 [node name="Mal" type="Sprite2D" parent="CanvasLayer/Label4" unique_id=1956181218]
 modulate = Color(0.7372549, 0.20392157, 0.16470589, 0)
-position = Vector2(228.8125, 115.24998)
-scale = Vector2(0.7314454, 0.71484345)
-texture = ExtResource("5_ov30o")
+position = Vector2(252.53418, 123.11574)
+scale = Vector2(0.3116437, 0.27808225)
+texture = ExtResource("5_epugp")
 
 [node name="Label" type="Label" parent="CanvasLayer/Label4" unique_id=195427784]
 layout_mode = 1

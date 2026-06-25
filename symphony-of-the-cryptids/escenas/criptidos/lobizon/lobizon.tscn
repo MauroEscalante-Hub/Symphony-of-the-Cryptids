@@ -1,13 +1,52 @@
 [gd_scene format=3 uid="uid://de835v6tldx7r"]
 
 [ext_resource type="Script" uid="uid://crp7y2ee008w3" path="res://escenas/criptidos/lobizon/lobizon.gd" id="1_tc5gp"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="2_i3dbj"]
+[ext_resource type="Texture2D" uid="uid://b8dxa60dknl2r" path="res://escenas/criptidos/lobizon/sprites_lobizon/Lobito1a.png" id="2_w2mvg"]
+[ext_resource type="Texture2D" uid="uid://c0knfa73xer33" path="res://escenas/criptidos/lobizon/sprites_lobizon/Lobito2b.png" id="3_y8ybc"]
+[ext_resource type="Texture2D" uid="uid://cbiq4fq3pktl0" path="res://escenas/criptidos/lobizon/sprites_lobizon/lobito3c.png" id="4_skrsc"]
+[ext_resource type="Texture2D" uid="uid://dbba4es6o0sb1" path="res://escenas/criptidos/lobizon/sprites_lobizon/LobitoGordito1.png" id="5_w5toe"]
+[ext_resource type="Texture2D" uid="uid://b6lsp6w2wb6p0" path="res://escenas/criptidos/lobizon/sprites_lobizon/lobitoGordito2.png" id="6_7lowj"]
+[ext_resource type="Texture2D" uid="uid://dmnpkdyn5rvbn" path="res://escenas/criptidos/lobizon/sprites_lobizon/LobitoGordito3.png" id="7_micwl"]
+[ext_resource type="AudioStream" uid="uid://bdceyf2s6shu4" path="res://efectos_sonido_musica/Aouuuuuuuuuuuuuuuhhhhh.mp3" id="8_y8ybc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_65ayd"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w2mvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y8ybc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_skrsc")
+}],
+"loop": 1,
+"name": &"Base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w5toe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7lowj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_micwl")
+}],
+"loop": 1,
+"name": &"Mansito",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_neqd0"]
+radius = 10.855269
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i4pja"]
+radius = 8.560416
 
 [node name="lobizon" type="CharacterBody2D" unique_id=1473864662]
 script = ExtResource("1_tc5gp")
@@ -16,8 +55,12 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=871392178]
 shape = SubResource("RectangleShape2D_65ayd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625975400]
-texture = ExtResource("2_i3dbj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1688922292]
+position = Vector2(3, 1)
+scale = Vector2(0.47321424, 0.46953586)
+sprite_frames = SubResource("SpriteFrames_3xd07")
+animation = &"Base"
+frame_progress = 0.17532912
 
 [node name="Area2D" type="Area2D" parent="." unique_id=403510906]
 scale = Vector2(5, 5)
@@ -34,6 +77,9 @@ scale = Vector2(5, 4.737)
 shape = SubResource("CircleShape2D_i4pja")
 
 [node name="Timer" type="Timer" parent="." unique_id=773719847]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=280393274]
+stream = ExtResource("8_y8ybc")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

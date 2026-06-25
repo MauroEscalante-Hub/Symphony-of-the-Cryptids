@@ -1,8 +1,9 @@
 extends Criptido
 class_name  Lobizon
 
-
+@onready var animachiones = $AnimatedSprite2D
 @onready var TiempoDeDanio = $Timer
+@onready var Aullido = $AudioStreamPlayer2D
 var me_empache = false
 var cantidad_maxima_de_pomberitos = 0
 var velocidad_original: int
@@ -19,19 +20,22 @@ func _ready():
 	
 
 func _physics_process(delta):
+	animachiones.play("Base")
+	
 	if enjaulado:
 		Estado_enjaulado()
 		move_and_slide()
 		return
 	
 	if encantado:
-		print("ESTOY ENCANTADO")
+		#print("ESTOY ENCANTADO")
 		Estado_encantado(delta)
 		move_and_slide()
 		return
 	
 	if me_empache == true:
-		print("estoy empachado")
+		#print("estoy empachado")
+		animachiones.play("Mansito")
 		estado_empachado()
 		move_and_slide()
 		return
@@ -57,17 +61,18 @@ func Aullar():
 	if jugador_actual == null:
 		return
 	
-	print("AUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
+	#print("AUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU")
 	if jugador_actual != null:
+		Aullido.play()
 		jugador_actual.recibir_aullido()
 	
 
 func estado_empachado():
 	cantidad_maxima_de_pomberitos += 1
-	print("Comidos:", cantidad_maxima_de_pomberitos)
+	#print("Comidos:", cantidad_maxima_de_pomberitos)
 	
 	if cantidad_maxima_de_pomberitos >= 1:
-		print("ME EMPACHÉ")
+		#print("ME EMPACHÉ")
 		empachado()
 
 func empachado():
@@ -76,10 +81,10 @@ func empachado():
 	
 	me_empache = true
 	velocidad = velocidad_original / 2
-	print("velocidad ahora: ",velocidad)
+	#print("velocidad ahora: ",velocidad)
 	_pomberito_actual = null
 	
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(500.0).timeout
 	
 	velocidad = velocidad_original
 	print("velocidad despues: ", velocidad)

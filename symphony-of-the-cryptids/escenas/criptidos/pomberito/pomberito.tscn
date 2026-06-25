@@ -1,23 +1,47 @@
 [gd_scene format=3 uid="uid://xx310i4yqu2k"]
 
 [ext_resource type="Script" uid="uid://bxds6e0eryjvd" path="res://escenas/criptidos/pomberito/pomberito.gd" id="1_84ooo"]
-[ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/sprites_pompero/1.png" id="2_eadcm"]
+[ext_resource type="Texture2D" uid="uid://rfp4tv6xkuhs" path="res://escenas/criptidos/pomberito/sprites_pompero/1.png" id="2_eadcm"]
+[ext_resource type="Texture2D" uid="uid://dpaihkowfyw40" path="res://escenas/criptidos/pomberito/sprites_pompero/2.png" id="3_2x8tr"]
+[ext_resource type="AudioStream" uid="uid://b2igrq42hdjte" path="res://efectos_sonido_musica/Silbido pombero.mp3" id="3_mgwgs"]
+[ext_resource type="Texture2D" uid="uid://da6alxskit6qm" path="res://escenas/criptidos/pomberito/sprites_pompero/3.png" id="4_471ny"]
+[ext_resource type="Texture2D" uid="uid://bacg2fdd2gxkf" path="res://escenas/criptidos/pomberito/sprites_pompero/4.png" id="5_8cp71"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jq8tk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eadcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2x8tr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_471ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8cp71")
+}],
+"loop": 1,
+"name": &"caminar",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgwgs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eadcm"]
+radius = 23.269701
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mgwgs"]
 
 [node name="Pomberito" type="CharacterBody2D" unique_id=1441714446]
 script = ExtResource("1_84ooo")
-metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=230453351]
-position = Vector2(213, -14)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("2_eadcm")
-offset = Vector2(-2575, 37.5)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1422908853]
+position = Vector2(13.000001, -8.999998)
+scale = Vector2(0.085834265, 0.07707839)
+sprite_frames = SubResource("SpriteFrames_jq8tk")
+animation = &"caminar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938637605]
 scale = Vector2(2.91991, 2.7899616)
@@ -37,6 +61,11 @@ scale = Vector2(8.794989, 9.400423)
 shape = SubResource("CircleShape2D_mgwgs")
 
 [node name="Timer" type="Timer" parent="." unique_id=549047513]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=353758367]
+stream = ExtResource("3_mgwgs")
+autoplay = true
+parameters/looping = false
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
