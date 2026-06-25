@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b5i2ngmbepn82"]
 
 [ext_resource type="Script" uid="uid://b5pmmurpyun62" path="res://escenas/criptidos/luz_mala/luz_mala.gd" id="1_1gl1v"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="1_gdo36"]
 [ext_resource type="PackedScene" uid="uid://cy7kum00rwwdd" path="res://escenas/balade_luz_mala/bala.tscn" id="2_o02at"]
+[ext_resource type="Texture2D" uid="uid://d2jadhj68jgt6" path="res://escenas/criptidos/luz_mala/luz_mala_sprites/LuzMala3.png" id="3_1ji5t"]
+[ext_resource type="Texture2D" uid="uid://8pwm04g8pf0w" path="res://escenas/criptidos/luz_mala/luz_mala_sprites/LuzMala 1.png" id="4_akept"]
+[ext_resource type="Texture2D" uid="uid://dqe2tnoyoscv5" path="res://escenas/criptidos/luz_mala/luz_mala_sprites/LuzMala 2.png" id="5_dn5g5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gl1v"]
 
@@ -10,16 +12,27 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cbf5i"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1ji5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_akept")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dn5g5")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="luz_mala" type="CharacterBody2D" unique_id=264062293]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_1gl1v")
 unabala = ExtResource("2_o02at")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=435241146]
-modulate = Color(0.8480453, 0.82811993, 0.74742204, 1)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("1_gdo36")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1853714090]
 scale = Vector2(1.875, 1.875)
@@ -40,6 +53,12 @@ scale = Vector2(5.5, 5.5)
 shape = SubResource("CircleShape2D_cbf5i")
 
 [node name="Timer" type="Timer" parent="." unique_id=890272315]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=556373123]
+position = Vector2(7.3333397, -6.666668)
+scale = Vector2(0.138, 0.142)
+sprite_frames = SubResource("SpriteFrames_3xd07")
+frame_progress = 0.086847864
 
 [connection signal="area_entered" from="area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="area2D" to="." method="_on_area_2d_area_exited"]

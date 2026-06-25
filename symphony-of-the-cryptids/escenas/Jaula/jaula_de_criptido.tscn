@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://0i63ioxnsxt5"]
 
 [ext_resource type="Script" uid="uid://bpqtcqwf8uw4p" path="res://scripts/jaula_de_criptido.gd" id="1_ecrkp"]
-[ext_resource type="Texture2D" uid="uid://dkt7wt8q0h0uj" path="res://escenas/jaula/Jaula_Abierta.png" id="2_6ir18"]
-[ext_resource type="Texture2D" uid="uid://dd33fmkahptyl" path="res://escenas/jaula/ENCERRADO.png" id="3_aq0d2"]
+[ext_resource type="Texture2D" uid="uid://dkt7wt8q0h0uj" path="res://escenas/Jaula/Jaula_Abierta.png" id="2_6ir18"]
+[ext_resource type="Texture2D" uid="uid://dd33fmkahptyl" path="res://escenas/Jaula/ENCERRADO.png" id="3_aq0d2"]
 
 [sub_resource type="Animation" id="Animation_7rgys"]
 resource_name = "NivelCompletado"

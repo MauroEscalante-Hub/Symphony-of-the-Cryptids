@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkt7wt8q0h0uj"
-path="res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"
+uid="uid://dpaihkowfyw40"
+path="res://.godot/imported/2.png-61c74aeeb431f7573f91eb95954a4702.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/Jaula/Jaula_Abierta.png"
-dest_files=["res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"]
+source_file="res://escenas/criptidos/pomberito/sprites_pompero/2.png"
+dest_files=["res://.godot/imported/2.png-61c74aeeb431f7573f91eb95954a4702.ctex"]
 
 [params]
 

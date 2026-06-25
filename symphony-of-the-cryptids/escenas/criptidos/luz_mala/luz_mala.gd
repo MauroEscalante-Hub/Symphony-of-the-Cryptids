@@ -2,6 +2,7 @@ extends Criptido
 class_name LuzMala
 
 @export var unabala: PackedScene
+@onready var Animacion_luz = $AnimatedSprite2D
 @onready var tiempodedanio = $Timer
 var esperar_punto: bool = false
 var tweens: Tween
@@ -15,6 +16,8 @@ func _ready():
 	
 
 func _physics_process(delta):
+	Animacion_luz.play("default")
+	
 	if enjaulado:
 		Estado_enjaulado()
 		move_and_slide()

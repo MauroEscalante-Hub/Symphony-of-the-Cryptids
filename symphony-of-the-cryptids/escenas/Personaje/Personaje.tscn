@@ -27,15 +27,16 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_i2yhl")
 }],
-"loop": true,
+"loop": 1,
 "name": &"Movimiento",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_48aib"]
+size = Vector2(20, 36.814037)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wwt2b"]
-radius = 18.329884
+radius = 30.602785
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kseoc"]
 bg_color = Color(0.8052077, 0.5177908, 0.40964422, 1)
@@ -56,23 +57,24 @@ position = Vector2(472, 299)
 scale = Vector2(0.63175714, 0.5422116)
 script = ExtResource("1_e58e8")
 UI_Encantamiento = ExtResource("2_kseoc")
-metadata/_edit_group_ = true
 
 [node name="SpriteJugador" type="AnimatedSprite2D" parent="." unique_id=339909752]
-position = Vector2(17.41175, -142.01097)
-scale = Vector2(0.20664303, 0.2567124)
+position = Vector2(6.3315525, -167.83116)
+scale = Vector2(0.23005879, 0.294825)
 sprite_frames = SubResource("SpriteFrames_qf0vx")
 animation = &"Movimiento"
 frame = 2
 frame_progress = 0.61698836
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489152137]
-scale = Vector2(6.3102736, 6.396642)
+position = Vector2(0, -53.776672)
+scale = Vector2(6.310273, 6.396642)
 shape = SubResource("RectangleShape2D_48aib")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=392176480]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1616666716]
+visible = false
 scale = Vector2(12, 13.443)
 shape = SubResource("CircleShape2D_wwt2b")
 debug_color = Color(0.6358332, 0.52458125, 0.14823806, 0.41960785)

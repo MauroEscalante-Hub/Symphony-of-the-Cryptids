@@ -7,6 +7,7 @@ extends Area2D
 @onready var Jaula_cerrada = $JaulaCerrada
 
 @export var Cantidad_De_Criptidos: int = 4
+@export var escena_nueva : PackedScene
 
 
 var Criptido_actual: Criptido = null
@@ -29,6 +30,7 @@ func Plata_Generada():
 	if Dinero_Generado > Dinero_Suficiente:
 		Cuota_cumplida = true
 
+
 func _on_body_entered(body):
 	if body is Criptido:
 		Criptido_actual = body
@@ -37,14 +39,13 @@ func _on_body_entered(body):
 		Dinero_Generado += Criptido_actual.obtener_valor()
 		Criptidos_Enjaulados += 1
 		Dinero_Generado += 150
-		
+		DineroDejaula.criptido_encerrados = Criptidos_Enjaulados
 		DineroDejaula.dinero_total = Dinero_Generado
+		DineroDejaula.cantidad_bichos = Cantidad_De_Criptidos
+		DineroDejaula.cuota = Cuota_cumplida
 		print(Dinero_Generado, Cuota_cumplida)
 		
 		await get_tree().create_timer(0.5).timeout
 		Criptido_actual = null
 		
 		if Criptidos_Enjaulados >= Cantidad_De_Criptidos or Cuota_cumplida == true:
-			get_tree().change_scene_to_file("res://escenas/gameover_y_pantalla_final/pantalla_ganaste.tscn")
-		
-		

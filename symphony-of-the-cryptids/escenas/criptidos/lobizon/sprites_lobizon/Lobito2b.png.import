@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpaihkowfyw40"
-path="res://.godot/imported/2.png-780e3ceaff95b467053b217e560442e4.ctex"
+uid="uid://c0knfa73xer33"
+path="res://.godot/imported/Lobito2b.png-33d711fcfbbe908b1376876055ff3d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/criptidos/sprites_pompero/2.png"
-dest_files=["res://.godot/imported/2.png-780e3ceaff95b467053b217e560442e4.ctex"]
+source_file="res://escenas/criptidos/lobizon/sprites_lobizon/Lobito2b.png"
+dest_files=["res://.godot/imported/Lobito2b.png-33d711fcfbbe908b1376876055ff3d39.ctex"]
 
 [params]
 

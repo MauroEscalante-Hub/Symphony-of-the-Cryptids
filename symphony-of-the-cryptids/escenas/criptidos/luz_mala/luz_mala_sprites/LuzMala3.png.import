@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bacg2fdd2gxkf"
-path="res://.godot/imported/4.png-e933b3b91f4b6c5e664ead72126bb393.ctex"
+uid="uid://d2jadhj68jgt6"
+path="res://.godot/imported/LuzMala3.png-eae1e0f2ae2151e3644c2ec7c2f21eec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/criptidos/sprites_pompero/4.png"
-dest_files=["res://.godot/imported/4.png-e933b3b91f4b6c5e664ead72126bb393.ctex"]
+source_file="res://escenas/criptidos/luz_mala/luz_mala_sprites/LuzMala3.png"
+dest_files=["res://.godot/imported/LuzMala3.png-eae1e0f2ae2151e3644c2ec7c2f21eec.ctex"]
 
 [params]
 
