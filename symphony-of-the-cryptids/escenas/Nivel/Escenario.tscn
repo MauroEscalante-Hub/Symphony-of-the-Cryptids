@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_1obfr"]
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="3_qvt54"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_mlppi"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_mlppi"]
 [ext_resource type="PackedScene" uid="uid://dh8lc5tmyiwda" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
 [ext_resource type="PackedScene" uid="uid://oa7e0dn7d0s8" path="res://escenas/gameover_y_pantalla_final/pantalla_ganaste.tscn" id="6_mlppi"]
 [ext_resource type="PackedScene" uid="uid://xx310i4yqu2k" path="res://escenas/criptidos/pomberito/pomberito.tscn" id="8_1obfr"]
@@ -9473,7 +9473,6 @@ script = ExtResource("4_r2gqe")
 
 [node name="JaulaDeCriptido" parent="." unique_id=172644181 instance=ExtResource("5_mlppi")]
 position = Vector2(317, 391)
-Cantidad_De_Criptidos = null
 escena_nueva = ExtResource("6_mlppi")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=107942673]
