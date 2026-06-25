@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dh8lc5tmyiwda"]
 
-[ext_resource type="Script" uid="uid://bf604iwjlbwhh" path="res://escenas/personaje/Personaje.gd" id="1_e58e8"]
+[ext_resource type="Script" uid="uid://dubcypl0f1ekd" path="res://escenas/personaje/Personaje.gd" id="1_e58e8"]
 [ext_resource type="PackedScene" uid="uid://cdwpaa2dxtou3" path="res://escenas/barra/barra.tscn" id="2_kseoc"]
 [ext_resource type="Texture2D" uid="uid://c06y68ta0788q" path="res://escenas/personaje/sprites/P1.png" id="3_njjr8"]
 [ext_resource type="Texture2D" uid="uid://cg1x1tyitl75g" path="res://escenas/personaje/sprites/P2.png" id="4_wf0h7"]
 [ext_resource type="PackedScene" uid="uid://cti5rysshfgog" path="res://escenas/cronometro/reloj.tscn" id="4_wpla8"]
 [ext_resource type="Texture2D" uid="uid://ddheo17mqg8yo" path="res://escenas/personaje/sprites/P3.png" id="5_a12ng"]
 [ext_resource type="Texture2D" uid="uid://d3ssg5iuye66v" path="res://escenas/personaje/sprites/P4.png" id="6_i2yhl"]
-[ext_resource type="AudioStream" uid="uid://bqgtjax2ibqve" path="res://Sonidos de notas/Do.mp3" id="8_wf0h7"]
-[ext_resource type="AudioStream" uid="uid://ca0pg0h5amrd5" path="res://Sonidos de notas/Mi.mp3" id="9_qf0vx"]
-[ext_resource type="AudioStream" uid="uid://bmvfpuo2bekoy" path="res://Sonidos de notas/Si.mp3" id="10_5hjvd"]
-[ext_resource type="AudioStream" uid="uid://dql48o4sck2mp" path="res://Sonidos de notas/Sol.mp3" id="11_3s1mw"]
+[ext_resource type="AudioStream" uid="uid://uy3lvi8l3xuh" path="res://Sonidos de notas/DoDo.mp3" id="8_qf0vx"]
+[ext_resource type="AudioStream" uid="uid://dphqvop4o76j7" path="res://Sonidos de notas/MiMi.mp3" id="9_5hjvd"]
+[ext_resource type="AudioStream" uid="uid://btrh3r5dha0sw" path="res://Sonidos de notas/SiSi.mp3" id="10_3s1mw"]
+[ext_resource type="AudioStream" uid="uid://rsxyeklq6q24" path="res://Sonidos de notas/SolSol.mp3" id="11_l82qi"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qf0vx"]
 animations = [{
@@ -98,21 +98,21 @@ max_value = 200.0
 value = 100.0
 
 [node name="Audio_Do" type="AudioStreamPlayer2D" parent="." unique_id=794843779]
-stream = ExtResource("8_wf0h7")
+stream = ExtResource("8_qf0vx")
 volume_db = -5.0
 pitch_scale = 0.9
 
 [node name="Audio_Mi" type="AudioStreamPlayer2D" parent="." unique_id=929303177]
-stream = ExtResource("9_qf0vx")
+stream = ExtResource("9_5hjvd")
 volume_db = -7.0
 
-[node name="Audio_Si" type="AudioStreamPlayer2D" parent="." unique_id=689059093]
-stream = ExtResource("10_5hjvd")
-volume_db = -9.0
-
 [node name="Audio_Sol" type="AudioStreamPlayer2D" parent="." unique_id=1324353865]
-stream = ExtResource("11_3s1mw")
-volume_db = -17.0
+stream = ExtResource("11_l82qi")
+volume_db = -13.0
+
+[node name="Audio_Si" type="AudioStreamPlayer2D" parent="." unique_id=689059093]
+stream = ExtResource("10_3s1mw")
+volume_db = -9.0
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
