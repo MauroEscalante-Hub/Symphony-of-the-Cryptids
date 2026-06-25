@@ -18,6 +18,7 @@ func _process(delta):
 	bichos_capturados = DineroDejaula.criptido_encerrados
 	label_puntuacion.text = "Dinero: " + str(DineroDejaula.dinero_total)
 	
+	
 
 func _on_volver_al_menu_button_down() -> void:
 	get_tree().change_scene_to_file("res://escenas/menu_principal/menu_principal.tscn")
@@ -29,8 +30,7 @@ func _on_salir_del_juego_button_down() -> void:
 
 
 func _on_siguiente_nivel_button_down() -> void:
-	if bichos >= bichos_capturados or cuota == true:
-		get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/intermedio_mapa2.tscn")
+	Escenario2()
 	pass # Replace with function body.
 
 func Escenario2():

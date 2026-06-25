@@ -49,3 +49,4 @@ func _on_body_entered(body):
 		Criptido_actual = null
 		
 		if Criptidos_Enjaulados >= Cantidad_De_Criptidos or Cuota_cumplida == true:
+			get_tree().change_scene_to_packed(escena_nueva)
