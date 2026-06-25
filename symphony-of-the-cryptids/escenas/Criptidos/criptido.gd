@@ -65,7 +65,7 @@ func Punto_Objetivo():
 			nuevo_punto = punto_inicial.pick_random()
 		
 		punto_actual = nuevo_punto
-		print("Nuevo destino: ", punto_actual.name)
+		#print("Nuevo destino: ", punto_actual.name)
 
 func siguiente_nota(nota):
 	print("Recibí: ", nota) 

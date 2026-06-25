@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkt7wt8q0h0uj"
-path="res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"
+uid="uid://yjxft45ynigo"
+path="res://.godot/imported/Flecha.png-d5331420b97b55ca797a6c3d675a4af8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/Jaula/Jaula_Abierta.png"
-dest_files=["res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"]
+source_file="res://escenas/barra/Flecha.png"
+dest_files=["res://.godot/imported/Flecha.png-d5331420b97b55ca797a6c3d675a4af8.ctex"]
 
 [params]
 

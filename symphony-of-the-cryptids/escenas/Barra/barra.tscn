@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://beynj8hgkqmy0" path="res://escenas/barra/barra.gd" id="1_r2e27"]
 [ext_resource type="Texture2D" uid="uid://bgd1d2su26453" path="res://Flechitas.png" id="2_vhnxa"]
-[ext_resource type="Texture2D" uid="uid://csl0mf4rq8it0" path="res://icon.svg" id="3_sfbtu"]
+[ext_resource type="Texture2D" uid="uid://dth6a4jk8m1ty" path="res://escenas/barra/LaFlecha.png" id="3_sfbtu"]
 
 [node name="barraControl" type="Control" unique_id=1887410771]
 layout_mode = 3

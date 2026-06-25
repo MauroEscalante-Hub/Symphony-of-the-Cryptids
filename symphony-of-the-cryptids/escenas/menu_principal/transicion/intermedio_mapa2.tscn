@@ -4,7 +4,7 @@
 
 [sub_resource type="Animation" id="Animation_7tqug"]
 resource_name = "Fades"
-length = 25.0
+length = 15.766666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -24,7 +24,7 @@ tracks/1/path = NodePath("ColorRect2:color")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 21.956774, 24.9326),
+"times": PackedFloat32Array(0, 1, 12.233334, 15.20916),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
