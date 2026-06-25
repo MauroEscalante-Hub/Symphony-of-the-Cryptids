@@ -1,10 +1,10 @@
 class_name Nota_Flauta
 extends Node2D
 
-var Do = load ("res://Sonidos de notas/Do.mp3")
-var Mi = load("res://Sonidos de notas/Mi.mp3")
-var	Sol= load("res://Sonidos de notas/Sol.mp3")
-var Si = load("res://Sonidos de notas/Si.mp3")
+var Do = load ("res://Sonidos de notas/DoDo.mp3")
+var Mi = load("res://Sonidos de notas/MiMi.mp3")
+var	Sol= load("res://Sonidos de notas/SolSol.mp3")
+var Si = load("res://Sonidos de notas/SiSi.mp3")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

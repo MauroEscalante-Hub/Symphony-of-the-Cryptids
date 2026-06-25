@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da6alxskit6qm"
-path="res://.godot/imported/3.png-1e0e84f629c02059f4c53a3d8b06c61d.ctex"
+path="res://.godot/imported/3.png-bc3cd6e668b9517038d40f9d00eb880f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/criptidos/sprites_pompero/3.png"
-dest_files=["res://.godot/imported/3.png-1e0e84f629c02059f4c53a3d8b06c61d.ctex"]
+source_file="res://escenas/Criptidos/sprites_pompero/3.png"
+dest_files=["res://.godot/imported/3.png-bc3cd6e668b9517038d40f9d00eb880f.ctex"]
 
 [params]
 
