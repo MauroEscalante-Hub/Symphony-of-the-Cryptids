@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dnctbkboxx1d" path="res://srites_ecenario/Fondo2.0.png" id="2_1obfr"]
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="3_qvt54"]
 [ext_resource type="Script" uid="uid://cha7ra11tnvei" path="res://scripts/escenario.gd" id="4_r2gqe"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_mlppi"]
-[ext_resource type="PackedScene" uid="uid://dh8lc5tmyiwda" path="res://escenas/personaje/Personaje.tscn" id="6_bw1yj"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_mlppi"]
+[ext_resource type="PackedScene" uid="uid://dh8lc5tmyiwda" path="res://escenas/personaje/personaje.tscn" id="6_bw1yj"]
 [ext_resource type="PackedScene" uid="uid://oa7e0dn7d0s8" path="res://escenas/gameover_y_pantalla_final/pantalla_ganaste.tscn" id="6_mlppi"]
 [ext_resource type="PackedScene" uid="uid://xx310i4yqu2k" path="res://escenas/criptidos/pomberito/pomberito.tscn" id="8_1obfr"]
 [ext_resource type="PackedScene" uid="uid://dw8jy2heta4aq" path="res://escenas/cronometro/control.tscn" id="8_2yff0"]
@@ -9525,7 +9525,7 @@ danio_de_ataque = 30
 nota_encantada = ExtResource("9_1obfr")
 
 [node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
-position = Vector2(664.9766, 1481.6104)
+position = Vector2(852, 817)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
