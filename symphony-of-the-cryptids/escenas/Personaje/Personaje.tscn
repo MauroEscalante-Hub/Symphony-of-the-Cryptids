@@ -27,7 +27,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_i2yhl")
 }],
-"loop": 1,
+"loop": true,
 "name": &"Movimiento",
 "speed": 5.0
 }]
@@ -72,9 +72,9 @@ scale = Vector2(6.310273, 6.396642)
 shape = SubResource("RectangleShape2D_48aib")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=392176480]
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1616666716]
-visible = false
 scale = Vector2(12, 13.443)
 shape = SubResource("CircleShape2D_wwt2b")
 debug_color = Color(0.6358332, 0.52458125, 0.14823806, 0.41960785)

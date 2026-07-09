@@ -20,8 +20,6 @@ func _ready():
 	
 
 func _physics_process(delta):
-	animachiones.play("Base")
-	
 	if enjaulado:
 		Estado_enjaulado()
 		move_and_slide()
@@ -46,6 +44,7 @@ func _physics_process(delta):
 	
 	
 	else:
+		animachiones.play("Base")
 		Punto_Objetivo()
 	
 	move_and_slide()
