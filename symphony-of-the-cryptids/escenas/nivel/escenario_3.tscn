@@ -9098,13 +9098,16 @@ volume_db = -3.0
 autoplay = true
 parameters/looping = false
 
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=557326042]
+position = Vector2(2636, 2082)
+scale = Vector2(1.5, 1.5)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=646672481]
+position = Vector2(3042, 1675)
+
 [node name="luz_mala2" parent="." unique_id=788163800 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("5_mo6nc")]
 position = Vector2(2801, 1089)
 jugador = NodePath("../Personaje")
-punto_inicial = [NodePath("../Marker2D3")]
+punto_inicial = [NodePath("../Marker2D3"), NodePath("../Marker2D")]
 la_jaula = NodePath("../JaulaDeCriptido")
 nota_encantada = ExtResource("10_m46ga")
-
-[node name="Marker2D3" type="Marker2D" parent="." unique_id=557326042]
-position = Vector2(2990, 1110)
-scale = Vector2(1.5, 1.5)
