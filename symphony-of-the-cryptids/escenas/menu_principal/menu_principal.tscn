@@ -180,5 +180,7 @@ autoplay = true
 parameters/looping = false
 
 [connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_button_down"]
