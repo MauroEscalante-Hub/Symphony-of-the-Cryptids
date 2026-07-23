@@ -19,13 +19,13 @@ func mostrar_nota(nota: String, comprobarNota: bool):
 	
 	match nota:
 		"up":
-			flecha_D_interaccion.rotation_degrees = 270
-		"down":
-			flecha_D_interaccion.rotation_degrees = 90
-		"left":
 			flecha_D_interaccion.rotation_degrees = 180
-		"right":
+		"down":
 			flecha_D_interaccion.rotation_degrees = 0
+		"left":
+			flecha_D_interaccion.rotation_degrees = 90
+		"right":
+			flecha_D_interaccion.rotation_degrees = 270
 	
 	correctaOincorrecta(comprobarNota)
 	

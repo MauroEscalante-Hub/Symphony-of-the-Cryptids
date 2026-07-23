@@ -5,6 +5,24 @@
 [ext_resource type="AudioStream" uid="uid://dd314bvirktei" path="res://efectos_sonido_musica/Mily Ortiz - Otro pompero 2026-06-10 00_22 (1).mp3" id="4_00m27"]
 [ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/menu_principal/Título.png" id="4_nrc4w"]
 
+[sub_resource type="Gradient" id="Gradient_00m27"]
+colors = PackedColorArray(0, 0.7058824, 0, 1, 1, 1, 0.1254902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_kddjp"]
+gradient = SubResource("Gradient_00m27")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5043478, 0.526087)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u5bk5"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
 bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)
 border_color = Color(0.25608057, 0.33874342, 0, 1)
@@ -61,6 +79,14 @@ offset_right = 585.0
 offset_bottom = 333.0
 texture = ExtResource("2_qi23i")
 expand_mode = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=746026095]
+visible = false
+position = Vector2(252, -171)
+amount = 30
+texture = SubResource("GradientTexture2D_kddjp")
+lifetime = 30.0
+process_material = SubResource("ParticleProcessMaterial_u5bk5")
 
 [node name="Control" type="Control" parent="." unique_id=435955731]
 layout_mode = 3
@@ -156,7 +182,7 @@ text = "proximamente"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
 
 [node name="Título" type="Sprite2D" parent="." unique_id=362228924]
-position = Vector2(140.00002, -14.000006)
+position = Vector2(140, -400)
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("4_nrc4w")
 
@@ -180,5 +206,11 @@ autoplay = true
 parameters/looping = false
 
 [connection signal="button_down" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_mouse_exited"]
