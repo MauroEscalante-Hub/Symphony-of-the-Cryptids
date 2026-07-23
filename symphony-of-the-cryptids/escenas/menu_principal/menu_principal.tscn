@@ -156,7 +156,7 @@ text = "proximamente"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1568839710]
 
 [node name="Título" type="Sprite2D" parent="." unique_id=362228924]
-position = Vector2(140.00002, -14.000006)
+position = Vector2(140, -400)
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("4_nrc4w")
 
@@ -183,4 +183,8 @@ parameters/looping = false
 [connection signal="mouse_entered" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_entered"]
 [connection signal="mouse_exited" from="Control/VBoxContainer/BotonComenzar" to="." method="_on_boton_comenzar_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonInstrucciones" to="." method="_on_boton_instrucciones_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_mouse_exited"]
