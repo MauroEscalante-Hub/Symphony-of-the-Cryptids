@@ -37,7 +37,7 @@ func mostrarBotones():
 	tween.tween_property(cajaDEbotones,"modulate:a", 1.0,3.0)
 	tween.tween_property(labelpartida,"modulate:a", 1.0,1.0)
 	
-	cambiarColorbotones()
+	#cambiarColorbotones()
 
 func cambiarColorbotones():
 	var tween = create_tween().set_loops()
