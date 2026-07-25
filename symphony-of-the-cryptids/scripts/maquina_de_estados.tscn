@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://l6r7f8beb5oy"]
+
+[ext_resource type="Script" uid="uid://3by40vhlj7bd" path="res://node.gd" id="1_kjhwy"]
+
+[node name="maquina_de_estados" type="Node" unique_id=1989814300]
+script = ExtResource("1_kjhwy")

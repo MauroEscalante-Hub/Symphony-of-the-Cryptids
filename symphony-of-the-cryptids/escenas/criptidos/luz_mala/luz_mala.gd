@@ -16,7 +16,6 @@ func _ready():
 	
 
 func _physics_process(delta):
-	Animacion_luz.play("default")
 	
 	if enjaulado:
 		Estado_enjaulado()
@@ -30,6 +29,7 @@ func _physics_process(delta):
 		return
 	
 	else:
+		Animacion_luz.play("default")
 		Punto_Objetivo()
 	
 	move_and_slide()
@@ -39,7 +39,6 @@ func Punto_Objetivo():
 		velocity = Vector2.ZERO
 		return
 	
-	iniciar_flotacion()
 	var direccion = (punto_actual.global_position - global_position).normalized()
 	
 	velocity = direccion * velocidad
@@ -49,9 +48,10 @@ func Punto_Objetivo():
 		
 		esperar_punto = true
 		velocity = Vector2.ZERO
+		iniciar_flotacion()
 		
 		await get_tree().create_timer(5.5).timeout  
-		
+		deneter_flotacion()
 		var nuevo_punto = punto_actual
 		
 		while nuevo_punto == punto_actual and punto_inicial.size() > 1:
@@ -59,7 +59,7 @@ func Punto_Objetivo():
 		
 		punto_actual = nuevo_punto
 		print("Nuevo destino: ", punto_actual.name)
-	
+		
 		esperar_punto = false
 
 func disparar():
@@ -74,13 +74,15 @@ func disparar():
 	get_tree().current_scene.add_child(nueva_bala)
 
 func iniciar_flotacion():
-	if tweens:
-		tweens.kill()
-	
 	tweens = create_tween()
 	tweens.set_loops()
-	tweens.tween_property(self, "position:y", position.y - 10, 1.5)
-	tweens.tween_property(self, "position:y", position.y + 10, 1.5)
+	tweens.tween_property(Animacion_luz, "position:y", - 20, 1.5)
+	tweens.tween_property(Animacion_luz, "position:y", 0, 1.5)
+	
+
+func deneter_flotacion():
+	if tweens:
+		tweens.kill()
 
 func obtener_valor():
 	return valorEspecial
