@@ -9096,7 +9096,7 @@ escena_nueva = ExtResource("9_m46ga")
 stream = ExtResource("7_3s13t")
 volume_db = -3.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="luz_mala2" parent="." unique_id=788163800 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("5_mo6nc")]
 position = Vector2(2801, 1089)

@@ -21,6 +21,8 @@ func _ready():
 
 func _physics_process(delta):
 	animachiones.play("Base")
+	if me_empache == true:
+		animachiones.play("Mansito")
 	
 	if enjaulado:
 		Estado_enjaulado()
@@ -30,6 +32,8 @@ func _physics_process(delta):
 	if encantado:
 		#print("ESTOY ENCANTADO")
 		Estado_encantado(delta)
+		if me_empache == true:
+			animachiones.play("Mansito")
 		move_and_slide()
 		return
 	

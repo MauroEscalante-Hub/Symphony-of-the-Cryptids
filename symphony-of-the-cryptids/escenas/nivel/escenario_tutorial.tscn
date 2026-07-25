@@ -9122,7 +9122,7 @@ position = Vector2(798.99994, 718)
 stream = ExtResource("8_5oa6d")
 volume_db = -3.0
 autoplay = true
-parameters/looping = false
+parameters/looping = true
 
 [node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("9_ytcqn")]
 position = Vector2(1341, 422)
