@@ -18,7 +18,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_dn5g5")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -38,7 +38,8 @@ unabala = ExtResource("2_o02at")
 position = Vector2(7.3333397, -6.666668)
 scale = Vector2(0.138, 0.142)
 sprite_frames = SubResource("SpriteFrames_3xd07")
-frame_progress = 0.086847864
+frame = 1
+frame_progress = 0.86639464
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1853714090]
 scale = Vector2(1.875, 1.875)
