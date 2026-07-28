@@ -9529,6 +9529,7 @@ position = Vector2(852, 817)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
+danio_de_ataque = 10
 nota_encantada = ExtResource("9_1obfr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=254523662]

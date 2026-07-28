@@ -40,12 +40,20 @@ func _physics_process(_delta):
 
 func recibir_danio(cantidad: int):
 	miVida -= cantidad
+	colordedanio()
 	if miVida <= 0:
 		print("Me pegaron [soy pomberito]")
 	
 	return miVida
 	
 
+func colordedanio():
+	var tween = create_tween().set_ease(Tween.EASE_IN)
+	tween.tween_property(Animacion,"modulate", Color.DARK_RED, 1.0)
+
+func parar_color():
+	var tween = create_tween().set_ease(Tween.EASE_IN)
+	tween.tween_property(Animacion,"modulate", Color.WHITE, 1.0)
 
 func obtener_valor():
 	return valorEspecial
@@ -72,8 +80,10 @@ func _on_areade_danio_body_entered(body):
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
+		jugador_actual.parar_colordanio()
 		jugador_actual = null
 		TiempoDeDanio.stop()
+	
 
 func _on_timer_timeout():
 	if jugador_actual != null and encantado == false:

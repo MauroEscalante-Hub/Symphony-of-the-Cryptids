@@ -62,37 +62,43 @@ func _on_boton_salir_button_down() -> void:
 
 func _on_boton_comenzar_mouse_entered():
 	print("pase por arriba [comenzar]")
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
 	tween.tween_property(botonComenzar, "scale", Vector2(1.1, 1.1), 3.0)
+	tween.tween_property(botonComenzar, "modulate", Color.DARK_ORANGE, 1.0)
 	pass # Replace with function body.
 
 
 func _on_boton_comenzar_mouse_exited():
 	print("pase por arriba [salir]")
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
 	tween.tween_property(botonComenzar, "scale", Vector2.ONE, 3.0)
+	tween.tween_property(botonComenzar, "modulate", Color.WHITE, 1.0)
 	pass # Replace with function body.
 
 
 func _on_boton_instrucciones_mouse_entered():
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
 	tween.tween_property(botonInstrucciones, "scale", Vector2(1.1, 1.1), 3.0)
+	tween.tween_property(botonInstrucciones, "modulate", Color.DARK_ORANGE, 1.0)
 	pass # Replace with function body.
 
 
 func _on_boton_instrucciones_mouse_exited():
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
 	tween.tween_property(botonInstrucciones, "scale", Vector2.ONE, 3.0)
+	tween.tween_property(botonInstrucciones, "modulate", Color.WHITE, 1.0)
 	pass # Replace with function body.
 
 
 func _on_boton_salir_mouse_entered():
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	tween.tween_property(botonSalir, "scale", Vector2.ONE, 3.0)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
+	tween.tween_property(botonSalir, "scale", Vector2(1.1, 1.1), 3.0)
+	tween.tween_property(botonSalir, "modulate", Color.DARK_ORANGE, 1.0)
 	pass # Replace with function body.
 
 
 func _on_boton_salir_mouse_exited():
-	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var tween = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT).set_parallel()
 	tween.tween_property(botonSalir, "scale", Vector2.ONE, 3.0)
+	tween.tween_property(botonSalir, "modulate", Color.WHITE, 1.0)
 	pass # Replace with function body.
