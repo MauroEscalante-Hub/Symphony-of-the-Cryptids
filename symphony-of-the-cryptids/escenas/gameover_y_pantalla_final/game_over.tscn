@@ -70,5 +70,11 @@ layout_mode = 2
 text = "Salir del Juego"
 
 [connection signal="button_down" from="Control/VBoxContainer/ReIntentar" to="." method="_on_re_intentar_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/ReIntentar" to="." method="_on_re_intentar_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/ReIntentar" to="." method="_on_re_intentar_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/Menu" to="." method="_on_menu_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/Menu" to="." method="_on_menu_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/Menu" to="." method="_on_menu_mouse_exited"]
 [connection signal="button_down" from="Control/VBoxContainer/Salir" to="." method="_on_salir_button_down"]
+[connection signal="mouse_entered" from="Control/VBoxContainer/Salir" to="." method="_on_salir_mouse_entered"]
+[connection signal="mouse_exited" from="Control/VBoxContainer/Salir" to="." method="_on_salir_mouse_exited"]

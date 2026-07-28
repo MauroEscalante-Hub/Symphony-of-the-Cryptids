@@ -20,9 +20,6 @@ func _ready():
 	
 
 func _physics_process(delta):
-	animachiones.play("Base")
-	if me_empache == true:
-		animachiones.play("Mansito")
 	
 	if enjaulado:
 		Estado_enjaulado()
@@ -32,8 +29,6 @@ func _physics_process(delta):
 	if encantado:
 		#print("ESTOY ENCANTADO")
 		Estado_encantado(delta)
-		if me_empache == true:
-			animachiones.play("Mansito")
 		move_and_slide()
 		return
 	
@@ -50,6 +45,7 @@ func _physics_process(delta):
 	
 	
 	else:
+		animachiones.play("Base")
 		Punto_Objetivo()
 	
 	move_and_slide()
@@ -117,7 +113,10 @@ func _on_areade_danio_body_entered(body):
 	if body == jugador:
 		jugador_actual = body
 		TiempoDeDanio.start()
-		Aullar()
+		if me_empache == true:
+			print("no puedo aullar")
+		else:
+			Aullar()
 		
 	elif body is Pomberito:
 		_pomberito_actual = body
@@ -126,9 +125,11 @@ func _on_areade_danio_body_entered(body):
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
+		jugador_actual.parar_colordanio()
 		jugador_actual = null
 		TiempoDeDanio.stop()
 	elif body is Pomberito:
+		#_pomberito_actual.parar_color()
 		_pomberito_actual = null
 		TiempoDeDanio.stop()
 
