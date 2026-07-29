@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkt7wt8q0h0uj"
-path="res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"
+uid="uid://dxhqyg001agsf"
+path="res://.godot/imported/Estrellas1.png-057a3c624286422250e209ea2b4a7ee4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/Jaula/Jaula_Abierta.png"
-dest_files=["res://.godot/imported/Jaula_Abierta.png-5fc38ada9322b3deeb34995fb8195fcd.ctex"]
+source_file="res://srites_ecenario/Lucesita/Estrellas1.png"
+dest_files=["res://.godot/imported/Estrellas1.png-057a3c624286422250e209ea2b4a7ee4.ctex"]
 
 [params]
 
