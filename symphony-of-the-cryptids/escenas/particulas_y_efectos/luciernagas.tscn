@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dj4rvsqbytyde"]
+
+[ext_resource type="Texture2D" uid="uid://dxhqyg001agsf" path="res://srites_ecenario/Lucesita/Estrellas1.png" id="1_cxlui"]
+[ext_resource type="Texture2D" uid="uid://do0mqyiq8i3vk" path="res://srites_ecenario/Lucesita/Estrellas2.png" id="2_kogii"]
+[ext_resource type="Texture2D" uid="uid://cq6epwhou2pu3" path="res://srites_ecenario/Lucesita/Estrellas 3.png" id="3_juhwm"]
+[ext_resource type="Script" uid="uid://by6vb81dngi02" path="res://escenas/particulas_y_efectos/luciernagas.gd" id="4_wkdl4"]
+[ext_resource type="Texture2D" uid="uid://bpkqc5t7nw0rc" path="res://srites_ecenario/Lucesita/2d_lights_and_shadows_neutral_point_light.webp" id="5_kogii"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3xd07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cxlui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kogii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_juhwm")
+}],
+"loop": 1,
+"name": &"Luces",
+"speed": 5.0
+}]
+
+[node name="Luciernagas" type="PointLight2D" unique_id=1515067422]
+energy = 1.94
+texture = ExtResource("5_kogii")
+script = ExtResource("4_wkdl4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1050891144]
+position = Vector2(1, -10.999996)
+scale = Vector2(0.47024655, 0.47152713)
+sprite_frames = SubResource("SpriteFrames_3xd07")
+animation = &"Luces"
+frame_progress = 0.5082104
