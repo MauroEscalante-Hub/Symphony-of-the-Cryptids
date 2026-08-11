@@ -8,11 +8,26 @@ extends Node2D
 @onready var nombre_Del_Titulo = $"Título"
 @onready var cajaDEbotones = $Control/VBoxContainer
 @onready var labelpartida = $Control/Label
+@onready var nube = $nubes
+@onready var otranube = $otrasnubes
+@onready var notas = $notas
 
 func _ready():
 	Color_Rect.visible = false
 	mostrarTitulo()
 	mostrarBotones()
+	mostrar_lasnubes()
+	
+	pass
+
+func _process(delta):
+	pass
+
+func mostrar_lasnubes():
+	var tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT).set_loops()
+	tween.tween_property(otranube, "position:y", 0, 10)
+	tween.tween_property(otranube, "position:y", -100, 10)
+	
 	pass
 
 func mostrarTitulo():

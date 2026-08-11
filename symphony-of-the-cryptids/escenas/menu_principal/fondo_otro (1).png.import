@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd33fmkahptyl"
-path="res://.godot/imported/ENCERRADO.png-85c0c4d50cf8c82f9b09da329f925c43.ctex"
+uid="uid://cvxng2aqpsbru"
+path="res://.godot/imported/fondo_otro (1).png-96d19428bb22418b2d267dbb9b894314.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/jaula/ENCERRADO.png"
-dest_files=["res://.godot/imported/ENCERRADO.png-85c0c4d50cf8c82f9b09da329f925c43.ctex"]
+source_file="res://escenas/menu_principal/fondo_otro (1).png"
+dest_files=["res://.godot/imported/fondo_otro (1).png-96d19428bb22418b2d267dbb9b894314.ctex"]
 
 [params]
 
