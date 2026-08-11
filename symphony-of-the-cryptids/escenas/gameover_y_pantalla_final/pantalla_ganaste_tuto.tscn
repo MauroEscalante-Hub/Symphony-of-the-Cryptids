@@ -61,5 +61,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="button_down" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Siguiente_Nivel" to="." method="_on_siguiente_nivel_mouse_exited"]
 [connection signal="button_down" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Volver_Al_Menu" to="." method="_on_volver_al_menu_mouse_exited"]
 [connection signal="button_down" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_button_down"]
+[connection signal="mouse_entered" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Salir_Del_Juego" to="." method="_on_salir_del_juego_mouse_exited"]

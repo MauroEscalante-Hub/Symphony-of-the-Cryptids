@@ -175,7 +175,7 @@ scale = Vector2(0.65957445, 0.3958188)
 texture = ExtResource("5_7mlcq")
 
 [node name="notas" type="Sprite2D" parent="." unique_id=653637218]
-position = Vector2(-461.00006, 87.000015)
+position = Vector2(-516, 86)
 scale = Vector2(0.36898097, 0.33972126)
 texture = ExtResource("6_otvbs")
 
