@@ -93,7 +93,7 @@ func ReciboDanio(cantidaddeDanio: int):
 
 func colordanio():
 	var tween = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
-	tween.tween_property(Animacion, "modulate", Color.DARK_RED, 1.0)
+	tween.tween_property(Animacion, "modulate", Color.DARK_RED, 0.5)
 	pass
 
 func parar_colordanio():

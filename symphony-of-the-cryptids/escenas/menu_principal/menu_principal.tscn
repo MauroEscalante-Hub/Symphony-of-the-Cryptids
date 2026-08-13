@@ -3,25 +3,10 @@
 [ext_resource type="Script" uid="uid://bf3l5vunxtl15" path="res://escenas/menu_principal/menu_principal.gd" id="1_ynsnw"]
 [ext_resource type="Texture2D" uid="uid://ba67dov8vl6rx" path="res://escenas/menu_principal/Fondo_menu.png" id="2_qi23i"]
 [ext_resource type="AudioStream" uid="uid://dd314bvirktei" path="res://efectos_sonido_musica/Mily Ortiz - Otro pompero 2026-06-10 00_22 (1).mp3" id="4_00m27"]
+[ext_resource type="Texture2D" uid="uid://ch0xmqmsslxq5" path="res://escenas/menu_principal/fondo_otro (2).png" id="4_hkuy5"]
 [ext_resource type="Texture2D" uid="uid://dqybb1cr2gtsb" path="res://escenas/menu_principal/Título.png" id="4_nrc4w"]
-
-[sub_resource type="Gradient" id="Gradient_00m27"]
-colors = PackedColorArray(0, 0.7058824, 0, 1, 1, 1, 0.1254902, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_kddjp"]
-gradient = SubResource("Gradient_00m27")
-width = 8
-height = 8
-fill = 1
-fill_from = Vector2(0.5043478, 0.526087)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u5bk5"]
-particle_flag_disable_z = true
-emission_shape = 1
-emission_sphere_radius = 1.0
-spread = 180.0
-initial_velocity_max = 10.0
-gravity = Vector3(0, 0, 0)
+[ext_resource type="Texture2D" uid="uid://cbkv7u3etrkhk" path="res://escenas/menu_principal/fondo_otro (3).png" id="5_7mlcq"]
+[ext_resource type="Texture2D" uid="uid://cvxng2aqpsbru" path="res://escenas/menu_principal/fondo_otro (1).png" id="6_otvbs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e150g"]
 bg_color = Color(0.04585386, 0.0371063, 0.026312748, 1)
@@ -79,14 +64,6 @@ offset_right = 585.0
 offset_bottom = 333.0
 texture = ExtResource("2_qi23i")
 expand_mode = 1
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=746026095]
-visible = false
-position = Vector2(252, -171)
-amount = 30
-texture = SubResource("GradientTexture2D_kddjp")
-lifetime = 30.0
-process_material = SubResource("ParticleProcessMaterial_u5bk5")
 
 [node name="Control" type="Control" parent="." unique_id=435955731]
 layout_mode = 3
@@ -186,7 +163,24 @@ position = Vector2(140, -400)
 scale = Vector2(0.42, 0.42)
 texture = ExtResource("4_nrc4w")
 
+[node name="nubes" type="Sprite2D" parent="." unique_id=258325807]
+position = Vector2(1.5000153, 162.96877)
+scale = Vector2(0.6534154, 0.22992162)
+texture = ExtResource("4_hkuy5")
+
+[node name="otrasnubes" type="Sprite2D" parent="." unique_id=1098453241]
+modulate = Color(1, 1, 1, 0.6666667)
+position = Vector2(3.9999998, -78)
+scale = Vector2(0.65957445, 0.3958188)
+texture = ExtResource("5_7mlcq")
+
+[node name="notas" type="Sprite2D" parent="." unique_id=653637218]
+position = Vector2(-516, 86)
+scale = Vector2(0.36898097, 0.33972126)
+texture = ExtResource("6_otvbs")
+
 [node name="Transicion" type="CanvasLayer" parent="." unique_id=2008146239]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Transicion" unique_id=1665620348]
 anchors_preset = 15

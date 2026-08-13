@@ -111,11 +111,9 @@ func _on_areade_danio_body_entered(body):
 
 func _on_areade_danio_body_exited(body):
 	if body == jugador_actual:
-		jugador_actual.parar_colordanio()
 		jugador_actual = null
 		tiempodedanio.stop()
 	
-
 
 func _on_timer_timeout():
 	if jugador_actual != null:
