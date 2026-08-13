@@ -11588,11 +11588,11 @@ danio_de_ataque = 30
 nota_encantada = ExtResource("9_1obfr")
 
 [node name="Pomberito" parent="." unique_id=1441714446 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
-position = Vector2(852, 817)
+position = Vector2(765, 1036)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
 la_jaula = NodePath("../JaulaDeCriptido")
-danio_de_ataque = 10
+danio_de_ataque = 15
 nota_encantada = ExtResource("9_1obfr")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=254523662]
@@ -11628,6 +11628,7 @@ position = Vector2(1570, 2238)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D7"), NodePath("../Marker2D8"), NodePath("../Marker2D9"), NodePath("../Marker2D10")]
 la_jaula = NodePath("../JaulaDeCriptido")
+danio_de_ataque = 25
 nota_encantada = ExtResource("9_1obfr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1370342931]
