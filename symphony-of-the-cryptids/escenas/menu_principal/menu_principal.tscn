@@ -180,7 +180,6 @@ scale = Vector2(0.36898097, 0.33972126)
 texture = ExtResource("6_otvbs")
 
 [node name="Transicion" type="CanvasLayer" parent="." unique_id=2008146239]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Transicion" unique_id=1665620348]
 anchors_preset = 15

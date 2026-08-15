@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="2_qrdts"]
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="3_lk35s"]
 [ext_resource type="Texture2D" uid="uid://bp5cs5lyu3mph" path="res://srites_ecenario/charco.png" id="4_5luiu"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_3s13t"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_3s13t"]
 [ext_resource type="PackedScene" uid="uid://b5i2ngmbepn82" path="res://escenas/criptidos/luz_mala/luz_mala.tscn" id="5_mo6nc"]
 [ext_resource type="Texture2D" uid="uid://crxi4k3gmby2p" path="res://srites_ecenario/Puerta con camino.png" id="5_yo85d"]
 [ext_resource type="PackedScene" uid="uid://dh8lc5tmyiwda" path="res://escenas/personaje/Personaje.tscn" id="6_mo6nc"]
@@ -11429,14 +11429,14 @@ autoplay = true
 parameters/looping = true
 
 [node name="Marker2D3" type="Marker2D" parent="." unique_id=557326042]
-position = Vector2(2636, 2082)
+position = Vector2(3661.0002, 2511)
 scale = Vector2(1.5, 1.5)
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=646672481]
-position = Vector2(3042, 1675)
+position = Vector2(4664, 1382)
 
 [node name="luz_mala2" parent="." unique_id=788163800 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("5_mo6nc")]
-position = Vector2(2801, 1089)
+position = Vector2(4190, 1989)
 jugador = NodePath("../Personaje")
 punto_inicial = [NodePath("../Marker2D3"), NodePath("../Marker2D")]
 la_jaula = NodePath("../JaulaDeCriptido")
@@ -11456,7 +11456,7 @@ position = Vector2(2770, 2244)
 energy = 1.0
 
 [node name="Luciernagas3" parent="." unique_id=254532422 instance=ExtResource("13_kxq6o")]
-position = Vector2(3477, 1785)
+position = Vector2(3494, 1760)
 energy = 1.0
 
 [node name="Luciernagas4" parent="." unique_id=926158591 instance=ExtResource("13_kxq6o")]
@@ -11481,3 +11481,19 @@ energy = 1.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1864273849]
 color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[node name="luz_mala" parent="." unique_id=264062293 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("5_mo6nc")]
+position = Vector2(1573, 2459)
+jugador = NodePath("../Personaje")
+secuencia = ["up", "up", "down", "down"]
+punto_inicial = [NodePath("../Marker2D2"), NodePath("../Marker2D4")]
+la_jaula = NodePath("../JaulaDeCriptido")
+velocidad = 70
+danio_de_ataque = 20
+nota_encantada = ExtResource("10_m46ga")
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=456330999]
+position = Vector2(1081, 2516)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=1212045912]
+position = Vector2(2499, 2526)

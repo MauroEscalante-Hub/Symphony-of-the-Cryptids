@@ -11677,3 +11677,18 @@ energy = 1.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=292725774]
 color = Color(0.6255971, 0.6255971, 0.6255971, 1)
+
+[node name="Pomberito3" parent="." unique_id=2070502679 node_paths=PackedStringArray("jugador", "punto_inicial", "la_jaula") instance=ExtResource("8_1obfr")]
+position = Vector2(2395, 204)
+jugador = NodePath("../Personaje")
+secuencia = ["right", "down", "up", "right"]
+punto_inicial = [NodePath("../Marker2D11"), NodePath("../Marker2D12")]
+la_jaula = NodePath("../JaulaDeCriptido")
+danio_de_ataque = 10
+nota_encantada = ExtResource("9_1obfr")
+
+[node name="Marker2D11" type="Marker2D" parent="." unique_id=455831238]
+position = Vector2(1954, 214)
+
+[node name="Marker2D12" type="Marker2D" parent="." unique_id=852811213]
+position = Vector2(2833, 202)
