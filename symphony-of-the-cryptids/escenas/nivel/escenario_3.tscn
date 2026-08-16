@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://coqeuqb5j4u7o" path="res://srites_ecenario/Arbusto cuadrado.png" id="2_qrdts"]
 [ext_resource type="Texture2D" uid="uid://b1kg47rimimoi" path="res://srites_ecenario/ProtoMapa1.png" id="3_lk35s"]
 [ext_resource type="Texture2D" uid="uid://bp5cs5lyu3mph" path="res://srites_ecenario/charco.png" id="4_5luiu"]
-[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/Jaula/jaula_de_criptido.tscn" id="5_3s13t"]
+[ext_resource type="PackedScene" uid="uid://0i63ioxnsxt5" path="res://escenas/jaula/jaula_de_criptido.tscn" id="5_3s13t"]
 [ext_resource type="PackedScene" uid="uid://b5i2ngmbepn82" path="res://escenas/criptidos/luz_mala/luz_mala.tscn" id="5_mo6nc"]
 [ext_resource type="Texture2D" uid="uid://crxi4k3gmby2p" path="res://srites_ecenario/Puerta con camino.png" id="5_yo85d"]
 [ext_resource type="PackedScene" uid="uid://dh8lc5tmyiwda" path="res://escenas/personaje/Personaje.tscn" id="6_mo6nc"]

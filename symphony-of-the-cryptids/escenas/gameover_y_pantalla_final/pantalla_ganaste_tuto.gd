@@ -10,7 +10,7 @@ func _process(delta):
 	label_puntuacion.text = "Dinero: " + str(DineroDejaula.dinero_total)
 
 func _on_siguiente_nivel_button_down() -> void:
-	get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/intermedioMapa1.tscn")
+	get_tree().change_scene_to_file("res://escenas/menu_principal/transicion/IntermedioMapa1.tscn")
 	pass # Replace with function body.
 
 func _on_volver_al_menu_button_down() -> void:
